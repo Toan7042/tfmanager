@@ -1,8 +1,8 @@
-import NextAuth, { AuthOptions } from "next-auth";
+import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import prisma from "@/lib/prisma";
 
-export const authOptions: AuthOptions = {
+const handler = NextAuth({
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
@@ -25,7 +25,7 @@ export const authOptions: AuthOptions = {
             avatar: user.image,
             providerId: account?.providerAccountId || "",
             lastLoginTime: new Date(),
-            role: "user",
+            role: "user", // Mặc định user có role "user"
           },
         });
       } else {
@@ -42,15 +42,15 @@ export const authOptions: AuthOptions = {
       const dbUser = await prisma.user.findUnique({
         where: { email: token.email! },
       });
-    
+   
       if (dbUser) {
         token.id = dbUser.id;
         token.role = dbUser.role;
       } else {
         console.log("User không tồn tại, xoá token...");
-        return {};
+        return {}; // Trả về token rỗng => mất session
       }
-    
+   
       return token;
     },    
 
@@ -64,9 +64,8 @@ export const authOptions: AuthOptions = {
   },
   session: { strategy: "jwt" },
   secret: process.env.NEXTAUTH_SECRET,
-};
+});
 
-const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST };
 
 

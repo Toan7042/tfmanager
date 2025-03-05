@@ -8,21 +8,39 @@ datasource db {
 }
 
 model User {
-  id            Int      @id @default(autoincrement())
-  email         String   @unique  // Đánh dấu email là duy nhất
-  name          String?  // Tên từ Google (có thể null)
-  avatar        String?  // Ảnh đại diện Google
-  providerId    String   @unique // ID của user trên Google
-  lastLoginTime DateTime?
-  role          String   @default("User")
-  balance       Decimal  @default(0)
+  id                 Int               @id @default(autoincrement())  // ID người dùng
+  email              String            @unique                      // Email người dùng (email là duy nhất)
+  name               String?                                 // Tên người dùng
+  avatar             String?                                 // Ảnh đại diện người dùng
+  providerId         String            @unique                      // Provider ID (Google, Facebook, v.v.)
+  lastLoginTime      DateTime?                              // Thời gian đăng nhập lần cuối
+  role               String           @default("User")             // Vai trò người dùng (user, admin, v.v.)
+  balance            Decimal          @default(0)                  // Số dư người dùng
+  
+  transactions       TransactionHistory[]
+  mphones            MPhone[]
+  mpcs               MPC[]
+  purchases          PurchaseHistory[]
+  userKeys           UserKey[]
 
-  transactions  TransactionHistory[]
-  mphones       MPhone[]
-  mpcs          MPC[]
-  purchases     PurchaseHistory[]
-  userKeys      UserKey[]
+  sessions           UserSessionPoint[]                              // Quan hệ 1-n với bảng UserSessionPoint
 }
+
+
+model UserSessionPoint {
+  id             Int      @id @default(autoincrement())       // ID phiên đăng nhập
+  userId         Int                                          // ID người dùng (foreign key)
+  user           User     @relation(fields: [userId], references: [id])  // Quan hệ với bảng User
+  sessionToken   String                                      // Token phiên duy nhất
+  deviceInfo     String?                                     // Thông tin thiết bị (User-Agent, IP, v.v.)
+  createdAt      DateTime @default(now())                     // Thời gian tạo phiên đăng nhập
+  updatedAt      DateTime @updatedAt                         // Thời gian cập nhật phiên
+  lastActiveAt   DateTime @default(now())                     // Thời gian hoạt động cuối cùng của phiên
+  expiresAt      DateTime                                     // Thời gian hết hạn phiên (thường là sau 1 ngày)
+
+  @@unique([userId, sessionToken])                            // Đảm bảo không có nhiều phiên cho 1 user
+}
+
 
 model TransactionHistory {
   id     Int      @id @default(autoincrement())
@@ -38,6 +56,7 @@ model MPhone {
   userId         Int
   user           User     @relation(fields: [userId], references: [id])
   phoneId        String
+  name        String
   createdDate    DateTime @default(now())
   expirationDate DateTime
 }
@@ -47,6 +66,7 @@ model MPC {
   userId         Int
   user           User     @relation(fields: [userId], references: [id])
   pcId           String
+  name           String
   createdDate    DateTime @default(now())
   expirationDate DateTime
 }

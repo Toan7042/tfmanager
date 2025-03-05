@@ -11,6 +11,19 @@ CREATE TABLE "User" (
 );
 
 -- CreateTable
+CREATE TABLE "UserSessionPoint" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "userId" INTEGER NOT NULL,
+    "sessionToken" TEXT NOT NULL,
+    "deviceInfo" TEXT,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL,
+    "lastActiveAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "expiresAt" DATETIME NOT NULL,
+    CONSTRAINT "UserSessionPoint_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+);
+
+-- CreateTable
 CREATE TABLE "TransactionHistory" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "userId" INTEGER NOT NULL,
@@ -25,6 +38,7 @@ CREATE TABLE "MPhone" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "userId" INTEGER NOT NULL,
     "phoneId" TEXT NOT NULL,
+    "name" TEXT NOT NULL,
     "createdDate" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "expirationDate" DATETIME NOT NULL,
     CONSTRAINT "MPhone_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
@@ -35,6 +49,7 @@ CREATE TABLE "MPC" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "userId" INTEGER NOT NULL,
     "pcId" TEXT NOT NULL,
+    "name" TEXT NOT NULL,
     "createdDate" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "expirationDate" DATETIME NOT NULL,
     CONSTRAINT "MPC_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
@@ -78,3 +93,6 @@ CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "User_providerId_key" ON "User"("providerId");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "UserSessionPoint_userId_sessionToken_key" ON "UserSessionPoint"("userId", "sessionToken");

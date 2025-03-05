@@ -3,7 +3,7 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X, LayoutDashboard, Shield } from "lucide-react";
+import { Menu, X, LayoutDashboard, Shield, User, Package, Command } from "lucide-react";
 
 export default function Navbar() {
   const { data: session } = useSession();
@@ -13,13 +13,41 @@ export default function Navbar() {
   const menuItems = [
     {
       href: "/dashboard",
-      label: "Dashboard",
+      label: "Bảng điều khiển",
       icon: <LayoutDashboard size={16} />,
       show: !!session,
     },
     {
+      href: "/community",
+      label: "Cộng đồng",
+      icon: <Command size={16} />,
+      show: !!session, // Hiển thị nếu session tồn tại (đăng nhập)
+    },
+    {
+      href: "/mydevices",
+      label: "Thiết bị của tôi",
+      icon: (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 4H19C19.55 4 20 4.45 20 5V19C20 19.55 19.55 20 19 20H5C4.45 20 4 19.55 4 19V5C4 4.45 4.45 4 5 4H9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      ),
+      show: !!session, // Hiển thị nếu session tồn tại (đăng nhập)
+    },
+    {
+      href: "/servicepackage",
+      label: "Gói dịch vụ",
+      icon: <Package size={16} />,
+      show: !!session,
+    },
+    {
+      href: "/profile",
+      label: "Hồ sơ",
+      icon: <User size={16} />, // Thêm icon profile
+      show: !!session,
+    },
+    {
       href: "/admin",
-      label: "Admin",
+      label: "Quản trị",
       icon: <Shield size={16} />,
       show: session?.user?.role === "admin",
     },
@@ -51,13 +79,16 @@ export default function Navbar() {
                   </Link>
                 ))}
 
+              {/* Hiển thị Avatar người dùng hoặc nút đăng xuất */}
               {session ? (
-                <button
-                  onClick={() => signOut()}
-                  className="bg-red-500 text-white px-3 py-1.5 text-sm rounded-md hover:bg-red-600 transition"
-                >
-                  Đăng xuất
-                </button>
+                <div className="flex items-center space-x-2">
+                  <button
+                    onClick={() => signOut()}
+                    className="bg-red-500 text-white px-3 py-1.5 text-sm rounded-md hover:bg-red-600 transition"
+                  >
+                    Đăng xuất
+                  </button>
+                </div>
               ) : (
                 <button
                   onClick={() => signIn("google")}
@@ -93,6 +124,7 @@ export default function Navbar() {
                 </Link>
               ))}
 
+            {/* Hiển thị avatar người dùng hoặc nút đăng xuất trên mobile */}
             {session ? (
               <button
                 onClick={() => signOut()}

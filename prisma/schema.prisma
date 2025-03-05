@@ -8,16 +8,14 @@ datasource db {
 }
 
 model User {
-  id            Int     @id @default(autoincrement())
-  username      String  @unique
-  password      String
-  phone         String?
-  role          String  @default("User")
-  maxPCKey      Int     @default(0)
-  maxPhoneKey   Int     @default(0)
-  ip            String?
+  id            Int      @id @default(autoincrement())
+  email         String   @unique  // Đánh dấu email là duy nhất
+  name          String?  // Tên từ Google (có thể null)
+  avatar        String?  // Ảnh đại diện Google
+  providerId    String   @unique // ID của user trên Google
   lastLoginTime DateTime?
-  balance       Decimal @default(0)
+  role          String   @default("User")
+  balance       Decimal  @default(0)
 
   transactions  TransactionHistory[]
   mphones       MPhone[]
@@ -27,29 +25,29 @@ model User {
 }
 
 model TransactionHistory {
-  id          Int     @id @default(autoincrement())
-  userId      Int
-  user        User    @relation(fields: [userId], references: [id])
-  amount      Decimal
-  type        String  @default("Deposit")
-  date        DateTime @default(now())
+  id     Int      @id @default(autoincrement())
+  userId Int
+  user   User     @relation(fields: [userId], references: [id])
+  amount Decimal
+  type   String   @default("Deposit")
+  date   DateTime @default(now())
 }
 
 model MPhone {
-  id            Int     @id @default(autoincrement())
-  userId        Int
-  user          User    @relation(fields: [userId], references: [id])
-  phoneId       String
-  createdDate   DateTime @default(now())
+  id             Int      @id @default(autoincrement())
+  userId         Int
+  user           User     @relation(fields: [userId], references: [id])
+  phoneId        String
+  createdDate    DateTime @default(now())
   expirationDate DateTime
 }
 
 model MPC {
-  id            Int     @id @default(autoincrement())
-  userId        Int
-  user          User    @relation(fields: [userId], references: [id])
-  pcId          String
-  createdDate   DateTime @default(now())
+  id             Int      @id @default(autoincrement())
+  userId         Int
+  user           User     @relation(fields: [userId], references: [id])
+  pcId           String
+  createdDate    DateTime @default(now())
   expirationDate DateTime
 }
 
@@ -63,24 +61,24 @@ model ServicePackage {
   keyPhone     Int
   durationDays Int
 
-  purchases    PurchaseHistory[]
+  purchases PurchaseHistory[]
 }
 
 model PurchaseHistory {
-  id            Int     @id @default(autoincrement())
-  userId        Int
-  user          User    @relation(fields: [userId], references: [id])
-  packageId     Int
+  id             Int            @id @default(autoincrement())
+  userId         Int
+  user           User           @relation(fields: [userId], references: [id])
+  packageId      Int
   servicePackage ServicePackage @relation(fields: [packageId], references: [id])
-  purchaseDate  DateTime @default(now())
+  purchaseDate   DateTime       @default(now())
   expirationDate DateTime
 }
 
 model UserKey {
-  id            Int     @id @default(autoincrement())
-  userId        Int
-  user          User    @relation(fields: [userId], references: [id])
-  keyPC        Int
-  keyPhone     Int
+  id             Int      @id @default(autoincrement())
+  userId         Int
+  user           User     @relation(fields: [userId], references: [id])
+  keyPC          Int
+  keyPhone       Int
   expirationDate DateTime
 }

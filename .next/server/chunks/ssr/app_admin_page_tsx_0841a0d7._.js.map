@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/TON/Desktop/WEBCODE/NextJS/TFKey/tf-manager/app/admin/page.tsx"],"sourcesContent":["\"use client\";\r\n\r\nimport { useSession } from \"next-auth/react\";\r\n\r\nexport default function AdminPage() {\r\n  const { data: session } = useSession();\r\n\r\n  if (!session || session.user.role !== \"admin\") {\r\n    return <p>Bạn không có quyền truy cập trang này.</p>;\r\n  }\r\n\r\n  return <h1>Chào mừng Admin {session.user.name}!</h1>;\r\n}\r\n"],"names":[],"mappings":";;;;AAEA;AAFA;;;AAIe,SAAS;IACtB,MAAM,EAAE,MAAM,OAAO,EAAE,GAAG,CAAA,GAAA,8IAAA,CAAA,aAAU,AAAD;IAEnC,IAAI,CAAC,WAAW,QAAQ,IAAI,CAAC,IAAI,KAAK,SAAS;QAC7C,qBAAO,8OAAC;sBAAE;;;;;;IACZ;IAEA,qBAAO,8OAAC;;YAAG;YAAiB,QAAQ,IAAI,CAAC,IAAI;YAAC;;;;;;;AAChD","debugId":null}},
+    {"offset": {"line": 38, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

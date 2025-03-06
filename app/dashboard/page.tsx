@@ -30,6 +30,7 @@ export default function DashboardPage() {
         <ReactApexChart
           options={{
             chart: { height: 300, type: "line", toolbar: { show: false }, zoom: { enabled: false } },
+            colors: ["#008FFB", "#00E396", "#FF4560"], // ✅ Màu: Xanh dương (Lượt chạy), Xanh lá (Thành công), Đỏ (Thất bại)
             series: [
               { name: "Lượt chạy", data: [1000, 17000, 35000, 23000, 40000] },
               { name: "Thành công", data: [3000, 15000, 19000, 32000, 27000] },

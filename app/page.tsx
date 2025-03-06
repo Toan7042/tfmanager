@@ -1,12 +1,21 @@
 "use client";
 
-import Nav from "@/app/components/Nav";
 import { useSession } from "next-auth/react";
-import Image from "next/image";
-import { motion } from "framer-motion";
+import { useRouter } from "next/navigation"; // Hoặc useRouter nếu là Next.js 12
+import { useEffect } from "react";
+import Nav from "@/app/components/Nav";
 
 export default function Home() {
   const { data: session } = useSession();
+  const router = useRouter();
+
+  // Sử dụng useEffect để thực hiện điều hướng sau khi render hoàn tất
+  useEffect(() => {
+    if (session) {
+      router.push("/dashboard");
+    }
+  }, [session, router]); // Chạy lại khi session thay đổi
+
   return (
     <main className="bg-gray-50 min-h-screen">
       <Nav />
@@ -55,25 +64,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-
-      {/* User Info (Hiển thị khi đăng nhập) */}
-      {session && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="fixed bottom-4 right-4 flex items-center bg-white shadow-lg p-3 rounded-xl"
-        >
-          <Image
-            src={session.user?.image || "/default-avatar.png"}
-            alt="Avatar"
-            width={40}
-            height={40}
-            className="rounded-full border-2 border-blue-500"
-          />
-          <span className="ml-3 text-gray-700 font-semibold">Xin chào, {session.user?.name}!</span>
-        </motion.div>
-      )}
     </main>
   );
 }

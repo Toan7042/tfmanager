@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/TON/Desktop/WEBCODE/NextJS/TFKey/tf-manager/app/dashboard/page.tsx"],"sourcesContent":["\"use client\";\r\n\r\nimport { useSession } from \"next-auth/react\";\r\n\r\nexport default function DashboardPage() {\r\n  const { data: session } = useSession();\r\n\r\n  if (!session) {\r\n    return <p>Vui lòng đăng nhập</p>;\r\n  }\r\n\r\n  return <h1>Chào {session.user.name}, đây là Dashboard của bạn!</h1>;\r\n}\r\n"],"names":[],"mappings":";;;;AAEA;AAFA;;;AAIe,SAAS;IACtB,MAAM,EAAE,MAAM,OAAO,EAAE,GAAG,CAAA,GAAA,8IAAA,CAAA,aAAU,AAAD;IAEnC,IAAI,CAAC,SAAS;QACZ,qBAAO,8OAAC;sBAAE;;;;;;IACZ;IAEA,qBAAO,8OAAC;;YAAG;YAAM,QAAQ,IAAI,CAAC,IAAI;YAAC;;;;;;;AACrC","debugId":null}},
-    {"offset": {"line": 38, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}

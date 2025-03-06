@@ -15,6 +15,13 @@ export default function LoginPage() {
     }
   }, [session, router]);
 
+  //  Điều hướng về home sau khi logout
+  useEffect(() => {
+    if (!session) {
+      router.push("/");  // Điều hướng về trang chủ khi đã đăng xuất
+    }
+  }, [session, router]);
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-2xl shadow-lg w-96 text-center">

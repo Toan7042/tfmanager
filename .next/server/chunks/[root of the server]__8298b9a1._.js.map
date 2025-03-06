@@ -1,9 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
-    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
-    {"offset": {"line": 140, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/TON/Desktop/WEBCODE/NextJS/TFKey/tf-manager/app/api/auth/%5B...nextauth%5D/route.ts"],"sourcesContent":["import NextAuth, { AuthOptions } from \"next-auth\";\r\nimport GoogleProvider from \"next-auth/providers/google\";\r\n\r\nexport const authOptions: AuthOptions = {\r\n  providers: [\r\n    GoogleProvider({\r\n      clientId: process.env.GOOGLE_CLIENT_ID!,\r\n      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,\r\n    }),\r\n  ],\r\n  session: {\r\n    strategy: \"jwt\", // Sử dụng kiểu 'jwt' thay vì string\r\n  },\r\n  secret: process.env.NEXTAUTH_SECRET,\r\n};\r\n\r\nconst handler = NextAuth(authOptions);\r\nexport { handler as GET, handler as POST };\r\n"],"names":[],"mappings":";;;;;AAAA;AACA;;;AAEO,MAAM,cAA2B;IACtC,WAAW;QACT,CAAA,GAAA,qJAAA,CAAA,UAAc,AAAD,EAAE;YACb,UAAU,QAAQ,GAAG,CAAC,gBAAgB;YACtC,cAAc,QAAQ,GAAG,CAAC,oBAAoB;QAChD;KACD;IACD,SAAS;QACP,UAAU;IACZ;IACA,QAAQ,QAAQ,GAAG,CAAC,eAAe;AACrC;AAEA,MAAM,UAAU,CAAA,GAAA,uIAAA,CAAA,UAAQ,AAAD,EAAE","debugId":null}},
-    {"offset": {"line": 163, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}

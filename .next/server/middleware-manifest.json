@@ -17,6 +17,26 @@
         {
           "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/dashboard(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\\\.json)?[\\/#\\?]?$",
           "originalSource": "/dashboard/:path*"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/community(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/community/:path*"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/mydevices(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/mydevices/:path*"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/servicepackage(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/servicepackage/:path*"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/profile(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/profile/:path*"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/api(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/api/:path*"
         }
       ],
       "wasm": [],
@@ -24,9 +44,9 @@
       "env": {
         "__NEXT_BUILD_ID": "development",
         "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "WMw83p1txlZN9/bvUuCZGa9FllM/FWf0Hg5dwUIOuZc=",
-        "__NEXT_PREVIEW_MODE_ID": "5d17b2596b6572885ff8538ecc1fa706",
-        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "b7980b6d5d7d5f1818fb850476919c4947f2635759e7117a6f79e4f777dc540a",
-        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "ebc87b65ca3b96da4fcbefe8a2fee81cf044b78c802c9dfb73d92de2d45997b4"
+        "__NEXT_PREVIEW_MODE_ID": "f252ec0242acc43a37b95b2f26a04198",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "df77f8484cda0eee6bdec0fcae9383cab76bd6b7a7bf98fcce0689aad92bff63",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "ab42ef78bccee0b22d81501f7c0767dff719b388405608a301a79f0d266a9e39"
       }
     }
   },

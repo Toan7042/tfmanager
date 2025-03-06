@@ -83,7 +83,7 @@ export default function Navbar() {
               {session ? (
                 <div className="flex items-center space-x-2">
                   <button
-                    onClick={() => signOut()}
+                    onClick={() => signOut({ callbackUrl: "/" })}
                     className="bg-red-500 text-white px-3 py-1.5 text-sm rounded-md hover:bg-red-600 transition"
                   >
                     Đăng xuất
@@ -127,11 +127,11 @@ export default function Navbar() {
             {/* Hiển thị avatar người dùng hoặc nút đăng xuất trên mobile */}
             {session ? (
               <button
-                onClick={() => signOut()}
+                onClick={() => signOut({ callbackUrl: "/" })}
                 className="block w-full text-left bg-red-500 text-white px-4 py-2 rounded-lg text-base hover:bg-red-600 transition"
               >
                 Đăng xuất
-              </button>
+              </button> 
             ) : (
               <button
                 onClick={() => signIn("google")}

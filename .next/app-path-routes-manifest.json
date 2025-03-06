@@ -3,8 +3,8 @@
   "/api/admin-only/route": "/api/admin-only",
   "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
   "/favicon.ico/route": "/favicon.ico",
-  "/dashboard/page": "/dashboard",
   "/admin/page": "/admin",
+  "/dashboard/page": "/dashboard",
   "/login/page": "/login",
   "/page": "/"
 }

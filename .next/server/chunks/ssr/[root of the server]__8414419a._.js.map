@@ -1,9 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/TON/Desktop/WEBCODE/NextJS/TFKey/tf-manager/app/providers.tsx"],"sourcesContent":["'use client';\r\n\r\nimport { SessionProvider } from \"next-auth/react\";\r\n\r\nexport default function Providers({ children }: { children: React.ReactNode }) {\r\n  return <SessionProvider>{children}</SessionProvider>;\r\n} "],"names":[],"mappings":";;;;AAEA;AAFA;;;AAIe,SAAS,UAAU,EAAE,QAAQ,EAAiC;IAC3E,qBAAO,8OAAC,8IAAA,CAAA,kBAAe;kBAAE;;;;;;AAC3B","debugId":null}},
-    {"offset": {"line": 32, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
-    {"offset": {"line": 62, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/TON/Desktop/WEBCODE/NextJS/TFKey/tf-manager/app/components/FlyonuiScript.tsx"],"sourcesContent":["'use client';\r\n\r\nimport { usePathname } from 'next/navigation';\r\nimport { useEffect } from 'react';\r\n\r\nimport { IStaticMethods } from 'flyonui/flyonui';\r\ndeclare global {\r\n  interface Window {\r\n    HSStaticMethods: IStaticMethods;\r\n  }\r\n}\r\n\r\nexport default function FlyonuiScript() {\r\n  const path = usePathname();\r\n\r\n  useEffect(() => {\r\n    const loadFlyonui = async () => {\r\n      await import('flyonui/flyonui');\r\n      window.HSStaticMethods.autoInit();\r\n    };\r\n    loadFlyonui();\r\n  }, [path]);\r\n\r\n  return null;\r\n}"],"names":[],"mappings":";;;AAEA;AACA;AAHA;;;AAYe,SAAS;IACtB,MAAM,OAAO,CAAA,GAAA,kIAAA,CAAA,cAAW,AAAD;IAEvB,CAAA,GAAA,qMAAA,CAAA,YAAS,AAAD,EAAE;QACR,MAAM,cAAc;YAClB;YACA,OAAO,eAAe,CAAC,QAAQ;QACjC;QACA;IACF,GAAG;QAAC;KAAK;IAET,OAAO;AACT","debugId":null}},
-    {"offset": {"line": 83, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}

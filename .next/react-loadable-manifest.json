@@ -1,4 +1,10 @@
 {
+  "app\\components\\FlyonuiScript.tsx -> flyonui/flyonui": {
+    "id": 4094,
+    "files": [
+      "static/chunks/c06dbae1.54993e987255473a.js"
+    ]
+  },
   "app\\dashboard\\page.tsx -> react-apexcharts": {
     "id": 8699,
     "files": [

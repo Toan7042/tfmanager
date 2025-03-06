@@ -3,6 +3,7 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import Image from "next/image";
 
 export default function LoginPage() {
   const { data: session } = useSession();
@@ -27,7 +28,13 @@ export default function LoginPage() {
       <div className="bg-white p-8 rounded-2xl shadow-lg w-96 text-center">
         {session ? (
           <>
-            <img src={session.user?.image || ""} alt="Avatar" className="w-20 h-20 rounded-full mx-auto border-4 border-blue-500" />
+            <Image
+                src={session.user?.image || "/default-avatar.png"} // Đặt ảnh mặc định nếu không có
+                alt="Avatar"
+                width={80} // Tương đương w-20
+                height={80} // Tương đương h-20
+                className="rounded-full mx-auto border-4 border-blue-500"
+              />
             <h2 className="mt-4 text-lg font-semibold">Chào, {session.user?.name}!</h2>
             <p className="text-gray-500">{session.user?.email}</p>
             <button

@@ -161,8 +161,7 @@ var { g: global, d: __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "GET": (()=>handler),
-    "POST": (()=>handler),
-    "authOptions": (()=>authOptions)
+    "POST": (()=>handler)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next-auth/index.js [app-route] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$providers$2f$google$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next-auth/providers/google.js [app-route] (ecmascript)");
@@ -170,7 +169,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app
 ;
 ;
 ;
-const authOptions = {
+const handler = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"])({
     providers: [
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$providers$2f$google$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"])({
             clientId: process.env.GOOGLE_CLIENT_ID,
@@ -185,9 +184,8 @@ const authOptions = {
                     email: user.email
                 }
             });
-            const sessionExpireTime = parseInt(process.env.SESSION_EXPIRE_TIME || "86400"); // Mặc định là 1 ngày
+            const sessionExpireTime = parseInt(process.env.SESSION_EXPIRE_TIME || "86400"); // 1 ngày
             if (!existingUser) {
-                // Tạo mới người dùng nếu chưa tồn tại
                 const createdUser = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.create({
                     data: {
                         email: user.email,
@@ -198,17 +196,15 @@ const authOptions = {
                         role: "user"
                     }
                 });
-                // Tạo session cho người dùng
                 await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].userSessionPoint.create({
                     data: {
                         userId: createdUser.id,
                         sessionToken: account?.access_token || "",
                         deviceInfo: account?.providerAccountId || "",
-                        expiresAt: new Date(new Date().getTime() + sessionExpireTime * 1000)
+                        expiresAt: new Date(Date.now() + sessionExpireTime * 1000)
                     }
                 });
             } else {
-                // Nếu người dùng đã tồn tại, cập nhật thông tin và token
                 await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.update({
                     where: {
                         email: user.email
@@ -217,7 +213,6 @@ const authOptions = {
                         lastLoginTime: new Date()
                     }
                 });
-                // Xóa tất cả các phiên cũ và tạo phiên mới
                 await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].userSessionPoint.deleteMany({
                     where: {
                         userId: existingUser.id,
@@ -231,13 +226,14 @@ const authOptions = {
                         userId: existingUser.id,
                         sessionToken: account?.access_token || "",
                         deviceInfo: account?.providerAccountId || "",
-                        expiresAt: new Date(new Date().getTime() + sessionExpireTime * 1000)
+                        expiresAt: new Date(Date.now() + sessionExpireTime * 1000)
                     }
                 });
             }
             return true;
         },
         async jwt ({ token }) {
+            if (!token.email) return {};
             const dbUser = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique({
                 where: {
                     email: token.email
@@ -253,13 +249,12 @@ const authOptions = {
                     }
                 });
                 if (!session || new Date(session.expiresAt) < new Date()) {
-                    // Nếu session hết hạn hoặc không tồn tại, yêu cầu đăng nhập lại
-                    console.log("Session hết hạn hoặc không hợp lệ.");
-                    return {}; // Trả về token rỗng, yêu cầu đăng nhập lại
+                    console.log("Session expired or invalid.");
+                    return {};
                 }
             } else {
-                console.log("User không tồn tại, xoá token...");
-                return {}; // Trả về token rỗng => mất session
+                console.log("User does not exist, removing token...");
+                return {};
             }
             return token;
         },
@@ -277,8 +272,7 @@ const authOptions = {
         maxAge: parseInt(process.env.SESSION_EXPIRE_TIME || "86400")
     },
     secret: process.env.NEXTAUTH_SECRET
-};
-const handler = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"])(authOptions);
+});
 ;
 }}),
 

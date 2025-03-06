@@ -1,8 +1,8 @@
-import NextAuth, { AuthOptions } from "next-auth";
+import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import prisma from "@/lib/prisma";
 
-export const authOptions: AuthOptions = {
+const handler = NextAuth({
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
@@ -17,10 +17,9 @@ export const authOptions: AuthOptions = {
         where: { email: user.email },
       });
 
-      const sessionExpireTime = parseInt(process.env.SESSION_EXPIRE_TIME || "86400"); // Mặc định là 1 ngày
+      const sessionExpireTime = parseInt(process.env.SESSION_EXPIRE_TIME || "86400"); // 1 ngày
 
       if (!existingUser) {
-        // Tạo mới người dùng nếu chưa tồn tại
         const createdUser = await prisma.user.create({
           data: {
             email: user.email,
@@ -28,35 +27,28 @@ export const authOptions: AuthOptions = {
             avatar: user.image,
             providerId: account?.providerAccountId || "",
             lastLoginTime: new Date(),
-            role: "user", // Mặc định role là user
+            role: "user",
           },
         });
 
-        // Tạo session cho người dùng
         await prisma.userSessionPoint.create({
           data: {
             userId: createdUser.id,
             sessionToken: account?.access_token || "",
             deviceInfo: account?.providerAccountId || "",
-            expiresAt: new Date(new Date().getTime() + sessionExpireTime * 1000), // Set time expire
+            expiresAt: new Date(Date.now() + sessionExpireTime * 1000),
           },
         });
       } else {
-        // Nếu người dùng đã tồn tại, cập nhật thông tin và token
         await prisma.user.update({
           where: { email: user.email },
-          data: {
-            lastLoginTime: new Date(),
-          },
+          data: { lastLoginTime: new Date() },
         });
 
-        // Xóa tất cả các phiên cũ và tạo phiên mới
         await prisma.userSessionPoint.deleteMany({
           where: {
             userId: existingUser.id,
-            sessionToken: {
-              not: account?.access_token, // Tìm các phiên không phải phiên hiện tại
-            },
+            sessionToken: { not: account?.access_token },
           },
         });
 
@@ -65,7 +57,7 @@ export const authOptions: AuthOptions = {
             userId: existingUser.id,
             sessionToken: account?.access_token || "",
             deviceInfo: account?.providerAccountId || "",
-            expiresAt: new Date(new Date().getTime() + sessionExpireTime * 1000), // Set time expire
+            expiresAt: new Date(Date.now() + sessionExpireTime * 1000),
           },
         });
       }
@@ -74,8 +66,10 @@ export const authOptions: AuthOptions = {
     },
 
     async jwt({ token }) {
+      if (!token.email) return {};
+
       const dbUser = await prisma.user.findUnique({
-        where: { email: token.email! },
+        where: { email: token.email },
       });
 
       if (dbUser) {
@@ -85,18 +79,17 @@ export const authOptions: AuthOptions = {
         const session = await prisma.userSessionPoint.findFirst({
           where: {
             userId: dbUser.id,
-            sessionToken: token.currentSessionToken,
+            sessionToken: token.currentSessionToken as string | undefined,
           },
         });
 
         if (!session || new Date(session.expiresAt) < new Date()) {
-          // Nếu session hết hạn hoặc không tồn tại, yêu cầu đăng nhập lại
-          console.log("Session hết hạn hoặc không hợp lệ.");
-          return {}; // Trả về token rỗng, yêu cầu đăng nhập lại
+          console.log("Session expired or invalid.");
+          return {};
         }
       } else {
-        console.log("User không tồn tại, xoá token...");
-        return {}; // Trả về token rỗng => mất session
+        console.log("User does not exist, removing token...");
+        return {};
       }
 
       return token;
@@ -106,17 +99,16 @@ export const authOptions: AuthOptions = {
       if (session.user) {
         session.user.id = token.id as string;
         session.user.role = token.role as string;
-        session.user.currentSessionToken = token.currentSessionToken as string;
+        session.user.currentSessionToken = token.currentSessionToken as string | undefined;
       }
       return session;
     },
   },
   session: {
     strategy: "jwt",
-    maxAge: parseInt(process.env.SESSION_EXPIRE_TIME || "86400"), // Max age theo .env
+    maxAge: parseInt(process.env.SESSION_EXPIRE_TIME || "86400"),
   },
   secret: process.env.NEXTAUTH_SECRET,
-};
+});
 
-const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST };

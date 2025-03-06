@@ -17,20 +17,18 @@ export default function DashboardPage() {
     const timer = setTimeout(() => {
       setShowWelcome(false);
     }, 3000);
-
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div>
       <Nav />
-
       {/* Biểu đồ ApexCharts */}
       <div id="apex-curved-line-charts" className="w-full">
         <ReactApexChart
           options={{
             chart: { height: 300, type: "line", toolbar: { show: false }, zoom: { enabled: false } },
-            colors: ["#008FFB", "#00E396", "#FF4560"], // ✅ Màu: Xanh dương (Lượt chạy), Xanh lá (Thành công), Đỏ (Thất bại)
+            colors: ["#008FFB", "#00E396", "#FF4560"],
             series: [
               { name: "Lượt chạy", data: [1000, 17000, 35000, 23000, 40000] },
               { name: "Thành công", data: [3000, 15000, 19000, 32000, 27000] },
@@ -52,7 +50,7 @@ export default function DashboardPage() {
         />
       </div>
 
-      {/* Hiển thị thông tin người dùng với hiệu ứng xuất hiện và biến mất */}
+      {/* Hiển thị thông tin người dùng */}
       <AnimatePresence>
         {session && showWelcome && (
           <motion.div

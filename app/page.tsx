@@ -19,7 +19,6 @@ export default function Home() {
   return (
     <main className="bg-gray-50 min-h-screen">
       <Nav />
-      
       {/* Hero Section */}
       <section className="text-center mt-16 px-6">
         <h1 className="text-4xl font-bold text-blue-600">Công cụ tự động hóa & tối ưu quy trình</h1>

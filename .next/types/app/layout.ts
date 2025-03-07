@@ -1,4 +1,4 @@
-// File: C:\Users\TON\Desktop\WEBCODE\NextJS\TFKey\tf-manager\app\layout.tsx
+// File: C:\Users\TON\Desktop\WEBCODE\NextJS\tf-manager\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

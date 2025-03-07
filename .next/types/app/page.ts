@@ -1,4 +1,4 @@
-// File: C:\Users\TON\Desktop\WEBCODE\NextJS\TFKey\tf-manager\app\page.tsx
+// File: C:\Users\TON\Desktop\WEBCODE\NextJS\tf-manager\app\page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -1,4 +1,4 @@
-// File: C:\Users\TON\Desktop\WEBCODE\NextJS\TFKey\tf-manager\app\api\admin-only\route.ts
+// File: C:\Users\TON\Desktop\WEBCODE\NextJS\tf-manager\app\api\admin-only\route.ts
 import * as entry from '../../../../../app/api/admin-only/route.js'
 import type { NextRequest } from 'next/server.js'
 

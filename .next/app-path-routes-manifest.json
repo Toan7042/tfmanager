@@ -1,10 +1,10 @@
 {
   "/_not-found/page": "/_not-found",
-  "/api/admin-only/route": "/api/admin-only",
   "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
+  "/api/admin-only/route": "/api/admin-only",
   "/favicon.ico/route": "/favicon.ico",
-  "/admin/page": "/admin",
   "/dashboard/page": "/dashboard",
+  "/admin/page": "/admin",
   "/login/page": "/login",
   "/page": "/"
 }

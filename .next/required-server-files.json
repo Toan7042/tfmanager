@@ -101,7 +101,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\TON\\Desktop\\WEBCODE\\NextJS\\TFKey\\tf-manager",
+    "outputFileTracingRoot": "C:\\Users\\TON\\Desktop\\WEBCODE\\NextJS\\tf-manager",
     "experimental": {
       "nodeMiddleware": false,
       "cacheLife": {
@@ -179,7 +179,7 @@
       "forceSwcTransforms": false,
       "largePageDataBytes": 128000,
       "turbo": {
-        "root": "C:\\Users\\TON\\Desktop\\WEBCODE\\NextJS\\TFKey\\tf-manager"
+        "root": "C:\\Users\\TON\\Desktop\\WEBCODE\\NextJS\\tf-manager"
       },
       "typedRoutes": false,
       "typedEnv": false,
@@ -285,7 +285,7 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts"
   },
-  "appDir": "C:\\Users\\TON\\Desktop\\WEBCODE\\NextJS\\TFKey\\tf-manager",
+  "appDir": "C:\\Users\\TON\\Desktop\\WEBCODE\\NextJS\\tf-manager",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",

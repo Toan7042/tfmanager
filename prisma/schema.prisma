@@ -8,79 +8,61 @@ datasource db {
 }
 
 model User {
-  id                 Int               @id @default(autoincrement())  
-  email              String            @unique  
-  name               String?  
-  avatar             String?  
-  providerId         String            @unique  
+  id                 Int               @id @default(autoincrement())  // Cập nhật khi đăng nhập
+  email              String            @unique                        // Cập nhật khi đăng nhập
+  name               String?                                          // Cập nhật khi đăng nhập
+  avatar             String?                                          // Cập nhật khi đăng nhập
+  providerId         String            @unique                        // Cập nhật khi đăng nhập
   lastLoginTime      DateTime?  
-  role               String           @default("User")  
-  balance            Decimal          @default(0)  
+  role               String           @default("user")                // Cập nhật khi đăng nhập, mặc định là user
+  balance            Decimal          @default(0)                     // Cập nhật khi Người dùng Nạp tiền ở TransactionHistory và mua ở ServicePackage
+  maxPhone           Int              @default(0)         // Cập nhật khi Người dùng mua ở ServicePackage
+  maxPC              Int              @default(0)         // Cập nhật khi Người dùng mua ở ServicePackage
 
   transactions       TransactionHistory[]
   mphones            MPhone[]
   mpcs               MPC[]
   purchases          PurchaseHistory[]
-  userKeys           UserKey[]
-  sessions           UserSessionPoint[]
+  sessions           SessionPoint[]
 }
 
-model UserSessionPoint {
-  id             Int      @id @default(autoincrement())  
-  userId         Int  
-  user           User     @relation(fields: [userId], references: [id])  
-  sessionToken   String  
-  deviceInfo     String?  
-  createdAt      DateTime @default(now())  
-  updatedAt      DateTime @updatedAt  
-  lastActiveAt   DateTime @default(now())  
-  expiresAt      DateTime  
+model SessionPoint {                                                        // Tự động cập nhật phiên đăng nhập khi login
+  id             Int      @id @default(autoincrement())                     // Tự động cập nhật phiên đăng nhập khi login
+  userId         Int                                                        // Tự động cập nhật phiên đăng nhập khi login
+  user           User     @relation(fields: [userId], references: [id])     // Tự động cập nhật phiên đăng nhập khi login
+  sessionToken   String                                                     // Tự động cập nhật phiên đăng nhập khi login
+  deviceInfo     String?                                                    // Tự động cập nhật phiên đăng nhập khi login
+  createdAt      DateTime @default(now())                                   // Tự động cập nhật phiên đăng nhập khi login
+  updatedAt      DateTime @updatedAt                                        // Tự động cập nhật phiên đăng nhập khi login
+  lastActiveAt   DateTime @default(now())                                   // Tự động cập nhật phiên đăng nhập khi login
+  expiresAt      DateTime                                                   // Tự động cập nhật phiên đăng nhập khi login
 
   @@unique([userId, sessionToken])
 }
 
-model TransactionHistory {
-  id     Int      @id @default(autoincrement())
-  userId Int
-  user   User     @relation(fields: [userId], references: [id])
-  amount Decimal
-  type   String   @default("Deposit")
-  date   DateTime @default(now())
-}
-
-model MPhone {
-  id             Int      @id @default(autoincrement())
-  userId         Int
-  user           User     @relation(fields: [userId], references: [id])
-  phoneId        String
-  name           String
-  createdDate    DateTime @default(now())
-  expirationDate DateTime
-}
-
-model MPC {
-  id             Int      @id @default(autoincrement())
-  userId         Int
-  user           User     @relation(fields: [userId], references: [id])
-  pcId           String
-  name           String
-  createdDate    DateTime @default(now())
-  expirationDate DateTime
-}
-
+// Các gói dịch vụ đang bán (thêm, sửa, xoá ở Admin)
 model ServicePackage {
-  id           Int     @id @default(autoincrement())
+  id           Int     @id @default(autoincrement())                   
   name         String
   packageType  String  @default("Thông thường")
-  description  String?
+  description  String?                                                      
   price        Decimal
-  keyPC        Int
-  keyPhone     Int
+  quantityPC        Int                                                                           
+  quantityPhone     Int
   durationDays Int
 
   purchases PurchaseHistory[]
 }
-
+// Lịch sử +- tiền, cập nhật khi người dùng nạp hoặc mua gói hàng ở ServicePackage
+model TransactionHistory {
+  id     Int      @id @default(autoincrement())
+  userId Int
+  user   User     @relation(fields: [userId], references: [id])
+  amount Decimal  // Số tiền +/-
+  type   String   @default("Deposit") // Nạp/mua
+  date   DateTime @default(now())
+}
+// Lịch sử đơn hàng, cập nhật sau khi mua gói hàng ở ServicePackage
 model PurchaseHistory {
   id             Int            @id @default(autoincrement())
   userId         Int
@@ -90,12 +72,101 @@ model PurchaseHistory {
   purchaseDate   DateTime       @default(now())
   expirationDate DateTime
 }
-
-model UserKey {
+// Cập nhật khi mua gói hàng
+model MPhone {
   id             Int      @id @default(autoincrement())
   userId         Int
   user           User     @relation(fields: [userId], references: [id])
-  keyPC          Int
-  keyPhone       Int
+  phoneId        String
+  name           String
+  createdDate    DateTime @default(now())
   expirationDate DateTime
+  Note           String
+} 
+// Cập nhật khi mua gói hàng
+model MPC {
+  id             Int      @id @default(autoincrement())
+  userId         Int
+  user           User     @relation(fields: [userId], references: [id])
+  pcId           String
+  name           String
+  createdDate    DateTime @default(now())
+  expirationDate DateTime
+  Note           String
+
+// Settings for launch
+  stlaunchAppRun       String   @default("Facebook") //"Facebook" | "FacebookLite" | "Messenger"
+  stlaunchListWipe     String   @default("ListItem")  // "ListItem" | "Appinfo" | "Single"
+  stlaunchIDGen        String   @default("Phone")     // "PhoneGen" | "MailGen" | "Directly"
+  stlaunchIDVerify     String   @default("Tempmail")     //  "Tempmail" | "Hotmail" | "Gmail" | "Icloud" | "Phone"
+
+// Settings for network
+  stnetworkTypeNetwork         String   @default("None")  // "None" | "ListProxy" | "SIM" | "VPN_1.1.1.1"
+  stnetworkTypeConnect         String   @default("Aper")  // "Aper" | "College" | "SuperProxy"
+  stnetworkListProxy           String
+  stnetworkTypeProxyForGetIDlaunchVerify  Int @default(0) // 0 tắt 1 bật
+  stnetworkListProxyForGetIDlaunchVerify  String
+
+// Settings for otp
+   stotpGmail                  String   @default("https://sptmail.com = api_here*facebook")  
+   stotpHotmail                String   @default("https://unlimitmail.com = api_here*5")  
+   stotpTempmail               String   @default("None")  
+   stotpPhone                  String   @default("https://thuesim.app = api_here*facebook")  
+   stotpIcloud                 String   @default("https://cubemmo.net = api_here*5")  
+
+// Settings for time
+   sttimeDelayBeforeOpenApp    Int @default(0)
+   sttimeDelayAfterOpenApp     Int @default(0)
+   sttimeDelayClickSignUP      Int @default(0)
+   sttimeOutMethodScriptSignUP        Int @default(300)
+   sttimeOutMethodScriptCheckSignUP   Int @default(300)
+   sttimeOutMethodScriptVerify        Int @default(300)
+   sttimeOutMethodScriptUpAvatar      Int @default(100)
+   sttimeTryAgainSendOTP        Int @default(3)
+// Settings for UploadToWebSite
+   stuploadtowebsiteType       Int @default(0)
+   stuploadtowebsiteFormat String   @default("{deviceTemp.Uid}|{deviceInfoAPI.PASSWORD}|{deviceTemp.Cookie}|{deviceTemp.Token}|{deviceTemp.MailID}|{deviceTemp.MailPass}|{currentDateTime}|{deviceInfoAPI.FULLNAME}")  
+   stuploadtowebsiteURL     String  @default("https://shipclone.com/api/importAccount.php?code=1&api_key=2&account=*[FacebookApp] .Verified(VR)")          
+
+
+// Settings for aperchange
+   staperchangeNETWORK        Int @default(0)
+   staperchangeBUILDOS        Int @default(0)
+   staperchangeUSERAGENT      Int @default(0)
+   staperchangeGPS            Int @default(0)
+   staperchangeSERIAL         Int @default(0)
+   staperchangeFINGERPRINT    Int @default(0)
+   staperchangeHOST           Int @default(0)
+   staperchangeDEVICE         Int @default(0)
+   staperchangeBOOTLOADER     Int @default(0)
+   staperchangeRELEASE        Int @default(0)
+   staperchangeWIPEADVANCED     Int @default(0)
+   staperchangeHIDEBYPASSROOT   Int @default(0)
+   staperchangeWIFITO4G         Int @default(0)
+   staperchangeHIDEVPN          Int @default(0)
+   staperchangeANTITRACKING     Int @default(0)
+   staperchangeKEYGUARDMANAGER   Int @default(0)
+   staperchangeSTACKTRACE         Int @default(0)
+   staperchangeLOCKPATTERNUTILS     Int @default(0)
+   staperchangeHIDEUSBDEBUG         Int @default(0)
+   staperchangeBATTERYMANAGER       Int @default(0)
+   staperchangeHIDEINSTRUMENTATION    Int @default(0)
+   staperchangeHIDEINPUTMANAGER         Int @default(0)
+   staperchangeHIDEACCESSIBILITYNODEINFO    Int @default(0)
+   staperchangeHIDEADB                    Int @default(0)
+   staperchangeGOOGLEAUTHUTIL                       Int @default(0)
+   staperchangePackageSDK                 Int @default(0)
+   staperchangeAPIGOOGLEPLAYSERVICES    Int @default(0)
+   staperchangeDNSRESOLUTION        Int @default(0)
+   staperchangeEBPF                   Int @default(0)
+   staperchangeBYPASSSERVERSIDEAI       Int @default(0)
+   staperchangeOPENGLRENDERER   Int @default(0)
+   staperchangetypePHONEINFO   String
+   staperchangeNAME        String  @default("vi_VN")
+   staperchangeCOUNTRY         String @default("VN")
+   staperchangePHONENUMBER   String   @default("AS-COUNTRY")
+   staperchangeLANGUAGE     String    @default("US")
+   staperchangeEMAIL         String   @default("8-12|@gmail.com|com.google")
 }
+
+

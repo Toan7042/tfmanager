@@ -31,7 +31,7 @@ const handler = NextAuth({
           },
         });
 
-        await prisma.userSessionPoint.create({
+        await prisma.sessionPoint.create({
           data: {
             userId: createdUser.id,
             sessionToken: account?.access_token || "",
@@ -45,14 +45,14 @@ const handler = NextAuth({
           data: { lastLoginTime: new Date() },
         });
 
-        await prisma.userSessionPoint.deleteMany({
+        await prisma.sessionPoint.deleteMany({
           where: {
             userId: existingUser.id,
             sessionToken: { not: account?.access_token },
           },
         });
 
-        await prisma.userSessionPoint.create({
+        await prisma.sessionPoint.create({
           data: {
             userId: existingUser.id,
             sessionToken: account?.access_token || "",
@@ -76,7 +76,7 @@ const handler = NextAuth({
         token.id = dbUser.id;
         token.role = dbUser.role;
 
-        const session = await prisma.userSessionPoint.findFirst({
+        const session = await prisma.sessionPoint.findFirst({
           where: {
             userId: dbUser.id,
             sessionToken: token.currentSessionToken as string | undefined,

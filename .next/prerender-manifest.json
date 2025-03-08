@@ -78,30 +78,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/admin": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/admin",
-      "dataRoute": "/admin.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/dashboard": {
       "experimentalBypassFor": [
         {
@@ -125,13 +101,37 @@
         "x-next-revalidated-tags",
         "x-next-revalidate-tag-token"
       ]
+    },
+    "/admin": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/admin",
+      "dataRoute": "/admin.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
     }
   },
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "d237f3c1edbd3605d23d7cf7d01dca88",
-    "previewModeSigningKey": "4bb2d5b733a4f2f32ab80ba11cf81a61426e8976cb837673f253f302c9ef41d1",
-    "previewModeEncryptionKey": "07c49e0b8b233fde5cc9bd4f165f32376bf66bb31e96789d996a38bc43adbd7a"
+    "previewModeId": "f4a7e6237be10825e14c6a71361d271c",
+    "previewModeSigningKey": "02f3f0150b37e42dc00b079bdce226bb219c100e90bb76ff1599393ef53bfa38",
+    "previewModeEncryptionKey": "3ce8b5dea9a56ab50375c27dcf225d71d4c7a0a2a697a9488f3491a8d736de68"
   }
 }

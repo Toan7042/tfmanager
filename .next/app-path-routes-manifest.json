@@ -1,0 +1,12 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/api/admin-only/route": "/api/admin-only",
+  "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
+  "/favicon.ico/route": "/favicon.ico",
+  "/admin/page": "/admin",
+  "/login/page": "/login",
+  "/components/custom/pcsettings/page": "/components/custom/pcsettings",
+  "/page": "/",
+  "/test/page": "/test",
+  "/dashboard/page": "/dashboard"
+}

@@ -43,6 +43,12 @@
       "namedRegex": "^/admin(?:/)?$"
     },
     {
+      "page": "/components/custom/pcsettings",
+      "regex": "^/components/custom/pcsettings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/components/custom/pcsettings(?:/)?$"
+    },
+    {
       "page": "/dashboard",
       "regex": "^/dashboard(?:/)?$",
       "routeKeys": {},
@@ -59,6 +65,12 @@
       "regex": "^/login(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/login(?:/)?$"
+    },
+    {
+      "page": "/test",
+      "regex": "^/test(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/test(?:/)?$"
     }
   ],
   "dataRoutes": [],

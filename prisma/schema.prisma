@@ -61,6 +61,7 @@ model TransactionHistory {
   amount Decimal  // Số tiền +/-
   type   String   @default("Deposit") // Nạp/mua
   date   DateTime @default(now())
+  status String   
 }
 // Lịch sử đơn hàng, cập nhật sau khi mua gói hàng ở ServicePackage
 model PurchaseHistory {

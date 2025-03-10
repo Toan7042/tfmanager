@@ -3,7 +3,6 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X, LayoutDashboard, Shield, User, Package, Command } from "lucide-react";
 
 export default function Navbar() {
   const { data: session } = useSession();
@@ -14,13 +13,13 @@ export default function Navbar() {
     {
       href: "/dashboard",
       label: "Bảng điều khiển",
-      icon: <LayoutDashboard size={16} />,
+      // icon: <LayoutDashboard size={16} />,
       show: !!session,
     },
     {
       href: "/community",
       label: "Cộng đồng",
-      icon: <Command size={16} />,
+      // icon: <Command size={16} />,
       show: !!session, // Hiển thị nếu session tồn tại (đăng nhập)
     },
     {
@@ -36,19 +35,19 @@ export default function Navbar() {
     {
       href: "/servicepackage",
       label: "Gói dịch vụ",
-      icon: <Package size={16} />,
+      // icon: <Package size={16} />,
       show: !!session,
     },
     {
       href: "/profile",
       label: "Hồ sơ",
-      icon: <User size={16} />, // Thêm icon profile
+      // icon: <User size={16} />, // Thêm icon profile
       show: !!session,
     },
     {
       href: "/admin",
       label: "Quản trị",
-      icon: <Shield size={16} />,
+      // icon: <Shield size={16} />,
       show: session?.user?.role === "admin",
     },
   ];
@@ -102,7 +101,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <div className="md:hidden">
               <button onClick={() => setMenuOpen(!menuOpen)} className="text-gray-700">
-                {menuOpen ? <X size={28} /> : <Menu size={28} />}
+                {/* {menuOpen ? <X size={28} /> : <Menu size={28} />} */}
               </button>
             </div>
           </div>

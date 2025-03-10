@@ -3,7 +3,7 @@
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation"; // Hoặc useRouter nếu là Next.js 12
 import { useEffect } from "react";
-import Nav from "@/app/components/Nav";
+import Nav from "./components/Nav";
 
 export default function Home() {
   const { data: session } = useSession();

@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogTrigger, DialogContentCustomPCSettings, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+// import PcSettings from "../components/custom/pcsettings/page";
 import PcSettings from "../components/custom/pcsettings/page";
 
 export default function TestPage() {
@@ -14,12 +15,12 @@ export default function TestPage() {
         <DialogTrigger asChild>
           <Button onClick={() => setOpen(true)}>Mở PC Settings</Button>
         </DialogTrigger>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Cấu hình PC</DialogTitle>
+        <DialogContentCustomPCSettings>
+        <DialogHeader>
+            <DialogTitle>PC SETTINGS</DialogTitle>
           </DialogHeader>
           <PcSettings />
-        </DialogContent>
+        </DialogContentCustomPCSettings>
       </Dialog>
     </div>
   );

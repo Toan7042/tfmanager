@@ -38,7 +38,7 @@ function DialogOverlay({
     <DialogPrimitive.Overlay
       data-slot="dialog-overlay"
       className={cn(
-        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/40",
+        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/80",
         className
       )}
       {...props}
@@ -57,20 +57,51 @@ function DialogContent({
       <DialogPrimitive.Content
         data-slot="dialog-content"
         className={cn(
-          "bg-background fixed top-[50%] left-[50%] z-50 grid w-auto max-w-full max-h-[90vh] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border p-6 shadow-lg duration-200 overflow-auto", // Thêm `overflow-auto` để có thanh cuộn khi cần
+          "bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border p-6 shadow-lg duration-200 sm:max-w-lg",
           className
         )}
         {...props}
       >
         {children}
-        <DialogPrimitive.Close className="absolute top-4 right-4 opacity-70 transition-opacity hover:opacity-100">
+        <DialogPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-accent data-[state=open]:text-muted-foreground absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4">
           <XIcon />
           <span className="sr-only">Close</span>
         </DialogPrimitive.Close>
       </DialogPrimitive.Content>
     </DialogPortal>
+  )
+}
+
+function DialogContentCustomPCSettings({
+  className,
+  children,
+  ...props
+}: React.ComponentProps<typeof DialogPrimitive.Content>) {
+  return (
+    <DialogPortal data-slot="dialog-portal">
+      <DialogOverlay />
+      <DialogPrimitive.Content
+        data-slot="dialog-content"
+        className={cn(
+          "bg-background fixed top-[50%] left-[50%] z-50 grid w-auto min-w-[90vw] max-w-[95vw] sm:min-w-[60vw] sm:max-w-[80vw] md:min-w-[50vw] md:max-w-[70vw] lg:min-w-[40vw] lg:max-w-[60vw] max-h-[90vh] translate-x-[-50%] translate-y-[-50%] rounded-lg border p-4 sm:p-6 shadow-lg duration-200 overflow-auto",
+          className
+        )}
+        {...props}
+      >
+        {/* Nút đóng */}
+        <DialogPrimitive.Close className="absolute top-4 right-4 p-2 opacity-70 transition-opacity hover:opacity-100 focus:outline-none">
+          <XIcon className="w-5 h-5" />
+          <span className="sr-only">Close</span>
+        </DialogPrimitive.Close>
+
+        {/* Nội dung chính */}
+        <div className="overflow-auto max-h-[80vh]">{children}</div>
+      </DialogPrimitive.Content>
+    </DialogPortal>
   );
 }
+
+
 
 
 
@@ -127,6 +158,7 @@ export {
   Dialog,
   DialogClose,
   DialogContent,
+  DialogContentCustomPCSettings,
   DialogDescription,
   DialogFooter,
   DialogHeader,

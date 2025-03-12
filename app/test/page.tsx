@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogTrigger, DialogContentCustomPCSettings, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 // import PcSettings from "../components/custom/pcsettings/page";
-import PcSettings from "../components/custom/pcsettings";
+import PcSettings from "../components/custom/PcSettings";
 
 export default function TestPage() {
   const [open, setOpen] = useState(false);
@@ -40,12 +40,12 @@ export default function TestPage() {
 
 
 // "use client";
-// import DataTable from "../components/custom/pcsettingsOTP";
+// import PcSettings from "../components/custom/PcSettings";
 // const TestPage = () => {
 //   return (
 //     <main className="p-6">
 //     <h1 className="text-2xl font-bold mb-4">Quản lý danh sách A, B, C</h1>
-//     <DataTable />
+//     <PcSettings />
 //   </main>
 //   );
 // };

@@ -25,7 +25,8 @@ import {
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { MoreVertical } from "lucide-react";
+import { KeyRound, MoreVertical } from "lucide-react";
+import { Card, CardTitle, CardHeader, CardContent } from "@/components/ui/card";
 
 interface DataItem {
   id: string;
@@ -64,7 +65,32 @@ const rawData: DataItem[] = [
 const countCategory = (category: string) => rawData.filter((item) => item.category === category).length;
 const sortDataByCategory = (data: DataItem[]) => [...data].sort((a, b) => a.category.localeCompare(b.category));
 
-export default function PcsettingsOTP() {
+interface Settings {
+  launch: {
+    stlaunchAppRun: string;
+    stlaunchListWipe: string;
+  };
+  network: {
+    stnetworkTypeNetwork: string;
+    stnetworkTypeConnect: string;
+  };
+  aperChange: {
+    [key: string]: boolean;
+  };
+  otp: {
+    stotpGmail: string;
+  };
+  time: {
+    timeZone: string;
+    timeSync: boolean;
+  };
+}
+
+interface Props {
+  settings: Settings;
+  handleChange: (category: keyof Settings, key: string, value: string | boolean) => void;
+}
+export default function PcsettingsOTP({ handleChange }: Props) {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortedData, setSortedData] = useState<DataItem[]>(sortDataByCategory(rawData));
   const [editItem, setEditItem] = useState<DataItem | null>(null);
@@ -77,6 +103,7 @@ export default function PcsettingsOTP() {
       const newData = sortedData.map((item) => item.id === editItem.id ? { ...item, api_value: editItem.api_value } : item);
       setSortedData(sortDataByCategory(newData));
       setEditItem(null);
+      handleChange("otp", "stotpGmail", editItem.api_value);
     }
   };
 
@@ -88,84 +115,94 @@ export default function PcsettingsOTP() {
   };
 
   return (
-    <div className="w-full">
-      <div className="flex items-center gap-2 py-2">
-        <Select onValueChange={(value) => setSelectedCategory(value)} value={selectedCategory}>
-          <SelectTrigger className="min-w-0 w-auto h-8 text-sm">
-            <SelectValue placeholder="Chọn danh mục" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">
-              Tất cả <Badge className="ml-2 bg-gray-200 text-gray-700">{rawData.length}</Badge>
-            </SelectItem>
-            {categories.map((cat) => (
-              <SelectItem key={cat} value={cat}>
-                {cat} <Badge className="ml-2 bg-gray-200 text-gray-700">{countCategory(cat)}</Badge>
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
-      <div className="rounded-md border text-sm overflow-auto">
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead className="w-[50px]">STT</TableHead>
-              <TableHead className="w-[50px]">Thao tác</TableHead>
-              <TableHead className="w-[100px]">Danh mục</TableHead>
-              <TableHead className="max-w-[200px] overflow-auto whitespace-nowrap">Website</TableHead>
-              <TableHead className="max-w-[300px] overflow-auto whitespace-nowrap">API Value</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {filteredData.length > 0 ? (
-              filteredData.map((item, index) => (
-                <TableRow key={item.id}>
-                  <TableCell className="text-center">{index + 1}</TableCell>
-                  <TableCell className="text-center">
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <Button variant="ghost" size="icon">
-                          <MoreVertical className="w-4 h-4" />
-                        </Button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent>
-                        <DropdownMenuItem onClick={() => setEditItem(item)}>Chỉnh sửa</DropdownMenuItem>
-                        <DropdownMenuItem onClick={() => setDefault(item.id, item.category)}>
-                          Đặt mặc định
-                        </DropdownMenuItem>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  </TableCell>
-                  <TableCell>{item.category}</TableCell>
-                  <TableCell className={`max-w-[200px] overflow-auto whitespace-nowrap ${item.default ? "text-blue-600" : ""}`}>{item.website}</TableCell>
-                  <TableCell className="max-w-[300px] overflow-auto whitespace-nowrap">{item.api_value}</TableCell>
+    <Card className="mt-3 w-[800px] h-[500px] overflow-hidden">
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <KeyRound className="w-5 h-5" />
+          Time Settings
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="h-full overflow-auto">
+        <div className="w-full">
+          <div className="flex items-center gap-2 py-2">
+            <Select onValueChange={(value) => setSelectedCategory(value)} value={selectedCategory}>
+              <SelectTrigger className="min-w-0 w-auto h-8 text-sm">
+                <SelectValue placeholder="Chọn danh mục" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">
+                  Tất cả <Badge className="ml-2 bg-gray-200 text-gray-700">{rawData.length}</Badge>
+                </SelectItem>
+                {categories.map((cat) => (
+                  <SelectItem key={cat} value={cat}>
+                    {cat} <Badge className="ml-2 bg-gray-200 text-gray-700">{countCategory(cat)}</Badge>
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="rounded-md border text-sm overflow-auto" style={{ maxHeight: "350px" }}>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="w-[50px]">STT</TableHead>
+                  <TableHead className="w-[50px]">Thao tác</TableHead>
+                  <TableHead className="w-[100px]">Danh mục</TableHead>
+                  <TableHead className="max-w-[200px] overflow-auto whitespace-nowrap">Website</TableHead>
+                  <TableHead className="max-w-[300px] overflow-auto whitespace-nowrap">API Value*TypeService</TableHead>
                 </TableRow>
-              ))
-            ) : (
-              <TableRow>
-                <TableCell colSpan={5} className="text-center py-4">Không có dữ liệu.</TableCell>
-              </TableRow>
-            )}
-          </TableBody>
-        </Table>
-      </div>
-      {editItem && (
-        <Dialog open={!!editItem} onOpenChange={(open) => !open && setEditItem(null)}>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle className="text-sm font-medium">API Value</DialogTitle>
-            </DialogHeader>
-            <div className="space-y-4">
-              <Input value={editItem.api_value} onChange={(e) => setEditItem({ ...editItem, api_value: e.target.value })} />
-            </div>
-            <DialogFooter>
-              <Button variant="secondary" onClick={() => setEditItem(null)}>Hủy</Button>
-              <Button onClick={saveEdit}>Lưu</Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
-      )}
-    </div>
+              </TableHeader>
+              <TableBody>
+                {filteredData.length > 0 ? (
+                  filteredData.map((item, index) => (
+                    <TableRow key={item.id}>
+                      <TableCell className="text-center">{index + 1}</TableCell>
+                      <TableCell className="text-center">
+                        <DropdownMenu>
+                          <DropdownMenuTrigger asChild>
+                            <Button variant="ghost" size="icon">
+                              <MoreVertical className="w-4 h-4" />
+                            </Button>
+                          </DropdownMenuTrigger>
+                          <DropdownMenuContent>
+                            <DropdownMenuItem onClick={() => setEditItem(item)}>Chỉnh sửa</DropdownMenuItem>
+                            <DropdownMenuItem onClick={() => setDefault(item.id, item.category)}>
+                              Đặt mặc định
+                            </DropdownMenuItem>
+                          </DropdownMenuContent>
+                        </DropdownMenu>
+                      </TableCell>
+                      <TableCell>{item.category}</TableCell>
+                      <TableCell className={`max-w-[200px] overflow-auto whitespace-nowrap ${item.default ? "text-blue-600" : ""}`}>{item.website}</TableCell>
+                      <TableCell className="max-w-[300px] overflow-auto whitespace-nowrap">{item.api_value}</TableCell>
+                    </TableRow>
+                  ))
+                ) : (
+                  <TableRow>
+                    <TableCell colSpan={5} className="text-center py-4"></TableCell>
+                  </TableRow>
+                )}
+              </TableBody>
+            </Table>
+          </div>
+          {editItem && (
+            <Dialog open={!!editItem} onOpenChange={(open) => !open && setEditItem(null)}>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle className="text-sm font-medium">API Value*TypeService</DialogTitle>
+                </DialogHeader>
+                <div className="space-y-4">
+                  <Input value={editItem.api_value} onChange={(e) => setEditItem({ ...editItem, api_value: e.target.value })} />
+                </div>
+                <DialogFooter>
+                  <Button variant="secondary" onClick={() => setEditItem(null)}>Hủy</Button>
+                  <Button onClick={saveEdit}>Lưu</Button>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
+          )}
+        </div>
+      </CardContent>
+    </Card>
   );
 }

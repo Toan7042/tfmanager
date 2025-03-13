@@ -99,6 +99,7 @@ export default function PcsettingsLaunch({ settings, handleChange }: Props) {
   const [selectedWorkspace, setSelectedWorkspace] = useState(stlaunchAppRuntype[0]);
   const [mounted, setMounted] = useState(false);
   const [priority, setPriority] = useState("highest");
+  const selectedPriority = prioritiesSpeeds.find((p) => p.value === priority);
 
   useEffect(() => {
     const initialWorkspace = stlaunchAppRuntype.find((w) => w.name === settings.launch.stlaunchAppRun) || stlaunchAppRuntype[0];
@@ -142,12 +143,15 @@ export default function PcsettingsLaunch({ settings, handleChange }: Props) {
       <CardContent className="h-full overflow-auto">
         <Table>
           <TableBody>
-            <TableRow>
+            {/* <TableRow> */}
               <TableCell>
               {/* stlaunchAppSpeed */}
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="outline">Speed: {priority}</Button>
+                  <Button variant="outline">
+                    {selectedPriority && <selectedPriority.icon className={`mr-2 h-4 w-4 ${selectedPriority.color}`} />}
+                    Speed: {priority}
+                  </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-44">
                   <DropdownMenuLabel>Set Speed</DropdownMenuLabel>
@@ -163,8 +167,8 @@ export default function PcsettingsLaunch({ settings, handleChange }: Props) {
               </DropdownMenu>
               {/* stlaunchAppSpeed */}
               </TableCell>
-            </TableRow>
-            <TableRow>
+            {/* </TableRow> */}
+            <TableRow className="hover:bg-transparent focus:bg-transparent"> {/* loại bỏ hiệu ứng hover */}
               <TableCell>
                 <DropdownMenu>
                   <DropdownMenuTrigger className="flex items-center gap-2 border hover:bg-accent py-1.5 px-2 rounded-md">
@@ -210,11 +214,12 @@ export default function PcsettingsLaunch({ settings, handleChange }: Props) {
                   </DropdownMenuContent>
                 </DropdownMenu>
               </TableCell>
+              
             </TableRow>
             {Object.entries(settings.launch).map(
               ([key, value]) =>
                 key !== "stlaunchAppRun" && (
-                  <TableRow key={key}>
+                  <TableRow className="hover:bg-transparent focus:bg-transparent" key={key}>
                     <TableCell>
                       <code className="text-[13px]">{key}</code>
                     </TableCell>

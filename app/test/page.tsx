@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogTrigger, DialogContentCustomPCSettings, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-// import PcSettings from "../components/custom/pcsettings/page";
 import PcSettings from "../components/custom/PcSettings";
+
 
 export default function TestPage() {
   const [open, setOpen] = useState(false);

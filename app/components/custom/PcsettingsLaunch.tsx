@@ -150,7 +150,7 @@ export default function PcsettingsLaunch({ settings, handleChange }: Props) {
                   <Button variant="outline">Speed: {priority}</Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-44">
-                  <DropdownMenuLabel>Set Priority</DropdownMenuLabel>
+                  <DropdownMenuLabel>Set Speed</DropdownMenuLabel>
                   <DropdownMenuSeparator />
                   <DropdownMenuRadioGroup value={priority} onValueChange={setPriority}>
                     {prioritiesSpeeds.map(({ value, label, icon: Icon, color }) => (

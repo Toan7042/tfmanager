@@ -135,7 +135,7 @@ export default function PcsettingsOTP({ handleChange }: Props) {
                 </SelectItem>
                 {categories.map((cat) => (
                   <SelectItem key={cat} value={cat}>
-                    {cat} <Badge className="ml-2 bg-gray-200 text-gray-700">{countCategory(cat)}</Badge>
+                    {cat} <Badge className="ml-2 bg-gray-200 text-gray-700 hover:bg-gray-200 hover:text-gray-700">{countCategory(cat)}</Badge>
                   </SelectItem>
                 ))}
               </SelectContent>
@@ -160,7 +160,7 @@ export default function PcsettingsOTP({ handleChange }: Props) {
                       <TableCell className="text-center">
                         <DropdownMenu>
                           <DropdownMenuTrigger asChild>
-                            <Button variant="ghost" size="icon">
+                            <Button  variant="ghost" size="icon">
                               <MoreVertical className="w-4 h-4" />
                             </Button>
                           </DropdownMenuTrigger>

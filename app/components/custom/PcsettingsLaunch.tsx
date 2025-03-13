@@ -44,8 +44,8 @@ interface MenuGroup {
 }
 
 const menuItems: MenuGroup[] = [
-  { 
-    label: "File", 
+  {
+    label: "File",
     items: [
       { label: "New", shortcut: "⌘N" },
       { label: "Open", shortcut: "⌘O" },
@@ -53,10 +53,10 @@ const menuItems: MenuGroup[] = [
       "separator",
       { label: "Print", shortcut: "⌘P" },
       { label: "Exit" }
-    ] 
+    ]
   },
-  { 
-    label: "Edit", 
+  {
+    label: "Edit",
     items: [
       { label: "Undo", shortcut: "⌘Z" },
       { label: "Redo", shortcut: "⌘Y" },
@@ -64,19 +64,19 @@ const menuItems: MenuGroup[] = [
       { label: "Cut", shortcut: "⌘X" },
       { label: "Copy", shortcut: "⌘C" },
       { label: "Paste", shortcut: "⌘V" }
-    ] 
+    ]
   },
-  { 
-    label: "View", 
+  {
+    label: "View",
     items: [
       { label: "Zoom In", shortcut: "⌘+" },
       { label: "Zoom Out", shortcut: "⌘-" },
       { label: "Reset Zoom", shortcut: "⌘0" }
-    ] 
+    ]
   },
-  { 
-    label: "Help", 
-    items: ["About", "Contact Us", "Support"] 
+  {
+    label: "Help",
+    items: ["About", "Contact Us", "Support"]
   }
 ];
 
@@ -143,32 +143,31 @@ export default function PcsettingsLaunch({ settings, handleChange }: Props) {
       <CardContent className="h-full overflow-auto">
         <Table>
           <TableBody>
-            {/* <TableRow> */}
+            <TableRow>
               <TableCell>
-              {/* stlaunchAppSpeed */}
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="outline">
-                    {selectedPriority && <selectedPriority.icon className={`mr-2 h-4 w-4 ${selectedPriority.color}`} />}
-                    Speed: {priority}
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-44">
-                  <DropdownMenuLabel>Set Speed</DropdownMenuLabel>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuRadioGroup value={priority} onValueChange={setPriority}>
-                    {prioritiesSpeeds.map(({ value, label, icon: Icon, color }) => (
-                      <DropdownMenuRadioItem key={value} value={value}>
-                        <Icon className={`mr-2 h-4 w-4 ${color}`} /> {label}
-                      </DropdownMenuRadioItem>
-                    ))}
-                  </DropdownMenuRadioGroup>
-                </DropdownMenuContent>
-              </DropdownMenu>
-              {/* stlaunchAppSpeed */}
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="outline">
+                      {selectedPriority && <selectedPriority.icon className={`mr-2 h-4 w-4 ${selectedPriority.color}`} />}
+                      Speed: {priority}
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-44">
+                    <DropdownMenuLabel>Set Speed</DropdownMenuLabel>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuRadioGroup value={priority} onValueChange={setPriority}>
+                      {prioritiesSpeeds.map(({ value, label, icon: Icon, color }) => (
+                        <DropdownMenuRadioItem key={value} value={value}>
+                          <Icon className={`mr-2 h-4 w-4 ${color}`} /> {label}
+                        </DropdownMenuRadioItem>
+                      ))}
+                    </DropdownMenuRadioGroup>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </TableCell>
-            {/* </TableRow> */}
-            <TableRow className="hover:bg-transparent focus:bg-transparent"> {/* loại bỏ hiệu ứng hover */}
+            </TableRow>
+
+            <TableRow className="hover:bg-transparent focus:bg-transparent">
               <TableCell>
                 <DropdownMenu>
                   <DropdownMenuTrigger className="flex items-center gap-2 border hover:bg-accent py-1.5 px-2 rounded-md">
@@ -214,24 +213,23 @@ export default function PcsettingsLaunch({ settings, handleChange }: Props) {
                   </DropdownMenuContent>
                 </DropdownMenu>
               </TableCell>
-              
             </TableRow>
-            {Object.entries(settings.launch).map(
-              ([key, value]) =>
-                key !== "stlaunchAppRun" && (
-                  <TableRow className="hover:bg-transparent focus:bg-transparent" key={key}>
-                    <TableCell>
-                      <code className="text-[13px]">{key}</code>
-                    </TableCell>
-                    <TableCell>
-                      <Input
-                        className="text-[13px] p-1"
-                        value={String(value)}
-                        onChange={(e) => handleChange("launch", key, e.target.value)}
-                      />
-                    </TableCell>
-                  </TableRow>
-                )
+
+            {Object.entries(settings.launch).map(([key, value]) =>
+              key !== "stlaunchAppRun" ? (
+                <TableRow className="hover:bg-transparent focus:bg-transparent" key={key}>
+                  <TableCell>
+                    <code className="text-[13px]">{key}</code>
+                  </TableCell>
+                  <TableCell>
+                    <Input
+                      className="text-[13px] p-1"
+                      value={String(value)}
+                      onChange={(e) => handleChange("launch", key, e.target.value)}
+                    />
+                  </TableCell>
+                </TableRow>
+              ) : null
             )}
           </TableBody>
         </Table>

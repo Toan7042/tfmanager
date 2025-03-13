@@ -40,7 +40,7 @@ export default function TestPage() {
 
 
 // "use client";
-// import PcSettings from "../components/custom/PcSettings";
+// import PcSettings from "../components/custom/Pcsettings";
 // const TestPage = () => {
 //   return (
 //     <main className="p-6">

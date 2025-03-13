@@ -3,9 +3,9 @@
   "/api/admin-only/route": "app/api/admin-only/route.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/admin/page": "app/admin/page.js",
-  "/login/page": "app/login/page.js",
   "/dashboard/page": "app/dashboard/page.js",
-  "/test/page": "app/test/page.js",
-  "/page": "app/page.js"
+  "/admin/page": "app/admin/page.js",
+  "/page": "app/page.js",
+  "/login/page": "app/login/page.js",
+  "/test/page": "app/test/page.js"
 }

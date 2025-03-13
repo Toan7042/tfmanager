@@ -1,21 +1,21 @@
 {
   "app\\dashboard\\page.tsx -> react-apexcharts": {
-    "id": 8699,
+    "id": 805,
     "files": [
-      "static/chunks/477d4af2.6d9808b9a4c69a77.js",
-      "static/chunks/699.f775322465c62c01.js"
+      "static/chunks/721aab79.727c3f4f3393fc86.js",
+      "static/chunks/805.681ec6d8c59943af.js"
     ]
   },
-  "node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
-    "id": 472,
+  "node_modules\\.pnpm\\next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0\\node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
+    "id": 8768,
     "files": [
-      "static/chunks/472.a3826d29d6854395.js"
+      "static/chunks/768.ec16db07f33fb829.js"
     ]
   },
-  "node_modules\\next\\dist\\client\\index.js -> ../pages/_error": {
-    "id": 9341,
+  "node_modules\\.pnpm\\next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0\\node_modules\\next\\dist\\client\\index.js -> ../pages/_error": {
+    "id": 5877,
     "files": [
-      "static/chunks/341.2903e54d3da731c1.js"
+      "static/chunks/877.1bee541c4020321d.js"
     ]
   }
 }

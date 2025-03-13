@@ -43,7 +43,6 @@ export default function PcSettings() {
             </TabsTrigger>
           ))}
         </TabsList>
-
         <TabsContent value="launch">
           <PcsettingsLaunch settings={settings} handleChange={handleChange} />
         </TabsContent>

@@ -96,6 +96,7 @@ model MPC {
   Note           String
 
 // Settings for launch
+  stlaunchAppSpeed     String   @default("High")     // "Highest" | "High" | "Medium" | "Low"
   stlaunchAppRun       String   @default("Facebook") //"Facebook" | "FacebookLite" | "Messenger"
   stlaunchListWipe     String   @default("ListItem")  // "ListItem" | "Appinfo" | "Single"
   stlaunchIDGen        String   @default("Phone")     // "PhoneGen" | "MailGen" | "Directly"
@@ -163,6 +164,7 @@ model MPC {
    staperchangeBYPASSSERVERSIDEAI       Int @default(0)
    staperchangeOPENGLRENDERER   Int @default(0)
    staperchangetypePHONEINFO   String
+
    staperchangeNAME        String  @default("vi_VN")
    staperchangeCOUNTRY         String @default("VN")
    staperchangePHONENUMBER   String   @default("AS-COUNTRY")

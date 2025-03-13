@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `MPC` ADD COLUMN `stlaunchAppSpeed` VARCHAR(191) NOT NULL DEFAULT 'High';

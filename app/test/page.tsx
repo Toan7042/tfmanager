@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogTrigger, DialogContentCustomPCSettings, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import PcSettings from "../components/custom/PcSettings";
+import PcSettings from "../components/custom/Pcsettings";
 
 
 export default function TestPage() {

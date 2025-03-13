@@ -6,7 +6,7 @@ import { Dialog, DialogTrigger, DialogContentCustomPCSettings, DialogHeader, Dia
 import PcSettings from "../components/custom/Pcsettings";
 
 
-export default function TestPage() {
+export default function Test() {
   const [open, setOpen] = useState(false);
 
   return (

@@ -143,13 +143,13 @@ export default function PcsettingsLaunch({ settings, handleChange }: Props) {
       <CardContent className="h-full overflow-auto">
         <Table>
           <TableBody>
-            <TableRow>
+            <TableRow className="hover:bg-transparent focus:bg-transparent">
               <TableCell>
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="outline">
                       {selectedPriority && <selectedPriority.icon className={`mr-2 h-4 w-4 ${selectedPriority.color}`} />}
-                      Speed: {priority}
+                      stlaunchAppSpeed: {priority}
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="w-44">

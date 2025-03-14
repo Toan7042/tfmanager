@@ -131,7 +131,7 @@ export default function PcsettingsOTP({ handleChange }: Props) {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">
-                  Tất cả <Badge className="ml-2 bg-gray-200 text-gray-700">{rawData.length}</Badge>
+                  Tất cả <Badge className="ml-2 bg-gray-200 text-gray-700 hover:bg-gray-200 hover:text-gray-700">{rawData.length}</Badge>
                 </SelectItem>
                 {categories.map((cat) => (
                   <SelectItem key={cat} value={cat}>

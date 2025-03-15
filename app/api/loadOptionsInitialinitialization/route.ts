@@ -4,7 +4,7 @@ import path from "path";
 
 export async function GET() {
   try {
-    const basePath = path.join(process.cwd(), "public/optionapiinitialinitialization");
+    const basePath = path.join(process.cwd(), "app/data/optionapiinitialinitialization");
 
     // LOAD .TXT, MỖI DÒNG LÀ 1 PHẦN TỬ
     const countryData = fs.readFileSync(path.join(basePath, "file_option_country.txt"), "utf-8").split("\n").map(line => line.trim()).filter(Boolean);

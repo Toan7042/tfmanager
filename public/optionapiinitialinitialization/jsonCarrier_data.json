@@ -1,0 +1,3844 @@
+[
+  {
+    "ISO": "AF",
+    "Country": "Afghanistan",
+    "Networks": [
+      "AWCC: 41201",
+      "Etisalat: 41250",
+      "Mobifone: 41288",
+      "Mobifone: 41280",
+      "MTN: 41240",
+      "Roshan: 41220"
+    ]
+  },
+  {
+    "ISO": "AL",
+    "Country": "Albania",
+    "Networks": [
+      "ALBtelecom Mobile / Eagle: 27603",
+      "One / AMC: 27601",
+      "Vodafone: 27602"
+    ]
+  },
+  {
+    "ISO": "DZ",
+    "Country": "Algeria",
+    "Networks": [
+      "Djezzy: 60302",
+      "Mobilis: 60301",
+      "Ooredoo: 60303"
+    ]
+  },
+  {
+    "ISO": "AS",
+    "Country": "American Samoa",
+    "Networks": [
+      "ASTCA Mobile: 544780",
+      "BlueSky: 54411"
+    ]
+  },
+  {
+    "ISO": "AD",
+    "Country": "Andorra",
+    "Networks": [
+      "Andorra Telecom / Mobiland: 21303"
+    ]
+  },
+  {
+    "ISO": "AO",
+    "Country": "Angola",
+    "Networks": [
+      "MoviCel: 63104",
+      "Unitel: 63102"
+    ]
+  },
+  {
+    "ISO": "AI",
+    "Country": "Anguilla",
+    "Networks": [
+      "Digicel: 365850",
+      "Flow: 365840"
+    ]
+  },
+  {
+    "ISO": "AG",
+    "Country": "Antigua and Barbuda",
+    "Networks": [
+      "Digicel: 344930",
+      "Digicel: 34493",
+      "Flow: 344920",
+      "Flow: 34492",
+      "imobile / APUA: 34430",
+      "imobile / APUA: 34403"
+    ]
+  },
+  {
+    "ISO": "AR",
+    "Country": "Argentina",
+    "Networks": [
+      "Claro: 722320",
+      "Claro: 722310",
+      "Claro: 72231",
+      "Claro: 722330",
+      "Express: 722299",
+      "Imowi: 722299",
+      "IPLAN: 722299",
+      "Kallofer: 722299",
+      "Movistar: 72210",
+      "Movistar: 72207",
+      "Movistar: 72270",
+      "Nuestro: 722299",
+      "Personal: 72234",
+      "Telecentro: 722299",
+      "Personal: 722341",
+      "Personal: 722340"
+    ]
+  },
+  {
+    "ISO": "AM",
+    "Country": "Armenia",
+    "Networks": [
+      "Beeline: 28301",
+      "KT: 28304",
+      "Orange: 28310",
+      "Viva-MTS: 28305"
+    ]
+  },
+  {
+    "ISO": "AW",
+    "Country": "Aruba",
+    "Networks": [
+      "Digicel: 36302",
+      "MIO: 363299",
+      "SETAR: 36301"
+    ]
+  },
+  {
+    "ISO": "AU",
+    "Country": "Australia",
+    "Networks": [
+      "ACMA: 505299",
+      "Compatel: 50530",
+      "Get SIM: 505299",
+      "Lycamobile: 50519",
+      "MessageBird: 50535",
+      "Norfolk Telecom: 50510",
+      "Optus: 50590",
+      "Pivotel: 50588",
+      "Pivotel: 50550",
+      "RailCorp: 50513",
+      "Sinch: 50526",
+      "Optus: 50502",
+      "Symbio: 505299",
+      "Telstra: 50511",
+      "Telstra: 50539",
+      "Telstra: 50572",
+      "Telstra: 50571",
+      "Telstra: 50501",
+      "VicTrack: 50516",
+      "Vodafone: 50506",
+      "Vodafone: 50512",
+      "Vodafone: 50507",
+      "Vodafone: 50503"
+    ]
+  },
+  {
+    "ISO": "AT",
+    "Country": "Austria",
+    "Networks": [
+      "3: 23219",
+      "3: 23214",
+      "3: 23205",
+      "3: 23216",
+      "3: 23210",
+      "A1 Telekom: 23202",
+      "A1 Telekom: 23211",
+      "A1 Telekom: 23201",
+      "A1 Telekom: 23209",
+      "A1 Telekom: 23212",
+      "ArgoNET: 232299",
+      "DIALOG telekom: 232299",
+      "Digital Privacy: 232299",
+      "DIMOCO: 232299",
+      "educom: 232299",
+      "Holding Graz: 23225",
+      "Innsbrucker Kommunalbetriebe: 232299",
+      "kabelplus: 232299",
+      "Lenovo Connect: 232299",
+      "LINK Mobility: 232299",
+      "LIWEST Mobil: 23226",
+      "MRS: 23217",
+      "Mtel: 23220",
+      "OBB Infrastruktur: 23291",
+      "Plintron: 23222",
+      "Simple SMS: 232299",
+      "Skymond Mobile: 232299",
+      "Smartel Services: 23224",
+      "smartspace: 23218",
+      "T-Mobile / Magenta: 23223",
+      "T-Mobile / Magenta: 23204",
+      "T-Mobile / Magenta: 23203",
+      "T-Mobile / Magenta: 23213",
+      "Telfoni: 232299",
+      "Tismi: 23227",
+      "Ventocom: 23207"
+    ]
+  },
+  {
+    "ISO": "AZ",
+    "Country": "Azerbaijan",
+    "Networks": [
+      "Azercell: 40001",
+      "Bakcell: 40002",
+      "FONEX: 40003",
+      "Nar Mobile: 40004",
+      "Naxtel: 40006"
+    ]
+  },
+  {
+    "ISO": "BS",
+    "Country": "Bahamas",
+    "Networks": [
+      "Aliv: 364490",
+      "Cybercell / BaTelCo: 364390",
+      "Cybercell / BaTelCo: 36430",
+      "Cybercell / BaTelCo: 36439"
+    ]
+  },
+  {
+    "ISO": "BH",
+    "Country": "Bahrain",
+    "Networks": [
+      "Batelco: 42601",
+      "Royal Court: 42605",
+      "VIVA: 42604",
+      "Zain: 42602"
+    ]
+  },
+  {
+    "ISO": "BD",
+    "Country": "Bangladesh",
+    "Networks": [
+      "Airtel: 47007",
+      "Airtel: 47002",
+      "Banglalink: 47003",
+      "GrameenPhone: 47001",
+      "TeleTalk: 47004"
+    ]
+  },
+  {
+    "ISO": "BB",
+    "Country": "Barbados",
+    "Networks": [
+      "Digicel: 34250",
+      "Flow / Lime: 342600",
+      "Ozone: 342299"
+    ]
+  },
+  {
+    "ISO": "BY",
+    "Country": "Belarus",
+    "Networks": [
+      "life:): 25704",
+      "MTS: 25702",
+      "velcom A1: 25701"
+    ]
+  },
+  {
+    "ISO": "BE",
+    "Country": "Belgium",
+    "Networks": [
+      "Base: 20620",
+      "BICS: 20628",
+      "Dense Air: 20625",
+      "Dust Mobile: 20623",
+      "Ericsson: 20633",
+      "FEBO: 206299",
+      "GianCom: 206299",
+      "Infrabel: 20602",
+      "interactive digital media / IDM: 206299",
+      "L-mobi: 206299",
+      "Lancelot: 20699",
+      "Legos: 206299",
+      "Lycamobile: 20606",
+      "Mobile Vikings: 20630",
+      "Mobistar / Orange: 20610",
+      "Nord Connect: 206299",
+      "onoff: 20634",
+      "PM Factory: 206299",
+      "Proximus: 20600",
+      "Proximus: 20601",
+      "Proximus: 20604",
+      "Telenet: 20605",
+      "Vectone Mobile: 20607",
+      "VOOmobile: 20608",
+      "Voxbone / Bandwidth: 206299"
+    ]
+  },
+  {
+    "ISO": "BZ",
+    "Country": "Belize",
+    "Networks": [
+      "DigiCell: 70267",
+      "Smart: 70299",
+      "Smart: 70269"
+    ]
+  },
+  {
+    "ISO": "BJ",
+    "Country": "Benin",
+    "Networks": [
+      "Moov: 61602",
+      "MTN: 61603"
+    ]
+  },
+  {
+    "ISO": "BM",
+    "Country": "Bermuda",
+    "Networks": [
+      "Digicel: 35001",
+      "One: 35000"
+    ]
+  },
+  {
+    "ISO": "BT",
+    "Country": "Bhutan",
+    "Networks": [
+      "B-Mobile: 40217",
+      "B-Mobile: 40211",
+      "TashiCell: 40277"
+    ]
+  },
+  {
+    "ISO": "BO",
+    "Country": "Bolivia",
+    "Networks": [
+      "Entel Movil: 73602",
+      "Tigo: 73603",
+      "Viva: 73601"
+    ]
+  },
+  {
+    "ISO": "BA",
+    "Country": "Bosnia and Herzegovina",
+    "Networks": [
+      "BH Mobile: 21890",
+      "Eronet: 21803",
+      "m:tel: 21805"
+    ]
+  },
+  {
+    "ISO": "BW",
+    "Country": "Botswana",
+    "Networks": [
+      "beMobile: 65204",
+      "Mascom: 65201",
+      "Orange: 65202"
+    ]
+  },
+  {
+    "ISO": "BR",
+    "Country": "Brazil",
+    "Networks": [
+      "Algar Telecom: 72434",
+      "Algar Telecom: 72432",
+      "Algar Telecom: 72433",
+      "Americanet: 72426",
+      "ARQIA: 724299",
+      "Bbs Options: 724299",
+      "Cinco: 724299",
+      "Claro: 72438",
+      "Claro: 72405",
+      "Ligue: 72421",
+      "Nextel: 72439",
+      "Nextel: 72400",
+      "NLT: 724299",
+      "Oi Movel: 72431",
+      "Oi Movel: 72416",
+      "Sercomtel: 72415",
+      "Surf: 72417",
+      "Telecall: 724299",
+      "TIM: 72403",
+      "TIM: 72402",
+      "TIM: 72404",
+      "TIM: 72454",
+      "Vecto Mobile: 724299",
+      "Vivo: 72406",
+      "Vivo: 72410",
+      "Vivo: 72411",
+      "Vivo: 72423"
+    ]
+  },
+  {
+    "ISO": "VG",
+    "Country": "British Virgin Islands",
+    "Networks": [
+      "CCT: 348570",
+      "Digicel: 348770",
+      "Flow: 348170"
+    ]
+  },
+  {
+    "ISO": "BN",
+    "Country": "Brunei",
+    "Networks": [
+      "B-Mobile: 52802",
+      "DST: 52811",
+      "DST: 52803"
+    ]
+  },
+  {
+    "ISO": "BG",
+    "Country": "Bulgaria",
+    "Networks": [
+      "A1: 28401",
+      "Bulsatcom: 28411",
+      "T.com: 28413",
+      "Telenor: 28405",
+      "Vivacom: 28403"
+    ]
+  },
+  {
+    "ISO": "BF",
+    "Country": "Burkina Faso",
+    "Networks": [
+      "Orange: 61302",
+      "Telecel: 61303",
+      "Telmob: 61301"
+    ]
+  },
+  {
+    "ISO": "BI",
+    "Country": "Burundi",
+    "Networks": [
+      "Leo: 64201",
+      "Leo: 64282",
+      "Lumitel: 64208",
+      "ONAMOB: 64203",
+      "Smart: 64207"
+    ]
+  },
+  {
+    "ISO": "KH",
+    "Country": "Cambodia",
+    "Networks": [
+      "QB: 45604",
+      "Cellcard: 45601",
+      "CooTel: 456299",
+      "Metfone: 45608",
+      "MPTC: 456299",
+      "Seatel: 45611",
+      "Smart: 45605",
+      "Smart: 45602",
+      "Smart: 45606"
+    ]
+  },
+  {
+    "ISO": "CM",
+    "Country": "Cameroon",
+    "Networks": [
+      "MTN: 62401",
+      "Nextel: 62404",
+      "Orange: 62402"
+    ]
+  },
+  {
+    "ISO": "CA",
+    "Country": "Canada",
+    "Networks": [
+      "Bell Mobility: 30264",
+      "Bell Mobility: 302610",
+      "Bell Mobility: 30269",
+      "Bell Mobility: 302640",
+      "Bell Mobility: 302690",
+      "Bell Mobility: 30266",
+      "Bell Mobility: 30263",
+      "Bell Mobility: 302630",
+      "Bell Mobility: 30261",
+      "Bell Mobility: 302660",
+      "eastlink: 302270",
+      "Fido: 30237",
+      "Fido: 302370",
+      "Freedom Mobile: 302491",
+      "Freedom Mobile: 302490",
+      "Freedom Mobile: 30249",
+      "Ice Wireless: 302620",
+      "Ice Wireless: 30262",
+      "K-Net Mobile: 30253",
+      "K-Net Mobile: 30238",
+      "K-Net Mobile: 302380",
+      "K-Net Mobile: 302530",
+      "Rogers: 30282",
+      "Rogers: 302320",
+      "Rogers: 302820",
+      "Rogers: 30272",
+      "Rogers: 302720",
+      "Rogers: 302721",
+      "Rogers: 30232",
+      "SaskTel Mobility: 302681",
+      "SaskTel Mobility: 302780",
+      "SaskTel Mobility: 302781",
+      "SaskTel Mobility: 302750",
+      "SaskTel Mobility: 30268",
+      "SaskTel Mobility: 302680",
+      "SaskTel Mobility: 30275",
+      "SaskTel Mobility: 30278",
+      "Telus Mobility: 302760",
+      "Telus Mobility: 30222",
+      "Telus Mobility: 30222",
+      "Telus Mobility: 302860",
+      "Telus Mobility: 302360",
+      "Telus Mobility: 30276",
+      "Telus Mobility: 302221",
+      "Telus Mobility: 30236",
+      "Telus Mobility: 30286",
+      "Telus Mobility: 302220",
+      "Videotron: 302510",
+      "Videotron: 302500",
+      "Videotron: 302520",
+      "Videotron: 30251",
+      "Videotron: 30250",
+      "Xplore Mobile: 302299"
+    ]
+  },
+  {
+    "ISO": "CV",
+    "Country": "Cape Verde",
+    "Networks": [
+      "CVMovel: 62501",
+      "Unitel T+: 62502"
+    ]
+  },
+  {
+    "ISO": "KY",
+    "Country": "Cayman Islands",
+    "Networks": [
+      "Digicel: 34650",
+      "Flow / Lime: 346140",
+      "Logic: 34601"
+    ]
+  },
+  {
+    "ISO": "CF",
+    "Country": "Central African Republic",
+    "Networks": [
+      "Azur: 62304",
+      "Moov: 62301",
+      "Orange: 62303",
+      "Socatel: 623299",
+      "Telecel: 62302"
+    ]
+  },
+  {
+    "ISO": "TD",
+    "Country": "Chad",
+    "Networks": [
+      "Airtel: 62201",
+      "Moov: 62203",
+      "Salam: 62204"
+    ]
+  },
+  {
+    "ISO": "CL",
+    "Country": "Chile",
+    "Networks": [
+      "Boby: 730299",
+      "CellOPS: 730299",
+      "Cellplus: 73022",
+      "Celupago: 73011",
+      "Cibeles Telecom: 73027",
+      "Cibeles Telecom: 73015",
+      "Claro: 73003",
+      "Claro: 73023",
+      "Compatel: 73017",
+      "Dotcom: 730299",
+      "Empresas Bunker: 73018",
+      "Entel: 73010",
+      "Entel: 73001",
+      "GTD Movil: 730299",
+      "Industel: 730299",
+      "INNET: 73006",
+      "Inversiones Santa Fe: 73020",
+      "Mavi: 730299",
+      "Mobilink: 730299",
+      "Movil Falabella: 73019",
+      "Movistar: 73007",
+      "Movistar: 73002",
+      "Mundo Pacifico: 730299",
+      "Netline: 73014",
+      "NetUno: 730299",
+      "Nomade Telecomunicaciones: 73016",
+      "Quantax: 730299",
+      "RedVoiss: 730299",
+      "Simple: 730299",
+      "Swedcom: 730299",
+      "Telcomax: 730299",
+      "Telefonica Uno Uno Cuatro: 730299",
+      "Telestar: 73012",
+      "Television Interactiva: 730299",
+      "Virgin Mobile: 73013",
+      "VOIP Analysis: 730299",
+      "VTR Movil: 73008",
+      "WOM: 73009",
+      "WOM: 73005",
+      "WOM: 73004"
+    ]
+  },
+  {
+    "ISO": "CN",
+    "Country": "China",
+    "Networks": [
+      "China Mobile: 46002",
+      "China Mobile: 46007",
+      "China Mobile: 46000",
+      "China Mobile: 46008",
+      "China Mobile: 46004",
+      "China Telecom: 46003",
+      "China Telecom: 46011",
+      "China Telecom: 46012",
+      "China Unicom: 46001",
+      "China Unicom: 46009",
+      "China Unicom: 46006",
+      "China Unicom: 46010"
+    ]
+  },
+  {
+    "ISO": "CO",
+    "Country": "Colombia",
+    "Networks": [
+      "ATnet: 732299",
+      "Avantel: 732130",
+      "Claro: 732666",
+      "Claro: 732101",
+      "Edatel: 73202",
+      "eTb: 732187",
+      "Eztalk Mobile: 732299",
+      "Flash Mobile: 732240",
+      "Gomobile: 732299",
+      "Libre Tecnologias: 732220",
+      "Movil Exito: 732299",
+      "Movistar: 73201",
+      "Movistar: 732123",
+      "Plintron: 732299",
+      "Setroc Mobile: 732230",
+      "SUMA movil: 732199",
+      "Tigo: 732103",
+      "Tigo: 732165",
+      "Tigo: 732111",
+      "TuCEL: 732299",
+      "UNE: 732142",
+      "UNE: 73220",
+      "Vilacom Mobile: 732299",
+      "Virgin Mobile: 732154",
+      "WOM: 732360"
+    ]
+  },
+  {
+    "ISO": "KM",
+    "Country": "Comoros",
+    "Networks": [
+      "HURI: 65401",
+      "Telma: 65402"
+    ]
+  },
+  {
+    "ISO": "CG",
+    "Country": "Congo",
+    "Networks": [
+      "Airtel: 62901",
+      "MTN: 62910",
+      "Warid: 62907"
+    ]
+  },
+  {
+    "ISO": "CK",
+    "Country": "Cook Islands",
+    "Networks": [
+      "Vodafone / Bluesky: 54801"
+    ]
+  },
+  {
+    "ISO": "CR",
+    "Country": "Costa Rica",
+    "Networks": [
+      "Claro: 71203",
+      "Kolbi / ICE: 71201",
+      "Kolbi / ICE: 71202",
+      "Movistar: 71204",
+      "MultiCom: 712299",
+      "racsa: 712299",
+      "Tuyo Movil: 712299"
+    ]
+  },
+  {
+    "ISO": "HR",
+    "Country": "Croatia",
+    "Networks": [
+      "A1 / VIP: 21910",
+      "T-Mobile: 21901",
+      "TELE FOCUS: 21912",
+      "Telemach / Tele2: 21902"
+    ]
+  },
+  {
+    "ISO": "CU",
+    "Country": "Cuba",
+    "Networks": [
+      "Cubacel: 36801",
+      "MoviTel: 368299"
+    ]
+  },
+  {
+    "ISO": "CY",
+    "Country": "Cyprus",
+    "Networks": [
+      "Cablenet / Lemontel: 28022",
+      "Cytamobile-Vodafone: 28002",
+      "Cytamobile-Vodafone: 28001",
+      "Epic / MTN: 28010",
+      "PrimeTel: 28020"
+    ]
+  },
+  {
+    "ISO": "CZ",
+    "Country": "Czech Republic",
+    "Networks": [
+      "+4U Mobile: 230299",
+      "3ton: 230299",
+      "CEZ: 230299",
+      "Compatel: 23008",
+      "Dragon: 230299",
+      "EriMobile: 230299",
+      "Fayn: 230299",
+      "GoMobil: 230299",
+      "ha-loo mobil: 230299",
+      "Laudatio: 230299",
+      "METRONET: 230299",
+      "MOBIL21: 230299",
+      "Nej Mobil: 230299",
+      "NETBOX Mobil: 230299",
+      "Nordic Telecom: 23004",
+      "O2: 23002",
+      "Odorik: 230299",
+      "PODA: 23005",
+      "SAZKA: 230299",
+      "SZDC: 230299",
+      "SZDC: 23098",
+      "T-Mobile: 23001",
+      "T-Mobile: 23007",
+      "Tesco Mobile: 230299",
+      "TOPefekt: 230299",
+      "TT Quality: 230299",
+      "Uniphone: 23009",
+      "Uniphone: 230299",
+      "Vodafone: 23003"
+    ]
+  },
+  {
+    "ISO": "CD",
+    "Country": "Democratic Republic of Congo",
+    "Networks": [
+      "Africell: 63090",
+      "Airtel: 63002",
+      "Orange: 63086",
+      "Supercell: 63005",
+      "Tatem: 630299",
+      "Vodacom: 63001",
+      "Yozma Timeturns: 63088"
+    ]
+  },
+  {
+    "ISO": "DK",
+    "Country": "Denmark",
+    "Networks": [
+      "3: 23806",
+      "42 Telecom: 238299",
+      "5Tel: 238299",
+      "Banedanmark: 23823",
+      "Benemen: 238299",
+      "Bolignet-Aarhus: 238299",
+      "CBB Mobil: 238299",
+      "celfon: 238299",
+      "Cobira: 23888",
+      "Companymobile: 238299",
+      "Compatel: 23813",
+      "Comtalk: 238299",
+      "Evercall: 238299",
+      "Firmafon: 238299",
+      "Firstcom: 238299",
+      "Gotanet: 23817",
+      "Greenwave: 23842",
+      "ipnordic: 238299",
+      "Ipvision: 238299",
+      "Lancelot: 238299",
+      "Lebara: 238299",
+      "LINK Mobility: 23828",
+      "Lycamobile: 23812",
+      "Maxtel.dk: 238299",
+      "MI Carrier Services: 238299",
+      "Mitto: 238299",
+      "Mobiweb: 238299",
+      "Monty Mobile: 23814",
+      "Net 1: 23815",
+      "Nexcon.io: 23804",
+      "NextM2M: 238299",
+      "Onomondo: 23873",
+      "Pareteum: 23830",
+      "SimService: 238299",
+      "Syniverse: 23803",
+      "TDC: 23810",
+      "TDC: 23801",
+      "Telenor: 23877",
+      "Telenor: 23802",
+      "Telenor Connexion: 238299",
+      "Telia: 23820",
+      "Telia: 23896",
+      "Tismi: 23816",
+      "Tripple Track: 238299",
+      "Uni-tel: 238299",
+      "Viahub: 23825",
+      "Viptel: 238299",
+      "Voxbone / Bandwidth: 23808"
+    ]
+  },
+  {
+    "ISO": "DG",
+    "Country": "Diego Garcia",
+    "Networks": [
+      "Sure: 310299"
+    ]
+  },
+  {
+    "ISO": "DJ",
+    "Country": "Djibouti",
+    "Networks": [
+      "Evatis: 63801"
+    ]
+  },
+  {
+    "ISO": "DM",
+    "Country": "Dominica",
+    "Networks": [
+      "Digicel: 36650",
+      "Flow: 366110"
+    ]
+  },
+  {
+    "ISO": "DO",
+    "Country": "Dominican Republic",
+    "Networks": [
+      "Claro: 37002",
+      "Orange / Altice: 37001",
+      "Satel: 370299",
+      "Viva: 37004"
+    ]
+  },
+  {
+    "ISO": "TL",
+    "Country": "East Timor",
+    "Networks": [
+      "Telemor: 51403",
+      "Telkomcel: 51401",
+      "Timor Telecom: 51402"
+    ]
+  },
+  {
+    "ISO": "EC",
+    "Country": "Ecuador",
+    "Networks": [
+      "Claro: 74001",
+      "CNT movil: 74002",
+      "Movistar: 74000"
+    ]
+  },
+  {
+    "ISO": "EG",
+    "Country": "Egypt",
+    "Networks": [
+      "Etisalat: 60203",
+      "Orange: 60201",
+      "Vodafone: 60202",
+      "WE: 60204"
+    ]
+  },
+  {
+    "ISO": "SV",
+    "Country": "El Salvador",
+    "Networks": [
+      "Claro: 70601",
+      "Digicel: 70602",
+      "Movistar: 70604",
+      "RED: 70605",
+      "Tigo: 70603"
+    ]
+  },
+  {
+    "ISO": "GQ",
+    "Country": "Equatorial Guinea",
+    "Networks": [
+      "Muni: 62703",
+      "Orange: 62701"
+    ]
+  },
+  {
+    "ISO": "ER",
+    "Country": "Eritrea",
+    "Networks": [
+      "Eritel: 65701"
+    ]
+  },
+  {
+    "ISO": "EE",
+    "Country": "Estonia",
+    "Networks": [
+      "Elisa: 24802",
+      "Tele2: 24803",
+      "Telia: 24813",
+      "Telia: 24801",
+      "TravelSim: 24804"
+    ]
+  },
+  {
+    "ISO": "ET",
+    "Country": "Ethiopia",
+    "Networks": [
+      "Ethio Mobile: 63601"
+    ]
+  },
+  {
+    "ISO": "FK",
+    "Country": "Falkland Islands",
+    "Networks": [
+      "Sure: 75001"
+    ]
+  },
+  {
+    "ISO": "FO",
+    "Country": "Faroe Islands",
+    "Networks": [
+      "Faroese Telecom: 28801",
+      "Hey / Kall: 28802",
+      "Tosa: 28803"
+    ]
+  },
+  {
+    "ISO": "FJ",
+    "Country": "Fiji",
+    "Networks": [
+      "DigiCell: 54202",
+      "Vodafone: 54201"
+    ]
+  },
+  {
+    "ISO": "FI",
+    "Country": "Finland",
+    "Networks": [
+      "Alcom: 24414",
+      "Benemen: 244299",
+      "Compatel: 24426",
+      "Cuuma: 244299",
+      "DNA: 24403",
+      "DNA: 24412",
+      "DNA: 24404",
+      "DNA: 24413",
+      "Elisa: 24421",
+      "Elisa: 24405",
+      "Elisa: 24406",
+      "interactive digital media / IDM: 244299",
+      "IPIFY: 244299",
+      "Lancelot: 244299",
+      "MI Carrier Services: 244299",
+      "MobiWeb: 244299",
+      "Nord Connect: 24424",
+      "NSN: 24441",
+      "NSN: 24440",
+      "NSN: 24407",
+      "NSN: 24408",
+      "NSN: 24409",
+      "NSN: 24438",
+      "NSN: 24439",
+      "RAILI: 244299",
+      "Telavox: 24443",
+      "Telia: 24436",
+      "Telia: 24491",
+      "Telit: 24415",
+      "Tismi: 24437",
+      "TravelSim: 244299",
+      "Twilio: 244299",
+      "Ukko Mobile: 24435",
+      "Viahub: 24442",
+      "VIRVE: 24447",
+      "VIRVE: 24446",
+      "VIRVE: 24433",
+      "VIRVE: 24445",
+      "Voxbone / Bandwidth: 24432"
+    ]
+  },
+  {
+    "ISO": "FR",
+    "Country": "France",
+    "Networks": [
+      "Add-On Multimedia: 208299",
+      "Afone Mobile: 208299",
+      "Airmob: 20828",
+      "Alphalink: 208299",
+      "Alphalink: 208299",
+      "Annatel: 208299",
+      "Atlas: 208299",
+      "Auchan: 208299",
+      "Auchan: 208299",
+      "Axialys: 208299",
+      "Bazile: 208299",
+      "BJT: 208299",
+      "BJT: 208299",
+      "Bouygues Telecom: 20888",
+      "Bouygues Telecom: 20821",
+      "Bouygues Telecom: 20820",
+      "Bretagne Telecom: 208299",
+      "CAT: 208299",
+      "CELESTE: 208299",
+      "Cellhire: 20834",
+      "Codepi: 208299",
+      "Coolwave: 208299",
+      "Coriolis: 20827",
+      "CPRO: 208299",
+      "CRH: 208299",
+      "CRT: 208299",
+      "CTExcel: 208299",
+      "Doctolib: 208299",
+      "Foliateam: 208299",
+      "Free Mobile: 20835",
+      "Free Mobile: 20816",
+      "Free Mobile: 20815",
+      "Free Mobile: 20836",
+      "Halys: 20894",
+      "Happy Telecom: 208299",
+      "Hexatel: 208299",
+      "Hub One: 20889",
+      "i-via: 208299",
+      "IP Directions: 20837",
+      "IP Telecom: 208299",
+      "Iptis: 208299",
+      "JOi: 208299",
+      "Kertel: 208299",
+      "Keyyo Mobile: 208299",
+      "La Poste Mobile: 208299",
+      "La Poste Mobile: 208299",
+      "LASOTEL: 208299",
+      "Lebara: 20838",
+      "Legos: 20817",
+      "Linkt: 208299",
+      "LITEYEAR: 208299",
+      "Lycamobile: 20825",
+      "MobiquiThings: 20824",
+      "MobiquiThings: 20803",
+      "Netcom: 208299",
+      "Networth Telecom: 20839",
+      "Nordnet: 208299",
+      "NRJ: 20826",
+      "onoff: 208299",
+      "OpenIP: 208299",
+      "Orange: 20832",
+      "Orange: 20802",
+      "Orange: 20801",
+      "Orange: 20891",
+      "Paritel: 208299",
+      "Prixtel: 208299",
+      "Prixtel: 208299",
+      "SCT TELECOM: 208299",
+      "SCT TELECOM: 208299",
+      "Sewan Communications: 208299",
+      "SFR: 20808",
+      "SFR: 20811",
+      "SFR: 20810",
+      "SFR: 20813",
+      "SFR: 20809",
+      "SIMbioz: 208299",
+      "Syma Mobile: 20830",
+      "TDF: 208299",
+      "Tismi: 208299",
+      "Transatel: 20822",
+      "Trunkline: 208299",
+      "Truphone: 20812",
+      "unyc: 208299",
+      "VA SOLUTIONS: 208299",
+      "Vectone Mobile: 20831",
+      "VOIP Telecom: 208299"
+    ]
+  },
+  {
+    "ISO": "PF",
+    "Country": "French Polynesia",
+    "Networks": [
+      "Ora: 547299",
+      "Vini: 54720",
+      "Vodafone: 54715"
+    ]
+  },
+  {
+    "ISO": "GA",
+    "Country": "Gabon",
+    "Networks": [
+      "Airtel: 62803",
+      "Libertis: 62801"
+    ]
+  },
+  {
+    "ISO": "GM",
+    "Country": "Gambia",
+    "Networks": [
+      "Africel: 60702",
+      "Comium: 60703",
+      "Gamcel: 60701",
+      "QCell: 60704"
+    ]
+  },
+  {
+    "ISO": "GE",
+    "Country": "Georgia",
+    "Networks": [
+      "Beeline: 28204",
+      "Geocell: 28201",
+      "GlobalCell: 28207",
+      "MagtiCom: 28202",
+      "Mobilive: 28211",
+      "MyPhone: 28222",
+      "Premium Net: 28210",
+      "Silknet: 28208",
+      "Telecom 1: 28212"
+    ]
+  },
+  {
+    "ISO": "DE",
+    "Country": "Germany",
+    "Networks": [
+      "1&1: 26223",
+      "Argon Networks: 262299",
+      "DB Netz: 26210",
+      "Telefonica / E-Plus: 26220",
+      "Lebara: 26214",
+      "Lycamobile: 26243",
+      "Multiconnect: 26221",
+      "sipgate: 26212",
+      "sipgate: 26222",
+      "T-mobile: 26206",
+      "T-mobile: 26201",
+      "T-mobile: 26278",
+      "TelcoVillage: 26224",
+      "Telefonica / E-Plus: 26203",
+      "Telefonica / E-Plus: 26205",
+      "Telefonica / E-Plus: 26217",
+      "Telefonica / O2: 26208",
+      "Telefonica / O2: 26211",
+      "Telefonica / O2: 26216",
+      "Telefonica / O2: 26207",
+      "Tismi: 262299",
+      "Truphone: 262299",
+      "Vodafone: 26202",
+      "Vodafone: 26242",
+      "Vodafone: 26209",
+      "Vodafone: 26204"
+    ]
+  },
+  {
+    "ISO": "GH",
+    "Country": "Ghana",
+    "Networks": [
+      "Airtel: 62003",
+      "Airtel: 62006",
+      "Comsys: 620299",
+      "Glo: 62007",
+      "MTN: 62001",
+      "National Security: 62005",
+      "Surfline: 62008",
+      "Vodafone: 62002"
+    ]
+  },
+  {
+    "ISO": "GI",
+    "Country": "Gibraltar",
+    "Networks": [
+      "GibFibreSpeed: 266299",
+      "Gibtel: 26601"
+    ]
+  },
+  {
+    "ISO": "GR",
+    "Country": "Greece",
+    "Networks": [
+      "AMD Telecom: 202299",
+      "Apifon: 202299",
+      "BWS: 20215",
+      "Cosmote: 20202",
+      "Cosmote: 20201",
+      "Inter Telecom: 20216",
+      "Interconnect: 202299",
+      "M-STAT: 202299",
+      "Nova: 202299",
+      "OSE: 20204",
+      "OTE: 20203",
+      "OTEGLOBE: 202299",
+      "Premium Net: 202299",
+      "Vodafone: 20205",
+      "Wind: 20210",
+      "Wind: 20209",
+      "Yuboto: 20212"
+    ]
+  },
+  {
+    "ISO": "GL",
+    "Country": "Greenland",
+    "Networks": [
+      "Tele Greenland: 29001"
+    ]
+  },
+  {
+    "ISO": "GD",
+    "Country": "Grenada",
+    "Networks": [
+      "Digicel: 35250",
+      "Flow: 352110",
+      "Spice Mobile: 352299"
+    ]
+  },
+  {
+    "ISO": "GF",
+    "Country": "Guadeloupe and Martinique and French Guiana",
+    "Networks": [
+      "Amigo: 34008",
+      "Digicel: 34020",
+      "Free: 34004",
+      "Orange: 34001",
+      "SFR: 34002"
+    ]
+  },
+  {
+    "ISO": "GU",
+    "Country": "Guam",
+    "Networks": [
+      "Docomo Pacific: 310370",
+      "Docomo Pacific: 310470",
+      "GTA: 310140",
+      "IT&E: 310110"
+    ]
+  },
+  {
+    "ISO": "GT",
+    "Country": "Guatemala",
+    "Networks": [
+      "Claro: 70401",
+      "Movistar: 70403",
+      "Tigo: 70402"
+    ]
+  },
+  {
+    "ISO": "GN",
+    "Country": "Guinea",
+    "Networks": [
+      "Cellcom: 61105",
+      "MTN: 61104",
+      "Orange: 61101"
+    ]
+  },
+  {
+    "ISO": "GW",
+    "Country": "Guinea-Bissau",
+    "Networks": [
+      "Guinetel: 63201",
+      "MTN: 63202",
+      "Orange: 63203"
+    ]
+  },
+  {
+    "ISO": "GY",
+    "Country": "Guyana",
+    "Networks": [
+      "Cellink: 73802",
+      "Digicel: 73801"
+    ]
+  },
+  {
+    "ISO": "HT",
+    "Country": "Haiti",
+    "Networks": [
+      "Digicel: 37202",
+      "Natcom: 37203"
+    ]
+  },
+  {
+    "ISO": "HN",
+    "Country": "Honduras",
+    "Networks": [
+      "Claro: 70801",
+      "Claro: 70801",
+      "HonduTel: 70830",
+      "HonduTel: 70830",
+      "Tigo: 70802",
+      "Tigo: 70802"
+    ]
+  },
+  {
+    "ISO": "HK",
+    "Country": "Hong Kong",
+    "Networks": [
+      "3: 45414",
+      "3: 45405",
+      "3: 45404",
+      "3: 45403",
+      "China Mobile: 45413",
+      "HKBN: 45432",
+      "China Mobile: 45430",
+      "China Mobile: 45412",
+      "China Unicom: 45407",
+      "CHKTL: 45411",
+      "Citic: 45401",
+      "CTExcel: 45431",
+      "Eascotel: 45436",
+      "Government: 454397",
+      "Government: 454392",
+      "Government: 45426",
+      "Government: 454396",
+      "Government: 454391",
+      "Government: 454395",
+      "Government: 454390",
+      "Government: 45428",
+      "Government: 454394",
+      "Government: 454398",
+      "Government: 45427",
+      "Government: 454393",
+      "Government: 45425",
+      "Multibyte: 45424",
+      "SmarTone: 45417",
+      "SmarTone: 45406",
+      "SmarTone: 45415",
+      "SUN Mobile / CSL: 45402",
+      "SUN Mobile / CSL: 45416",
+      "SUN Mobile / CSL: 45410",
+      "SUN Mobile / CSL: 45420",
+      "SUN Mobile / CSL: 45418",
+      "SUN Mobile / CSL: 45419",
+      "SUN Mobile / CSL: 45400",
+      "Tru: 45408",
+      "Webbing: 45435"
+    ]
+  },
+  {
+    "ISO": "HU",
+    "Country": "Hungary",
+    "Networks": [
+      "Antenna: 216299",
+      "Digi: 21603",
+      "Fix line: 216999",
+      "Invitech: 216299",
+      "Mobil4: 216299",
+      "MVM NET: 21602",
+      "Netfone: 216299",
+      "TARR: 216299",
+      "Telekom: 21630",
+      "Telenor: 21601",
+      "Vidanet: 216299",
+      "Vodafone: 21671",
+      "Vodafone: 21670"
+    ]
+  },
+  {
+    "ISO": "IS",
+    "Country": "Iceland",
+    "Networks": [
+      "NOVA: 27411",
+      "Siminn: 27408",
+      "Siminn: 27401",
+      "Siminn: 27431",
+      "Tismi: 27416",
+      "Viking Wireless: 27404",
+      "Vodafone: 27412",
+      "Vodafone: 27403",
+      "Vodafone: 27402"
+    ]
+  },
+  {
+    "ISO": "IN",
+    "Country": "India",
+    "Networks": [
+      "Aircel: 40437",
+      "Aircel: 40435",
+      "Aircel: 40417",
+      "Aircel: 40433",
+      "Aircel: 40442",
+      "Aircel: 40491",
+      "Aircel: 40429",
+      "Aircel: 40425",
+      "Aircel: 40441",
+      "Aircel: 40428",
+      "Airtel: 40498",
+      "Airtel: 40406",
+      "Airtel: 40493",
+      "Airtel: 40449",
+      "Airtel: 40497",
+      "Airtel: 40403",
+      "Airtel: 40492",
+      "Airtel: 40431",
+      "Airtel: 40496",
+      "Airtel: 40402",
+      "Airtel: 40490",
+      "Airtel: 40416",
+      "Airtel: 40495",
+      "Airtel: 40470",
+      "Airtel: 40410",
+      "Airtel: 40494",
+      "BSNL Mobile: 40476",
+      "BSNL Mobile: 40453",
+      "BSNL Mobile: 40471",
+      "BSNL Mobile: 40458",
+      "BSNL Mobile: 40475",
+      "BSNL Mobile: 40451",
+      "BSNL Mobile: 40466",
+      "BSNL Mobile: 40457",
+      "BSNL Mobile: 40474",
+      "BSNL Mobile: 40438",
+      "BSNL Mobile: 40464",
+      "BSNL Mobile: 40455",
+      "BSNL Mobile: 40473",
+      "BSNL Mobile: 40481",
+      "BSNL Mobile: 40434",
+      "BSNL Mobile: 40462",
+      "BSNL Mobile: 40477",
+      "BSNL Mobile: 40454",
+      "BSNL Mobile: 40472",
+      "BSNL Mobile: 40480",
+      "BSNL Mobile: 40459",
+      "Dolphin: 40469",
+      "Garuda: 40468",
+      "Idea: 40412",
+      "Idea: 404845",
+      "Idea: 40424",
+      "Idea: 404850",
+      "Idea: 40407",
+      "Idea: 40482",
+      "Idea: 40489",
+      "Idea: 40422",
+      "Idea: 404849",
+      "Idea: 40404",
+      "Idea: 40478",
+      "Idea: 40487",
+      "Idea: 40419",
+      "Idea: 404848",
+      "Idea: 40456",
+      "Idea: 404853",
+      "Idea: 40414",
+      "Idea: 404846",
+      "Idea: 40444",
+      "Idea: 404852",
+      "Jio: 404872",
+      "Jio: 404863",
+      "Jio: 404868",
+      "Jio: 404859",
+      "Jio: 404873",
+      "Jio: 404864",
+      "Jio: 404856",
+      "Jio: 404869",
+      "Jio: 404860",
+      "Jio: 404865",
+      "Jio: 404857",
+      "Jio: 404870",
+      "Jio: 404861",
+      "Jio: 404854",
+      "Jio: 404874",
+      "Jio: 404866",
+      "Jio: 404871",
+      "Jio: 404862",
+      "Jio: 404855",
+      "Jio: 404867",
+      "Jio: 404858",
+      "Loop Mobile: 40421",
+      "Reliance Mobile: 40483",
+      "Reliance Mobile: 40436",
+      "Reliance Mobile: 40485",
+      "Reliance Mobile: 40450",
+      "Reliance Mobile: 40452",
+      "Reliance Mobile: 40408",
+      "Reliance Mobile: 40418",
+      "Reliance Mobile: 40467",
+      "Reliance Mobile: 40409",
+      "Reliance Mobile: 40423",
+      "Vodafone: 40443",
+      "Vodafone: 40413",
+      "Vodafone: 40486",
+      "Vodafone: 40430",
+      "Vodafone: 40411",
+      "Vodafone: 40484",
+      "Vodafone: 40427",
+      "Vodafone: 40405",
+      "Vodafone: 40460",
+      "Vodafone: 40420",
+      "Vodafone: 40401",
+      "Vodafone: 40446",
+      "Vodafone: 40415",
+      "Vodafone: 40488"
+    ]
+  },
+  {
+    "ISO": "ID",
+    "Country": "Indonesia",
+    "Networks": [
+      "3: 51089",
+      "Indosat Ooredoo: 51062",
+      "Indosat Ooredoo: 51001",
+      "Indosat Ooredoo: 51021",
+      "Net1: 51027",
+      "Smartfren: 51028",
+      "Smartfren: 51099",
+      "Smartfren: 51009",
+      "Telkomsel: 51010",
+      "Telkomsel: 51020",
+      "XL: 51008",
+      "XL: 51011"
+    ]
+  },
+  {
+    "ISO": "N/A",
+    "Country": "International Networks",
+    "Networks": [
+      "1NCE: 90167",
+      "A1: 90176",
+      "AeroMobile: 90114",
+      "Afinna One: 901299",
+      "Airnity: 90181",
+      "AnyNet: 90182",
+      "Bandwidth: 90124",
+      "Beezz: 90155",
+      "BICS: 90158",
+      "Bubbletone: 90170",
+      "Cingular Wireless Network: 90118",
+      "Cisco Jasper: 90116",
+      "Com4 Sweden: 90148",
+      "Cubic: 90173",
+      "DCN Hub: 90142",
+      "Deutsche Telekom: 90140",
+      "DIDWW: 901299",
+      "EchoStar Mobile: 90150",
+      "Ellipsat: 901299",
+      "EMnify: 90143",
+      "EMSAT: 901299",
+      "Global Access Services: 901299",
+      "Globalstar: 901299",
+      "GSM.AQ: 90113",
+      "i-lincc: 90122",
+      "Inmarsat: 90111",
+      "Intermatica: 90120",
+      "Iridium: 90103",
+      "Legos: 90169",
+      "Limitless: 90166",
+      "Manx Telecom: 90152",
+      "Maritime Roaming Service: 90119",
+      "MCNtelecom: 901299",
+      "MCP: 90112",
+      "MessageBird: 90159",
+      "Monaco Telecom: 90127",
+      "Movistar: 90184",
+      "MTT: 90138",
+      "MTX Connect: 90139",
+      "Navitas Telecom: 90117",
+      "Nokia: 90179",
+      "O2: 90185",
+      "OnAir: 90115",
+      "One Network: 90141",
+      "Ooredoo: 90147",
+      "Orange: 90131",
+      "Oration Technologies: 901299",
+      "Phonegroup: 901299",
+      "Plintron: 90165",
+      "Pod: 90175",
+      "republic wireless: 901299",
+      "SAP: 90157",
+      "Sipme: 901299",
+      "SMART: 90133",
+      "Sparkle: 90178",
+      "Syniverse: 90164",
+      "Tele2: 90172",
+      "Telecom26: 901299",
+      "Telekom Malaysia: 901299",
+      "Telenor Connexion: 90129",
+      "Thuraya RMSS: 90105",
+      "Transatel: 90137",
+      "Twilio: 90162",
+      "tyntec: 90134",
+      "VisionNG: 90151",
+      "Wins: 90121",
+      "Zain: 901299"
+    ]
+  },
+  {
+    "ISO": "IR",
+    "Country": "Iran",
+    "Networks": [
+      "Anarestan: 432299",
+      "ApTel: 432299",
+      "Arian Tel: 432299",
+      "LotusTel: 432299",
+      "MCI: 43211",
+      "MTCE: 43219",
+      "MTN IranCell: 43235",
+      "RighTel: 43220",
+      "SamanTel: 43201",
+      "Shatel Mobile: 43208",
+      "Taliya: 43232",
+      "Telekish: 43214"
+    ]
+  },
+  {
+    "ISO": "IQ",
+    "Country": "Iraq",
+    "Networks": [
+      "Asia Cell: 41805",
+      "Korek: 41840",
+      "Mobitel: 41845",
+      "Zain: 41820",
+      "Zain: 41830"
+    ]
+  },
+  {
+    "ISO": "IE",
+    "Country": "Ireland",
+    "Networks": [
+      "3: 27217",
+      "3: 27205",
+      "3: 27202",
+      "BT: 272299",
+      "Cubic Telecom: 272299",
+      "Lycamobile: 27213",
+      "Meteor: 27207",
+      "Meteor: 27203",
+      "Meteor: 27208",
+      "Net Feasa: 272299",
+      "OGCIO: 272299",
+      "Tesco Mobile: 27211",
+      "Virgin Media: 27215",
+      "Vodafone: 27201"
+    ]
+  },
+  {
+    "ISO": "IL",
+    "Country": "Israel",
+    "Networks": [
+      "019 Mobile: 42519",
+      "Annatel Mobile: 425299",
+      "Beezz: 42523",
+      "Bynet: 425299",
+      "Cellact: 425299",
+      "Cellcom: 42502",
+      "Golan Telecom: 42508",
+      "Home Cellular: 42515",
+      "Hot Mobile: 42577",
+      "Hot Mobile: 42507",
+      "Ituran: 42513",
+      "Maskyoo: 42522",
+      "Orange: 42501",
+      "Pelephone: 42512",
+      "Pelephone: 42503",
+      "Rami Levy Communications: 42516",
+      "T2T: 425299",
+      "Von waves: 42517",
+      "We4G: 42509",
+      "YouPhone: 42514"
+    ]
+  },
+  {
+    "ISO": "IT",
+    "Country": "Italy",
+    "Networks": [
+      "1Mobile: 222299",
+      "A-Tono: 222299",
+      "Agile Telecom: 22240",
+      "BT mobile: 22234",
+      "Esendex: 222299",
+      "Compatel: 222299",
+      "CoopVoce: 22253",
+      "Daily Telecom Mobile: 222299",
+      "Digi: 22236",
+      "DireQ: 222299",
+      "Enel: 22242",
+      "Fastweb: 22208",
+      "WindTre / Hi3G: 22299",
+      "Iliad: 22250",
+      "Kaleyra: 222299",
+      "SMS.it / LINK Mobility: 22239",
+      "Lycamobile: 22235",
+      "Noverca Italia: 22207",
+      "Plintron: 22254",
+      "Poste Mobile: 22233",
+      "Premium Numbers: 222999",
+      "rdcom: 22258",
+      "RFI: 22230",
+      "spusu: 22256",
+      "TIM: 22201",
+      "Telecom Italia Mobile: 22248",
+      "Telecom Italia Mobile: 22243",
+      "Sparkle: 222299",
+      "Tiscali: 222299",
+      "Mundio: 22244",
+      "ho.: 22251",
+      "Vianova Mobile: 22249",
+      "Vodafone: 22210",
+      "Vodafone: 22206",
+      "Vola: 222299",
+      "Webcom: 222299",
+      "WindTre / WIND: 22288",
+      "WindTre / Hi3G: 22237"
+    ]
+  },
+  {
+    "ISO": "CI",
+    "Country": "Ivory Coast",
+    "Networks": [
+      "Moov: 61202",
+      "MTN: 61205",
+      "Orange: 61203"
+    ]
+  },
+  {
+    "ISO": "JM",
+    "Country": "Jamaica",
+    "Networks": [
+      "Digicel: 33850",
+      "Flow: 338110",
+      "Flow: 338180"
+    ]
+  },
+  {
+    "ISO": "JP",
+    "Country": "Japan",
+    "Networks": [
+      "KDDI: 44071",
+      "KDDI: 44076",
+      "KDDI: 44054",
+      "KDDI: 44072",
+      "KDDI: 44050",
+      "KDDI: 44070",
+      "KDDI: 44073",
+      "KDDI: 44051",
+      "KDDI: 44074",
+      "KDDI: 44052",
+      "KDDI: 44075",
+      "KDDI: 44053",
+      "NTT DoCoMo: 44010",
+      "Okinawa Cellular: 44078",
+      "Rakuten Mobile: 44011",
+      "SoftBank: 44000",
+      "SoftBank: 44005",
+      "SoftBank: 44001",
+      "SoftBank: 44020",
+      "SoftBank: 44021"
+    ]
+  },
+  {
+    "ISO": "JO",
+    "Country": "Jordan",
+    "Networks": [
+      "Orange: 41677",
+      "Umniah: 41603",
+      "Zain: 41601"
+    ]
+  },
+  {
+    "ISO": "KZ",
+    "Country": "Kazakhstan",
+    "Networks": [
+      "Altel: 40107",
+      "Arna: 401299",
+      "Beeline: 40101",
+      "Failed Call(s): 401299",
+      "Kazakhstan Online: 40108",
+      "Kcell: 40102",
+      "Tele2: 40177"
+    ]
+  },
+  {
+    "ISO": "KE",
+    "Country": "Kenya",
+    "Networks": [
+      "Airtel: 63905",
+      "Airtel: 63903",
+      "eferio: 639299",
+      "Finserve Africa: 63906",
+      "Homeland Media: 63909",
+      "Infura: 63912",
+      "Jambo Telcoms: 63911",
+      "Jamii Telecommunications: 63910",
+      "Mobile Pay: 63904",
+      "Safaricom: 63902",
+      "Safaricom: 63901",
+      "Telkom: 63907"
+    ]
+  },
+  {
+    "ISO": "KI",
+    "Country": "Kiribati",
+    "Networks": [
+      "FrigateNet: 54501",
+      "FrigateNet: 54509",
+      "Ocean Link: 545299"
+    ]
+  },
+  {
+    "ISO": "XK",
+    "Country": "Kosovo",
+    "Networks": [
+      "D3 mobile: 22107",
+      "IPKO: 22102",
+      "MTS: 221299",
+      "Vala: 22101"
+    ]
+  },
+  {
+    "ISO": "KW",
+    "Country": "Kuwait",
+    "Networks": [
+      "Ooredoo: 41903",
+      "Virgin Mobile: 419299",
+      "Viva: 41904",
+      "Zain: 41902"
+    ]
+  },
+  {
+    "ISO": "KG",
+    "Country": "Kyrgyzstan",
+    "Networks": [
+      "Beeline: 43701",
+      "KT Mobile: 43702",
+      "MegaCom: 43705",
+      "O!: 43709",
+      "Saima: 43710",
+      "Sem Mobile: 43703"
+    ]
+  },
+  {
+    "ISO": "LA",
+    "Country": "Laos",
+    "Networks": [
+      "Beeline: 45708",
+      "ETL Mobile: 45702",
+      "LTC: 45701",
+      "Unitel: 45703"
+    ]
+  },
+  {
+    "ISO": "LV",
+    "Country": "Latvia",
+    "Networks": [
+      "Bite: 24705",
+      "LMT: 24701",
+      "LMT: 24710",
+      "Premium Numbers: 247299",
+      "Tele2: 24702",
+      "Tet: 24704",
+      "TRIATEL: 24703",
+      "VENTA Mobile: 24708",
+      "XOmobile: 24709"
+    ]
+  },
+  {
+    "ISO": "LB",
+    "Country": "Lebanon",
+    "Networks": [
+      "Alfa: 41501",
+      "Touch: 41503"
+    ]
+  },
+  {
+    "ISO": "LS",
+    "Country": "Lesotho",
+    "Networks": [
+      "Econet: 65102",
+      "Vodacom: 65101"
+    ]
+  },
+  {
+    "ISO": "LR",
+    "Country": "Liberia",
+    "Networks": [
+      "MTN / Lonestar: 61801",
+      "Novafone: 61804",
+      "Orange: 61807"
+    ]
+  },
+  {
+    "ISO": "LY",
+    "Country": "Libya",
+    "Networks": [
+      "Al-Madar: 60601",
+      "Libyana: 60600",
+      "LibyaPhone Mobile: 60603"
+    ]
+  },
+  {
+    "ISO": "LI",
+    "Country": "Liechtenstein",
+    "Networks": [
+      "7acht: 29502",
+      "CUBIC: 29506",
+      "Datamobile: 295299",
+      "Dimoco: 295299",
+      "EMnify: 29509",
+      "FL GSM: 29501",
+      "FL1: 29505",
+      "SORACOM: 295299",
+      "Telna: 295299"
+    ]
+  },
+  {
+    "ISO": "LT",
+    "Country": "Lithuania",
+    "Networks": [
+      "Bite: 24602",
+      "LTG: 24605",
+      "Mediafon: 24606",
+      "SkyCall: 246299",
+      "Tele2: 24603",
+      "Teletel: 246299",
+      "Telia: 24601"
+    ]
+  },
+  {
+    "ISO": "LU",
+    "Country": "Luxembourg",
+    "Networks": [
+      "Blue Communications: 27010",
+      "Bouygues Telecom: 270299",
+      "e-LUX Mobile: 27081",
+      "Eltrona: 270299",
+      "Luxembourg Online: 27005",
+      "MTX Connect: 270299",
+      "Orange: 27099",
+      "Post: 27001",
+      "Tango: 27077"
+    ]
+  },
+  {
+    "ISO": "MO",
+    "Country": "Macao",
+    "Networks": [
+      "3: 45503",
+      "3: 45505",
+      "China Telecom: 45507",
+      "China Telecom: 45502",
+      "CTM: 45504",
+      "CTM: 45501",
+      "SmarTone: 45506",
+      "SmarTone: 45500"
+    ]
+  },
+  {
+    "ISO": "MG",
+    "Country": "Madagascar",
+    "Networks": [
+      "Airtel: 64601",
+      "Bip: 646299",
+      "Orange: 64602",
+      "Telma: 64604"
+    ]
+  },
+  {
+    "ISO": "MW",
+    "Country": "Malawi",
+    "Networks": [
+      "Airtel: 65010",
+      "TNM: 65001"
+    ]
+  },
+  {
+    "ISO": "MY",
+    "Country": "Malaysia",
+    "Networks": [
+      "Altel Communications: 502156",
+      "Telekom Malaysia: 50214",
+      "Telekom Malaysia: 50211",
+      "Celcom: 50219",
+      "Celcom: 50213",
+      "DiGi: 50210",
+      "DiGi: 50216",
+      "MKN: 502299",
+      "Maxis: 50217",
+      "Maxis: 50212",
+      "Maxis Broadband: 502299",
+      "OCESB: 502299",
+      "REDtone Mobile: 502299",
+      "REDtone: 502299",
+      "TT dotCom: 502299",
+      "Tune Talk: 502150",
+      "U Mobile: 50218",
+      "Webe Digital: 502153",
+      "XOX Com: 502195",
+      "Y-Max: 502299",
+      "Yes: 502152"
+    ]
+  },
+  {
+    "ISO": "MV",
+    "Country": "Maldives",
+    "Networks": [
+      "DhiMobile: 47201",
+      "Ooredoo: 47202"
+    ]
+  },
+  {
+    "ISO": "ML",
+    "Country": "Mali",
+    "Networks": [
+      "Malitel: 61001",
+      "Orange: 61002",
+      "Telecel: 61003"
+    ]
+  },
+  {
+    "ISO": "MT",
+    "Country": "Malta",
+    "Networks": [
+      "Vodafone: 27801",
+      "GO Mobile: 27821",
+      "GO Mobile: 27830",
+      "Melita: 27877"
+    ]
+  },
+  {
+    "ISO": "MH",
+    "Country": "Marshall Islands",
+    "Networks": [
+      "MINTA: 551299"
+    ]
+  },
+  {
+    "ISO": "MR",
+    "Country": "Mauritania",
+    "Networks": [
+      "Chinguitel: 60902",
+      "Mattel: 60901",
+      "Mauritel: 60910"
+    ]
+  },
+  {
+    "ISO": "MU",
+    "Country": "Mauritius",
+    "Networks": [
+      "Chili: 61702",
+      "Chili: 61703",
+      "Emtel: 61710",
+      "my.t mobile: 61701"
+    ]
+  },
+  {
+    "ISO": "YT",
+    "Country": "Mayotte",
+    "Networks": [
+      "Maore Mobile: 64701",
+      "SFR: 64710"
+    ]
+  },
+  {
+    "ISO": "MX",
+    "Country": "Mexico",
+    "Networks": [
+      "ALTAN Redes: 334140",
+      "Altcel: 334299",
+      "AT&T / IUSACell: 33450",
+      "Failed Call(s): 334299",
+      "FreedomPop: 334299",
+      "Ibo Cell: 334299",
+      "Maxcom: 334299",
+      "MegaTel: 334299",
+      "Movistar: 33430",
+      "Movistar: 33403",
+      "NEUS Mobile: 334299",
+      "Nextel: 33490",
+      "Nextel: 33410",
+      "Nextel: 33401",
+      "QBOcel: 334299",
+      "SAI PCS: 33460",
+      "Servitron: 334299",
+      "Telcel: 33420",
+      "Telcel: 33402",
+      "Telecomunicaciones 360: 334299",
+      "Unefon: 33480",
+      "Unefon: 33470"
+    ]
+  },
+  {
+    "ISO": "FM",
+    "Country": "Micronesia",
+    "Networks": [
+      "FSMTCeLL: 55001"
+    ]
+  },
+  {
+    "ISO": "MD",
+    "Country": "Moldova",
+    "Networks": [
+      "Moldcell: 25902",
+      "Orange: 25901",
+      "Unite: 25903",
+      "Unite: 25999",
+      "Unite: 25905"
+    ]
+  },
+  {
+    "ISO": "MC",
+    "Country": "Monaco",
+    "Networks": [
+      "Monaco Telecom: 21210",
+      "Monaco Telecom: 21201"
+    ]
+  },
+  {
+    "ISO": "MN",
+    "Country": "Mongolia",
+    "Networks": [
+      "G-Mobile: 42898",
+      "Mobicom: 42899",
+      "Skytel: 42800",
+      "Unitel: 42888"
+    ]
+  },
+  {
+    "ISO": "ME",
+    "Country": "Montenegro",
+    "Networks": [
+      "Mtel: 29703",
+      "Telekom / T-mobile: 29702",
+      "Telenor: 29701"
+    ]
+  },
+  {
+    "ISO": "MS",
+    "Country": "Montserrat",
+    "Networks": [
+      "Digicel: 354299",
+      "Flow: 354860"
+    ]
+  },
+  {
+    "ISO": "MA",
+    "Country": "Morocco",
+    "Networks": [
+      "IAM: 60401",
+      "inwi: 60405",
+      "inwi: 60402",
+      "Orange: 60400"
+    ]
+  },
+  {
+    "ISO": "MZ",
+    "Country": "Mozambique",
+    "Networks": [
+      "Movitel: 64303",
+      "TMCEL: 64301",
+      "Vodacom: 64304"
+    ]
+  },
+  {
+    "ISO": "MM",
+    "Country": "Myanmar",
+    "Networks": [
+      "MecTel: 41403",
+      "MPT: 41401",
+      "MPT: 41400",
+      "Mytel: 41409",
+      "Ooredoo: 41405",
+      "Telenor: 41406"
+    ]
+  },
+  {
+    "ISO": "NA",
+    "Country": "Namibia",
+    "Networks": [
+      "Demshi: 649299",
+      "MTC: 64901",
+      "TN Mobile: 64903"
+    ]
+  },
+  {
+    "ISO": "NR",
+    "Country": "Nauru",
+    "Networks": [
+      "Digicel: 53602"
+    ]
+  },
+  {
+    "ISO": "NP",
+    "Country": "Nepal",
+    "Networks": [
+      "CG Telecom: 429299",
+      "Hello Nepal: 42903",
+      "Ncell: 42902",
+      "Nepal Telecom: 42901",
+      "Smart: 42904",
+      "UTL: 42900"
+    ]
+  },
+  {
+    "ISO": "NL",
+    "Country": "Netherlands",
+    "Networks": [
+      "88 mobile: 204299",
+      "AGMS: 204299",
+      "ASPIDER Solutions: 20430",
+      "Belcentrale: 204299",
+      "BodyTrace: 204299",
+      "Combird Mobile: 204299",
+      "Dean Mobile: 204299",
+      "Eazit: 204299",
+      "ElephantTalk: 20405",
+      "EziMobile: 204299",
+      "interactive digital media / IDM: 204299",
+      "Intovoice: 20400",
+      "KeenMobile: 204299",
+      "KORE: 20423",
+      "KPN: 20412",
+      "KPN: 20408",
+      "KPN: 20410",
+      "KPN: 20469",
+      "L-mobi: 20427",
+      "Lancelot: 20428",
+      "Lancelot: 20498",
+      "Lycamobile: 20409",
+      "MessageBird: 20463",
+      "mGage: 204299",
+      "Motto: 204299",
+      "Move / Teleena: 20407",
+      "Okta8: 204299",
+      "Premium Numbers: 204299",
+      "Premium Routing: 204299",
+      "Private Mobility: 20424",
+      "ProRail: 20421",
+      "Redworks: 204299",
+      "SpeakUp: 20426",
+      "T-Mobile: 20402",
+      "T-Mobile: 20420",
+      "T-Mobile: 20416",
+      "Tismi: 20429",
+      "Truphone: 20433",
+      "Vectone Mobile: 204299",
+      "Vodafone: 20404",
+      "Voiceworks Mobile: 20403",
+      "Ziggo: 20415",
+      "Ziggo Services: 20418"
+    ]
+  },
+  {
+    "ISO": "AN",
+    "Country": "Netherlands Antilles",
+    "Networks": [
+      "Chippie: 36291",
+      "Digicel: 36269",
+      "Premium Numbers: 362299",
+      "TelCell: 36251"
+    ]
+  },
+  {
+    "ISO": "NC",
+    "Country": "New Caledonia",
+    "Networks": [
+      "Mobilis: 54601"
+    ]
+  },
+  {
+    "ISO": "NZ",
+    "Country": "New Zealand",
+    "Networks": [
+      "2degrees: 53024",
+      "Compass Mobile: 530299",
+      "Devoli: 530299",
+      "LinkTel: 530299",
+      "Skinny Mobile: 53006",
+      "Spark Mobile: 53002",
+      "Spark Mobile: 53005",
+      "Symbio: 530299",
+      "Vocus: 530299",
+      "Vodafone: 53001",
+      "Voxbone / Bandwidth: 530299",
+      "Voyager Internet: 530299",
+      "WXC: 530299"
+    ]
+  },
+  {
+    "ISO": "NI",
+    "Country": "Nicaragua",
+    "Networks": [
+      "Claro: 71021",
+      "Claro: 71073",
+      "CooTel: 710299",
+      "Movistar: 71030"
+    ]
+  },
+  {
+    "ISO": "NE",
+    "Country": "Niger",
+    "Networks": [
+      "Airtel: 61402",
+      "Moov: 61403",
+      "Niger Telecoms: 61401",
+      "Orange: 61404"
+    ]
+  },
+  {
+    "ISO": "NG",
+    "Country": "Nigeria",
+    "Networks": [
+      "9mobile: 62160",
+      "Airtel: 62120",
+      "Alpha Technologies: 621299",
+      "Glo Mobile: 62150",
+      "MTN: 62130",
+      "ntel: 62140",
+      "Smile: 62127",
+      "Zodafones: 621299"
+    ]
+  },
+  {
+    "ISO": "NU",
+    "Country": "Niue",
+    "Networks": [
+      "Telecom Niue: 55501"
+    ]
+  },
+  {
+    "ISO": "KP",
+    "Country": "North Korea",
+    "Networks": [
+      "Kangsung Net: 467299",
+      "Koryolink: 467192"
+    ]
+  },
+  {
+    "ISO": "MK",
+    "Country": "North Macedonia",
+    "Networks": [
+      "A1: 29403",
+      "A1: 29402",
+      "LATRON: 294299",
+      "Lycamobile: 29404",
+      "Mobik: 29411",
+      "Telekabel: 294299",
+      "Telekom: 29401"
+    ]
+  },
+  {
+    "ISO": "MP",
+    "Country": "Northern Mariana Islands",
+      "Networks": [
+      "Fix Line: 534999"
+      ]
+  },
+  {
+    "ISO": "NO",
+    "Country": "Norway",
+    "Networks": [
+      "Altibox Mobil: 24222",
+      "BANE NOR: 24221",
+      "BANE NOR: 24220",
+      "bigblu: 242299",
+      "Chilimobil: 242299",
+      "Com4: 24209",
+      "eRate: 24215",
+      "GlobalConnect: 242299",
+      "ICE: 24214",
+      "intility: 242299",
+      "Iristel: 24216",
+      "JetNett: 242299",
+      "Lycamobile: 24223",
+      "Network Norway: 24205",
+      "NextGenTel: 242299",
+      "Nkom: 24210",
+      "Nodnett: 242299",
+      "ICE: 24206",
+      "Puzzel: 242299",
+      "Sierra Wireless: 242299",
+      "Svea: 242299",
+      "Telavox: 242299",
+      "Telenor: 24212",
+      "Telenor: 24201",
+      "Telia / NetCom: 24202",
+      "Telia / NetCom: 24208",
+      "unifon: 242299"
+    ]
+  },
+  {
+    "ISO": "OM",
+    "Country": "Oman",
+    "Networks": [
+      "Omantel Mobile: 42202",
+      "Ooredoo / Nawras: 42203"
+    ]
+  },
+  {
+    "ISO": "PK",
+    "Country": "Pakistan",
+    "Networks": [
+      "Jazz: 41007",
+      "Jazz: 41001",
+      "SCOM: 41005",
+      "Telenor: 41006",
+      "Ufone: 41003",
+      "Warid: 410299",
+      "Zong: 41004"
+    ]
+  },
+  {
+    "ISO": "PW",
+    "Country": "Palau",
+    "Networks": [
+      "Palau Mobile: 55299",
+      "PalauCel: 55201",
+      "PT Waves: 55202"
+    ]
+  },
+  {
+    "ISO": "PS",
+    "Country": "Palestinian Territory",
+    "Networks": [
+      "Jawwal: 42505",
+      "Ooredoo: 42506"
+    ]
+  },
+  {
+    "ISO": "PA",
+    "Country": "Panama",
+    "Networks": [
+      "+Movil: 71401",
+      "Claro: 71403",
+      "Digicel: 71404",
+      "Movistar: 71402",
+      "Movistar: 71420"
+    ]
+  },
+  {
+    "ISO": "PG",
+    "Country": "Papua New Guinea",
+    "Networks": [
+      "BeMobile Vodafone: 53701",
+      "Citifon: 53702",
+      "Digicel: 53703",
+      "DIGIVOIP: 537299"
+    ]
+  },
+  {
+    "ISO": "PY",
+    "Country": "Paraguay",
+    "Networks": [
+      "Claro: 74402",
+      "Personal: 74403",
+      "Tigo: 74404",
+      "VOX: 74401"
+    ]
+  },
+  {
+    "ISO": "PE",
+    "Country": "Peru",
+    "Networks": [
+      "Claro: 71610",
+      "Claro: 71670",
+      "Claro: 71620",
+      "Dolphin: 716299",
+      "Entel: 71617",
+      "Movistar: 71606",
+      "Entel: 71607",
+      "Tuyo: 71630",
+      "Viettel: 71615"
+    ]
+  },
+  {
+    "ISO": "PH",
+    "Country": "Philippines",
+    "Networks": [
+      "DITO: 51566",
+      "Globe: 51501",
+      "Globe: 51502",
+      "Smart: 51503",
+      "Sun Cellular: 51505"
+    ]
+  },
+  {
+    "ISO": "PL",
+    "Country": "Poland",
+    "Networks": [
+      "3S: 260299",
+      "Aero2: 26017",
+      "Aero2: 26016",
+      "Aero2: 26015",
+      "Aero2: 26004",
+      "Agile Telecom: 26048",
+      "AMD Telecom: 26018",
+      "Benemen: 260299",
+      "BSG: 260299",
+      "Caritas Laczy: 260299",
+      "Cludo: 260299",
+      "Compatel: 26032",
+      "Cyfrowy Polsat: 26012",
+      "e-Telko: 260299",
+      "EZ Mobile: 26041",
+      "I.M. Consulting: 260299",
+      "Inea: 260299",
+      "IZZI: 260299",
+      "JMDI J. Maleszko: 260299",
+      "Klucz Mobile: 260299",
+      "lajt mobile: 260299",
+      "LoVo: 260299",
+      "Lycamobile: 26009",
+      "Messagebird: 26049",
+      "Metro Mobile: 260299",
+      "Mobile Vikings: 260299",
+      "Mobiledata: 260299",
+      "MobiWeb: 26042",
+      "Moja GSM: 260299",
+      "Move: 26013",
+      "multiMOBILE: 260299",
+      "Nasza Wizja: 260299",
+      "NAU Mobile: 260299",
+      "nc+ Mobile: 260299",
+      "NetBalt: 26019",
+      "Netia: 26007",
+      "Next Mobile: 260299",
+      "NIMBOW: 260299",
+      "Ntel Solutions: 26027",
+      "Orange: 26005",
+      "Orange: 26003",
+      "PKP: 26035",
+      "Play: 26098",
+      "Play: 26006",
+      "Plus: 26011",
+      "Plus: 26001",
+      "Politechnika Lodzka Uczelniane: 26097",
+      "Polska Spolka Gazownictwa: 26090",
+      "Polvoice: 260299",
+      "Pomagacz: 260299",
+      "Premium Mobile: 260299",
+      "Premium Numbers: 260299",
+      "SAT FILM: 260299",
+      "Move: 26014",
+      "SGT: 260299",
+      "SMSHIGHWAY: 26047",
+      "Softelnet: 260299",
+      "T-Mobile: 26034",
+      "T-Mobile: 26002",
+      "T-Mobile: 26010",
+      "Telco Leaders: 26014",
+      "Tele GO: 260299",
+      "TeleCube: 260299",
+      "Telenabler: 260299",
+      "TELGAM: 260299",
+      "Tismi: 26020",
+      "TOYAmobilna: 260299",
+      "Twilio: 26022",
+      "UPC: 260299",
+      "Vectra: 260299",
+      "Virgin Mobile: 26045",
+      "Virgin Mobile: 26045",
+      "Vonage: 260299",
+      "Voxbone / Bandwidth: 26039",
+      "w naszej Rodzinie: 260299"
+    ]
+  },
+  {
+    "ISO": "PT",
+    "Country": "Portugal",
+    "Networks": [
+      "Lycamobile: 26804",
+      "MEO: 26806",
+      "MEO: 26880",
+      "MEO: 26808",
+      "NOS: 26803",
+      "NOS: 26893",
+      "NOWO: 268299",
+      "Oni: 268299",
+      "Premium Numbers: 410299",
+      "Vodafone: 26891",
+      "Vodafone: 26801"
+    ]
+  },
+  {
+    "ISO": "QA",
+    "Country": "Qatar",
+    "Networks": [
+      "Ooredoo: 42701",
+      "Ooredoo: 42706",
+      "Vodafone: 42702"
+    ]
+  },
+  {
+    "ISO": "RE",
+    "Country": "Reunion",
+    "Networks": [
+      "Only: 64702",
+      "Only: 64703",
+      "Orange: 64700",
+      "ZEOP Mobile: 64704"
+    ]
+  },
+  {
+    "ISO": "RO",
+    "Country": "Romania",
+    "Networks": [
+      "Digi Mobil: 22605",
+      "Iristel: 226299",
+      "Lycamobile: 22616",
+      "Orange: 22610",
+      "Telekom: 22602",
+      "Telekom: 22603",
+      "Vodafone: 22601"
+    ]
+  },
+  {
+    "ISO": "RU",
+    "Country": "Russia",
+    "Networks": [
+      "Antares: 250299",
+      "Arktur: 250299",
+      "Astran: 250299",
+      "ASVT: 250299",
+      "Aurora Telecom: 250299",
+      "Beeline: 25099",
+      "Beliton: 250299",
+      "BIT-CENTR: 250299",
+      "Center 2M: 250299",
+      "Cifra 1: 250299",
+      "CountryCom: 250299",
+      "ECO Networks: 250299",
+      "Elemte: 250299",
+      "ER-Telecom: 250299",
+      "Gazprom Telecom: 250299",
+      "Global Telecom: 25048",
+      "Glonass: 25055",
+      "GLONASS MOBILE: 250299",
+      "Integral: 250299",
+      "Internod: 250299",
+      "Intersvyaz-2: 250299",
+      "Krymtelecom: 25034",
+      "KvatroPlus: 250299",
+      "Lardex: 250299",
+      "Letai Mobile: 25054",
+      "Lycamobile: 250299",
+      "Matrix Mobile: 25057",
+      "Media-Market: 250299",
+      "Megafon: 25002",
+      "Metro-Pei: 250299",
+      "MGTS: 250299",
+      "Miatel: 250299",
+      "MOSTELECOM: 250299",
+      "Motiv: 25035",
+      "MSN Telekom: 250299",
+      "MTS: 25001",
+      "MTT: 25042",
+      "NCI: 250299",
+      "NETBYNET: 250299",
+      "New Mobile Communications: 250299",
+      "OBIT: 250299",
+      "Orange Business Services: 250299",
+      "PIN: 250299",
+      "Plintron: 250299",
+      "Quantech: 250299",
+      "RECONN: 250299",
+      "Reteyl Innovatsii: 250299",
+      "Sberbank-Telecom: 250299",
+      "SEVTELECOM: 25033",
+      "Sim Sim: 250299",
+      "Sintonik: 250299",
+      "Sky Networks: 250299",
+      "Skylink: 25009",
+      "SkyNet: 250299",
+      "Sonet: 250299",
+      "Sprint: 250299",
+      "Start: 250299",
+      "SunSIM: 250299",
+      "Surgutneftegaz: 250299",
+      "Svyazresurs-Mobile: 250299",
+      "Tander: 250299",
+      "Tele2: 25020",
+      "Tele2: 25012",
+      "Tinkoff Mobile: 250299",
+      "TMT: 250299",
+      "TransMobilCom: 250299",
+      "TRASTEL: 250299",
+      "TRN-telecom: 250299",
+      "TTK: 250299",
+      "TTK-Svyaz: 250299",
+      "TVE: 250299",
+      "UnitTelecom: 250299",
+      "Unycel: 250299",
+      "Vainah Telecom: 250299",
+      "ViKom: 250299",
+      "Virgin Connect: 250299",
+      "Voentelecom: 250299",
+      "Volna Mobile: 25060",
+      "Glonass: 25077",
+      "VTB Mobile: 250299",
+      "Win Mobile: 25032",
+      "Yota: 25011"
+    ]
+  },
+  {
+    "ISO": "RW",
+    "Country": "Rwanda",
+    "Networks": [
+      "Airtel: 63513",
+      "MTN: 63510"
+    ]
+  },
+  {
+    "ISO": "SH",
+    "Country": "Saint Helena and Ascension and Tristan da Cunha",
+     "Networks": [
+      "Fix Line: 658999"
+    ]
+  },
+  {
+    "ISO": "KN",
+    "Country": "Saint Kitts and Nevis",
+    "Networks": [
+      "Chippie: 35670",
+      "Chippie: 35670",
+      "Digicel: 35650",
+      "Digicel: 35650",
+      "Flow: 356110",
+      "Flow: 35611",
+      "The Cable: 356299"
+    ]
+  },
+  {
+    "ISO": "LC",
+    "Country": "Saint Lucia",
+    "Networks": [
+      "Digicel: 35805",
+      "Digicel: 35850",
+      "Flow: 358110",
+      "Flow: 35811"
+    ]
+  },
+  {
+    "ISO": "PM",
+    "Country": "Saint Pierre and Miquelon",
+    "Networks": [
+      "Ameris: 30801",
+      "Ameris: 30803",
+      "Globaltel: 30802"
+    ]
+  },
+  {
+    "ISO": "VC",
+    "Country": "Saint Vincent and the Grenadines",
+    "Networks": [
+      "Digicel: 36050",
+      "Flow: 360110"
+    ]
+  },
+  {
+    "ISO": "WS",
+    "Country": "Samoa",
+    "Networks": [
+      "BlueSky: 54927",
+      "Digicel: 54901"
+    ]
+  },
+  {
+    "ISO": "SM",
+    "Country": "San Marino",
+    "Networks": [
+      "Prima: 29201",
+      "TeleneT: 292299"
+    ]
+  },
+  {
+    "ISO": "ST",
+    "Country": "Sao Tome and Principe",
+    "Networks": [
+      "CSTmovel: 62601",
+      "Unitel: 62602"
+    ]
+  },
+  {
+    "ISO": "SA",
+    "Country": "Saudi Arabia",
+    "Networks": [
+      "Lebara Mobile: 42006",
+      "Mobily: 42003",
+      "Red Bull MOBILE: 420299",
+      "Salam: 420299",
+      "STC / Al Jawal: 42001",
+      "Virgin Mobile: 42005",
+      "Zain: 42004"
+    ]
+  },
+  {
+    "ISO": "SN",
+    "Country": "Senegal",
+    "Networks": [
+      "2s Mobile: 608299",
+      "Expresso: 60803",
+      "Free: 60802",
+      "HAYO: 60804",
+      "Orange: 60801",
+      "Promobile: 608299"
+    ]
+  },
+  {
+    "ISO": "RS",
+    "Country": "Serbia",
+    "Networks": [
+      "Globaltel: 22011",
+      "MTS: 22003",
+      "Telenor: 22001",
+      "VIP: 22020",
+      "VIP: 22005"
+    ]
+  },
+  {
+    "ISO": "SC",
+    "Country": "Seychelles",
+    "Networks": [
+      "Airtel: 63310",
+      "Cable & Wireless: 63301",
+      "Intelvision: 63305"
+    ]
+  },
+  {
+    "ISO": "SL",
+    "Country": "Sierra Leone",
+    "Networks": [
+      "Africell: 61903",
+      "IPTel: 619299",
+      "Onlime: 619299",
+      "Orange: 61901",
+      "Qcell: 61907",
+      "SierraTel: 619299"
+    ]
+  },
+  {
+    "ISO": "SG",
+    "Country": "Singapore",
+    "Networks": [
+      "Circles.Life: 52509",
+      "GRID: 52512",
+      "M1: 52503",
+      "M1: 52511",
+      "MyRepublic: 525299",
+      "Nexwave: 525299",
+      "redONE: 525299",
+      "SingTel: 52502",
+      "SingTel: 52501",
+      "SingTel: 52507",
+      "Smart Pinoy: 525299",
+      "Starhub: 52506",
+      "Starhub: 52508",
+      "Starhub: 52505",
+      "TPG Telecom: 52510",
+      "VivoBee: 525299",
+      "Zero1: 525299"
+    ]
+  },
+  {
+    "ISO": "SK",
+    "Country": "Slovakia",
+    "Networks": [
+      "O2: 23106",
+      "Orange: 23105",
+      "Orange: 23101",
+      "Orange: 23107",
+      "Swan / 4ka: 23103",
+      "Telekom: 23102",
+      "Telekom: 23150",
+      "Telekom: 23104",
+      "Uniphone: 23108",
+      "Vonage: 231299",
+      "ZSR: 23199"
+    ]
+  },
+  {
+    "ISO": "SI",
+    "Country": "Slovenia",
+    "Networks": [
+      "A1 / Si.mobil: 29340",
+      "Compatel: 29320",
+      "Elektro Gorenjska: 29386",
+      "HOT mobil: 293299",
+      "Me2: 293299",
+      "Mobitel: 29341",
+      "Novatel: 293299",
+      "Slovenske zeleznice: 29310",
+      "SoftNET: 293299",
+      "T-2: 29364",
+      "Telemach / Tusmobil: 29370"
+    ]
+  },
+  {
+    "ISO": "SB",
+    "Country": "Solomon Islands",
+    "Networks": [
+      "bemobile: 54002",
+      "Breeze: 54001",
+      "Satsol: 540299",
+      "Smile: 540299"
+    ]
+  },
+  {
+    "ISO": "SO",
+    "Country": "Somalia",
+    "Networks": [
+      "AirSom: 637299",
+      "Golis: 63730",
+      "Hormuud: 63719",
+      "Nationlink: 63710",
+      "NETCO: 637299",
+      "Onkod: 63770",
+      "Somafone: 63704",
+      "SomNetworks: 637299",
+      "Somtel: 63771",
+      "STG: 637299",
+      "Telcom Mobile: 63782",
+      "Telesom: 63701"
+    ]
+  },
+  {
+    "ISO": "ZA",
+    "Country": "South Africa",
+    "Networks": [
+      "Cell C: 65507",
+      "Lycamobile: 655299",
+      "MTN: 65512",
+      "MTN: 65510",
+      "Rain: 65519",
+      "Rain: 65538",
+      "Rain: 65573",
+      "Rain: 65574",
+      "Telkom: 65505",
+      "Telkom: 65502",
+      "Virgin Mobile: 655299",
+      "Vodacom: 65501"
+    ]
+  },
+  {
+    "ISO": "KR",
+    "Country": "South Korea",
+    "Networks": [
+      "KT Powertel: 45007",
+      "LG U+: 45006",
+      "olleh / KT: 45004",
+      "olleh / KT: 45002",
+      "olleh / KT: 45008",
+      "SK Telecom: 45012",
+      "SK Telecom: 45005",
+      "SK Telecom: 45011"
+    ]
+  },
+  {
+    "ISO": "ES",
+    "Country": "Spain",
+    "Networks": [
+      "ACN: 214299",
+      "Adamo Telecom: 214299",
+      "Alai: 21436",
+      "Alta Tecnologia en Comunicacions: 21402",
+      "Aurea: 214299",
+      "Avatel Movil: 21414",
+      "Billing Financial: 214299",
+      "Bluephone: 214299",
+      "CloudComms: 214299",
+      "Dialoga: 214299",
+      "Digi.Mobil: 21422",
+      "Dragonet: 214299",
+      "Euskaltel Movil: 21408",
+      "Evolutio: 214299",
+      "Global: 214299",
+      "GNET: 214299",
+      "ION MOBILE: 21434",
+      "Jetnet: 214299",
+      "Lemonvil: 214299",
+      "Lycamobile: 21425",
+      "mobil R: 21417",
+      "Movistar: 21438",
+      "Movistar: 21407",
+      "Movistar: 21405",
+      "Olephone: 214299",
+      "On Movil: 214299",
+      "Oniti Telecom: 214299",
+      "OperadorsCat: 214299",
+      "Orange: 21421",
+      "Orange: 21403",
+      "Orange: 21409",
+      "Pepephone: 214299",
+      "Premium Numbers: 214299",
+      "PTV Telecom movil: 214299",
+      "Quattre: 214299",
+      "Sarenet: 214299",
+      "SEWAN: 214299",
+      "Simyo: 21419",
+      "SUMA movil: 21435",
+      "Suop: 214299",
+      "Syma: 214299",
+      "mobil R: 21416",
+      "Telsome: 214299",
+      "The Telecom Boutique: 214299",
+      "Truphone: 21427",
+      "Venus Movil: 21412",
+      "Vodafone: 21401",
+      "Vodafone: 21437",
+      "Vodafone: 21406",
+      "Yoigo: 21433",
+      "Yoigo: 21429",
+      "Yoigo: 21423",
+      "Yoigo: 21404",
+      "You Mobile: 214299",
+      "Zinnia: 21410"
+    ]
+  },
+  {
+    "ISO": "LK",
+    "Country": "Sri Lanka",
+    "Networks": [
+      "Airtel: 41305",
+      "Dialog: 41302",
+      "Hutch: 41308",
+      "Mobitel: 41301"
+    ]
+  },
+  {
+    "ISO": "SD",
+    "Country": "Sudan",
+    "Networks": [
+      "MTN: 63403",
+      "MTN: 63402",
+      "Sudani One: 63407",
+      "Zain: 63401",
+      "Zain: 63406"
+    ]
+  },
+  {
+    "ISO": "SR",
+    "Country": "Suriname",
+    "Networks": [
+      "Digicel: 74603",
+      "Telesur: 74602"
+    ]
+  },
+  {
+    "ISO": "SZ",
+    "Country": "Swaziland",
+    "Networks": [
+      "Eswatini Mobile: 65302",
+      "EswatiniTelecom: 65301",
+      "Swazi MTN: 65310"
+    ]
+  },
+  {
+    "ISO": "SE",
+    "Country": "Sweden",
+    "Networks": [
+      "42 Telecom: 24035",
+      "A3: 24013",
+      "Advoco: 240299",
+      "Allo Telecom: 240299",
+      "Bahnhof: 240299",
+      "Benemen: 240299",
+      "Biztel: 240299",
+      "BM Sverige: 240299",
+      "Bredband 2: 240299",
+      "Bredbandsson: 240299",
+      "BSG: 240299",
+      "Chilimobil: 240299",
+      "Com Hem: 24011",
+      "Com4: 24009",
+      "Compatel: 24032",
+      "Connectel: 240299",
+      "Core Telecom: 240299",
+      "easy pbx: 240299",
+      "EasyTelecom: 240299",
+      "EUtel: 24022",
+      "Fastcom: 240299",
+      "Febo Telecom: 240299",
+      "Fello: 240299",
+      "Fibio: 240299",
+      "Fink Telecom: 24063",
+      "Firstcom: 240299",
+      "Fonia: 240299",
+      "Messit / Minicall: 24018",
+      "Global Telefoni: 240299",
+      "GlobalConnect: 240299",
+      "Globetouch: 24027",
+      "Gotanet: 24017",
+      "3: 24002",
+      "Horisen: 240299",
+      "iCentrex: 240299",
+      "Infobip: 24023",
+      "InfraCom: 240299",
+      "interactive digital media / IDM: 24036",
+      "Ipify: 240299",
+      "Junyverse: 240299",
+      "Karma Mobil: 240299",
+      "Lancelot: 240299",
+      "LINK Mobility: 24028",
+      "Loxysoft: 240299",
+      "Lycamobile: 24012",
+      "Maingate: 240299",
+      "Megaphone: 240299",
+      "MessageBird: 240299",
+      "MI Carrier Services: 24029",
+      "miniTel: 240299",
+      "Mitto: 240299",
+      "Mobile Arts: 24033",
+      "MobiWeb: 24043",
+      "Molnstruktur: 240299",
+      "Monty Mobile: 24025",
+      "My Beat: 240299",
+      "Net at Once: 240299",
+      "Netmore: 24040",
+      "Netsize: 240299",
+      "onoff: 240299",
+      "Bixia AB: 240299",
+      "Premium Numbers: 240299",
+      "Primlight: 24039",
+      "Rebtel: 24031",
+      "Sierra Wireless: 24020",
+      "Sinch: 24037",
+      "soatso: 240299",
+      "Soluno: 240299",
+      "Spirius: 24045",
+      "SSTNet: 240299",
+      "Svea Billing Services: 240299",
+      "Svensk Konsumentmobil: 240299",
+      "TelaVox: 240299",
+      "Tele2: 24007",
+      "Tele2: 24005",
+      "Tele2: 24014",
+      "Telecom3 Sverige AB: 240299",
+      "Teledigit Scandinavia AB: 240299",
+      "Telekometen: 240299",
+      "Telenabler: 24044",
+      "Telenor Connexion: 24042",
+      "Telenor: 24008",
+      "Telenor: 24004",
+      "Telia: 24001",
+      "Tell it to Mi: 240299",
+      "Telness: 240299",
+      "Net 1: 24003",
+      "Tismi: 24048",
+      "Tolv Mobil: 240299",
+      "Trafikverket: 24021",
+      "Twilio: 24026",
+      "Unicorn Telecom: 240299",
+      "Vectone Mobile: 24019",
+      "Verbal: 240299",
+      "Viahub: 24046",
+      "Viatel: 24047",
+      "Vobbiz: 240299",
+      "Voice Integrate: 240299",
+      "Voicetech: 240299",
+      "Voxbone / Bandwidth: 24038",
+      "Weelia: 240299",
+      "Wifi.se: 240299",
+      "Wifog Sverige: 240299",
+      "XPLORA: 240299"
+    ]
+  },
+  {
+    "ISO": "CH",
+    "Country": "Switzerland",
+    "Networks": [
+      "Beeone: 22858",
+      "Comfone: 22805",
+      "Comfone: 22809",
+      "Inovia: 22866",
+      "Lycamobile: 22854",
+      "MTEL: 22869",
+      "Nexphone: 22865",
+      "relario: 22851",
+      "Salt Mobile: 22803",
+      "SBB: 22806",
+      "Sunrise: 22860",
+      "Sunrise: 22812",
+      "Sunrise: 22802",
+      "Sunrise: 22808",
+      "Sunrise: 22807",
+      "Sunrise: 22853",
+      "Swisscom: 22801",
+      "Telecom26: 22862",
+      "Tismi: 22870",
+      "Vectone Mobile: 22859"
+    ]
+  },
+  {
+    "ISO": "SY",
+    "Country": "Syria",
+    "Networks": [
+      "MTN: 41702",
+      "Syriatel: 41701"
+    ]
+  },
+  {
+    "ISO": "TW",
+    "Country": "Taiwan",
+    "Networks": [
+      "APT: 46612",
+      "APT: 46605",
+      "Chunghwa Telecom: 46692",
+      "Chunghwa Telecom: 46611",
+      "Far EasTone: 46601",
+      "Far EasTone: 46603",
+      "Far EasTone: 46688",
+      "T Star: 46689",
+      "Taiwan Mobile: 46697"
+    ]
+  },
+  {
+    "ISO": "TJ",
+    "Country": "Tajikistan",
+    "Networks": [
+      "Babilon-Mobile: 43604",
+      "Beeline: 43605",
+      "Megafon: 43603",
+      "Premium Numbers: 436299",
+      "Tcell: 43601",
+      "Tcell: 43602"
+    ]
+  },
+  {
+    "ISO": "TZ",
+    "Country": "Tanzania",
+    "Networks": [
+      "Airtel: 64005",
+      "Halotel / Viettel: 64009",
+      "Mkulima African Telecommunication: 64099",
+      "MO Mobile: 64014",
+      "Smile Communications: 64011",
+      "Tanzania Telecommunication Corporation: 64007",
+      "Tigo / MIC: 64002",
+      "Vodacom: 64004",
+      "WiAfrica: 64013",
+      "Zanzibar Telecom / Zantel: 64003"
+    ]
+  },
+  {
+    "ISO": "TH",
+    "Country": "Thailand",
+    "Networks": [
+      "AIS: 52001",
+      "AIS: 52003",
+      "dtac: 52018",
+      "dtac TriNet: 52005",
+      "my: 52000",
+      "TOTmobile: 52015",
+      "TOTmobile: 52047",
+      "TrueMove H: 52004"
+    ]
+  },
+  {
+    "ISO": "TG",
+    "Country": "Togo",
+    "Networks": [
+      "Atlantique Telecom / Moov: 61503",
+      "Togo Cellulaire / TogoCel: 61501"
+    ]
+  },
+  {
+    "ISO": "TO",
+    "Country": "Tonga",
+    "Networks": [
+      "Digicel: 53988",
+      "Digicel: 53943",
+      "U-Call: 53901",
+      "WanTok: 539299"
+    ]
+  },
+  {
+    "ISO": "TT",
+    "Country": "Trinidad and Tobago",
+    "Networks": [
+      "bmobile: 37412",
+      "Digicel: 374130"
+    ]
+  },
+  {
+    "ISO": "TN",
+    "Country": "Tunisia",
+    "Networks": [
+      "Lycamobile: 60506",
+      "Ooredoo: 60503",
+      "Orange: 60501",
+      "TT Mobile: 60502"
+    ]
+  },
+  {
+    "ISO": "TR",
+    "Country": "Turkiye",
+    "Networks": [
+      "Asistan Telekom: 286299",
+      "Avea: 28604",
+      "Avea: 28603",
+      "BasakCell: 286299",
+      "Compatel: 286299",
+      "Fenix Telekom: 286299",
+      "Foniva: 286299",
+      "IsNet: 286299",
+      "Maxiphone: 286299",
+      "Medium Telekom: 286299",
+      "Mobilisim: 286299",
+      "Netgsm: 286299",
+      "Nida: 286299",
+      "Oris: 286299",
+      "Pelicell: 286299",
+      "Plus Telekom: 286299",
+      "Roitel: 286299",
+      "SesNet: 286299",
+      "TCDD: 286299",
+      "TTM: 286299",
+      "Turkcell: 28601",
+      "Vodafone: 28602"
+    ]
+  },
+  {
+    "ISO": "TM",
+    "Country": "Turkmenistan",
+    "Networks": [
+      "MTS: 43801",
+      "TMCELL: 43802"
+    ]
+  },
+  {
+    "ISO": "UG",
+    "Country": "Uganda",
+    "Networks": [
+      "Airtel: 64101",
+      "Airtel: 64122",
+      "Lycamobile: 64104",
+      "Mango: 64111",
+      "MTN: 64110",
+      "Smile: 64133"
+    ]
+  },
+  {
+    "ISO": "UA",
+    "Country": "Ukraine",
+    "Networks": [
+      "3Mob: 25507",
+      "IT: 25504",
+      "Kyivstar: 25503",
+      "Kyivstar: 25502",
+      "lifecell: 25506",
+      "PEOPLEnet: 25521",
+      "Phoenix: 25599",
+      "Vodafone: 25501"
+    ]
+  },
+  {
+    "ISO": "AE",
+    "Country": "United Arab Emirates",
+    "Networks": [
+      "DU: 42403",
+      "Etisalat: 42402"
+    ]
+  },
+  {
+    "ISO": "GB",
+    "Country": "United Kingdom",
+    "Networks": [
+      "Airwave: 23478",
+      "aql: 23429",
+      "BT Group: 23476",
+      "BT Group: 23400",
+      "BT OnePhone: 23408",
+      "Cloud9: 23418",
+      "T-Mobile: 23432",
+      "T-Mobile: 23431",
+      "T-Mobile: 23430",
+      "FlexTel: 23417",
+      "FMS Solutions: 23404",
+      "Gamma Mobile: 23439",
+      "Greenfone: 23424",
+      "Hanhaa Mobile: 23472",
+      "Home Office: 23471",
+      "3: 23494",
+      "3: 23420",
+      "Icron Network: 23423",
+      "Jersey Airtel: 23403",
+      "JSC Ingenicum: 23435",
+      "JT Mobile: 23450",
+      "LINK Mobility: 23414",
+      "Lycamobile: 23426",
+      "Manx Telecom Mobile: 23458",
+      "Marathon Telecom: 23428",
+      "Mass Response Service GmbH: 23475",
+      "NCSC: 23456",
+      "Network Rail: 23495",
+      "Network Rail: 23412",
+      "Network Rail: 23413",
+      "now broadband: 23451",
+      "Orange: 23434",
+      "Orange: 23433",
+      "Pareteum: 23474",
+      "Sky: 23457",
+      "spusu: 23440",
+      "Sure Guernsey: 23455",
+      "Sure Isle of Man: 23436",
+      "Sure Jersey: 23499",
+      "Synectiv: 23437",
+      "Talk Talk: 23416",
+      "Tata Communications Ltd: 23427",
+      "O2: 23402",
+      "O2: 23411",
+      "O2: 23410",
+      "Telesign Mobile: 23422",
+      "TeleWare: 23419",
+      "Tismi: 23409",
+      "Truphone: 23425",
+      "Vectone Mobile: 23401",
+      "Virgin Mobile: 23438",
+      "Vodafone: 23415",
+      "Vodafone: 23491",
+      "Vodafone: 23477",
+      "Vodafone: 23492",
+      "Vodafone: 23407",
+      "Vodafone: 23489"
+    ]
+  },
+  {
+    "ISO": "US",
+    "Country": "United States of America",
+    "Networks": [
+      "Appalachian Wireless: 310750",
+      "Appalachian Wireless: 312130",
+      "Appalachian Wireless: 312750",
+      "Appalachian Wireless: 310130",
+      "ASTAC Cellular: 310760",
+      "ASTAC Cellular: 312760",
+      "ASTAC Cellular: 312710",
+      "ASTAC Cellular: 310710",
+      "AT&T Mobility: 312380",
+      "AT&T Mobility: 31230",
+      "AT&T Mobility: 313280",
+      "AT&T Mobility: 313380",
+      "AT&T Mobility: 311180",
+      "AT&T Mobility: 31316",
+      "AT&T Mobility: 312170",
+      "AT&T Mobility: 310670",
+      "AT&T Mobility: 311670",
+      "AT&T Mobility: 31090",
+      "AT&T Mobility: 313150",
+      "AT&T Mobility: 31180",
+      "AT&T Mobility: 312410",
+      "AT&T Mobility: 31270",
+      "AT&T Mobility: 310210",
+      "AT&T Mobility: 313410",
+      "AT&T Mobility: 311210",
+      "AT&T Mobility: 31330",
+      "AT&T Mobility: 312180",
+      "AT&T Mobility: 310680",
+      "AT&T Mobility: 311680",
+      "AT&T Mobility: 310150",
+      "AT&T Mobility: 313170",
+      "AT&T Mobility: 31190",
+      "AT&T Mobility: 312670",
+      "AT&T Mobility: 31280",
+      "AT&T Mobility: 310280",
+      "AT&T Mobility: 313670",
+      "AT&T Mobility: 31030",
+      "AT&T Mobility: 311280",
+      "AT&T Mobility: 31370",
+      "AT&T Mobility: 31116",
+      "AT&T Mobility: 312210",
+      "AT&T Mobility: 310950",
+      "AT&T Mobility: 311950",
+      "AT&T Mobility: 310170",
+      "AT&T Mobility: 313180",
+      "AT&T Mobility: 311150",
+      "AT&T Mobility: 312680",
+      "AT&T Mobility: 31290",
+      "AT&T Mobility: 310380",
+      "AT&T Mobility: 313680",
+      "AT&T Mobility: 311380",
+      "AT&T Mobility: 31070",
+      "AT&T Mobility: 31380",
+      "AT&T Mobility: 31130",
+      "AT&T Mobility: 312280",
+      "AT&T Mobility: 31216",
+      "AT&T Mobility: 310180",
+      "AT&T Mobility: 313210",
+      "AT&T Mobility: 311170",
+      "AT&T Mobility: 312950",
+      "AT&T Mobility: 312150",
+      "AT&T Mobility: 31016",
+      "AT&T Mobility: 310410",
+      "AT&T Mobility: 313950",
+      "AT&T Mobility: 311410",
+      "AT&T Mobility: 31080",
+      "AT&T Mobility: 31390",
+      "AT&T Mobility: 31170",
+      "Cellcom: 310600",
+      "Choice Wireless: 310630",
+      "cv cellular: 310700",
+      "DTC Wireless: 310880",
+      "ETEX: 31035",
+      "Evolve: 310990",
+      "GCI Wireless: 311430",
+      "GCI Wireless: 311370",
+      "GCI Wireless: 310430",
+      "Limitless: 310690",
+      "Limitless: 311340",
+      "Limitless: 311690",
+      "Limitless: 312340",
+      "Limitless: 310340",
+      "Limitless: 312690",
+      "Northstar Technology: 311299",
+      "Northstar Technology: 316299",
+      "Northstar Technology: 312299",
+      "Northstar Technology: 313299",
+      "Northstar Technology: 314299",
+      "Northstar Technology: 310299",
+      "Northstar Technology: 315299",
+      "OWTC: 310540",
+      "Pioneer Cellular: 311570",
+      "Pioneer Cellular: 313280",
+      "Pioneer Cellular: 310570",
+      "Pioneer Cellular: 313360",
+      "Pioneer Cellular: 310280",
+      "Pioneer Cellular: 311280",
+      "Pioneer Cellular: 313570",
+      "Pioneer Cellular: 311360",
+      "Pioneer Cellular: 310360",
+      "T-Mobile: 31010",
+      "T-Mobile: 311660",
+      "T-Mobile: 316240",
+      "T-Mobile: 311200",
+      "T-Mobile: 312880",
+      "T-Mobile: 310880",
+      "T-Mobile: 312250",
+      "T-Mobile: 311882",
+      "T-Mobile: 316530",
+      "T-Mobile: 310260",
+      "T-Mobile: 311270",
+      "T-Mobile: 316160",
+      "T-Mobile: 31110",
+      "T-Mobile: 312660",
+      "T-Mobile: 316880",
+      "T-Mobile: 310660",
+      "T-Mobile: 312190",
+      "T-Mobile: 311800",
+      "T-Mobile: 316250",
+      "T-Mobile: 310200",
+      "T-Mobile: 311230",
+      "T-Mobile: 312882",
+      "T-Mobile: 310882",
+      "T-Mobile: 312260",
+      "T-Mobile: 311940",
+      "T-Mobile: 316660",
+      "T-Mobile: 310270",
+      "T-Mobile: 310190",
+      "T-Mobile: 311311",
+      "T-Mobile: 316190",
+      "T-Mobile: 311120",
+      "T-Mobile: 312800",
+      "T-Mobile: 316882",
+      "T-Mobile: 310800",
+      "T-Mobile: 312200",
+      "T-Mobile: 311830",
+      "T-Mobile: 316260",
+      "T-Mobile: 310230",
+      "T-Mobile: 311240",
+      "T-Mobile: 312940",
+      "T-Mobile: 310940",
+      "T-Mobile: 312270",
+      "T-Mobile: 31210",
+      "T-Mobile: 316800",
+      "T-Mobile: 310310",
+      "T-Mobile: 310160",
+      "T-Mobile: 311490",
+      "T-Mobile: 316200",
+      "T-Mobile: 311160",
+      "T-Mobile: 312830",
+      "T-Mobile: 316940",
+      "T-Mobile: 310830",
+      "T-Mobile: 312230",
+      "T-Mobile: 311870",
+      "T-Mobile: 316270",
+      "T-Mobile: 310240",
+      "T-Mobile: 311250",
+      "T-Mobile: 31610",
+      "T-Mobile: 312490",
+      "T-Mobile: 316830",
+      "T-Mobile: 310490",
+      "T-Mobile: 312120",
+      "T-Mobile: 310120",
+      "T-Mobile: 311530",
+      "T-Mobile: 316230",
+      "T-Mobile: 311190",
+      "T-Mobile: 312870",
+      "T-Mobile: 310870",
+      "T-Mobile: 312240",
+      "T-Mobile: 311880",
+      "T-Mobile: 316490",
+      "T-Mobile: 310250",
+      "T-Mobile: 311260",
+      "T-Mobile: 316120",
+      "T-Mobile: 312530",
+      "T-Mobile: 316870",
+      "T-Mobile: 310530",
+      "T-Mobile: 312160",
+      "Union Wireless: 31020",
+      "Verizon Wireless: 312820",
+      "Verizon Wireless: 311275",
+      "Verizon Wireless: 312281",
+      "Verizon Wireless: 310489",
+      "Verizon Wireless: 311595",
+      "Verizon Wireless: 310480",
+      "Verizon Wireless: 311486",
+      "Verizon Wireless: 312592",
+      "Verizon Wireless: 310277",
+      "Verizon Wireless: 310910",
+      "Verizon Wireless: 312272",
+      "Verizon Wireless: 310283",
+      "Verizon Wireless: 311289",
+      "Verizon Wireless: 312483",
+      "Verizon Wireless: 31013",
+      "Verizon Wireless: 310891",
+      "Verizon Wireless: 311897",
+      "Verizon Wireless: 311280",
+      "Verizon Wireless: 312286",
+      "Verizon Wireless: 310594",
+      "Verizon Wireless: 311770",
+      "Verizon Wireless: 312894",
+      "Verizon Wireless: 311591",
+      "Verizon Wireless: 312597",
+      "Verizon Wireless: 311271",
+      "Verizon Wireless: 312277",
+      "Verizon Wireless: 310485",
+      "Verizon Wireless: 310288",
+      "Verizon Wireless: 311482",
+      "Verizon Wireless: 312488",
+      "Verizon Wireless: 310273",
+      "Verizon Wireless: 310896",
+      "Verizon Wireless: 31213",
+      "Verizon Wireless: 311285",
+      "Verizon Wireless: 312390",
+      "Verizon Wireless: 310599",
+      "Verizon Wireless: 311893",
+      "Verizon Wireless: 312899",
+      "Verizon Wireless: 312890",
+      "Verizon Wireless: 311276",
+      "Verizon Wireless: 312282",
+      "Verizon Wireless: 310590",
+      "Verizon Wireless: 311596",
+      "Verizon Wireless: 310481",
+      "Verizon Wireless: 311487",
+      "Verizon Wireless: 312593",
+      "Verizon Wireless: 310278",
+      "Verizon Wireless: 31112",
+      "Verizon Wireless: 312273",
+      "Verizon Wireless: 310284",
+      "Verizon Wireless: 311350",
+      "Verizon Wireless: 312484",
+      "Verizon Wireless: 310110",
+      "Verizon Wireless: 310892",
+      "Verizon Wireless: 311898",
+      "Verizon Wireless: 311281",
+      "Verizon Wireless: 312287",
+      "Verizon Wireless: 310595",
+      "Verizon Wireless: 311820",
+      "Verizon Wireless: 312895",
+      "Verizon Wireless: 311592",
+      "Verizon Wireless: 312598",
+      "Verizon Wireless: 311272",
+      "Verizon Wireless: 312278",
+      "Verizon Wireless: 310486",
+      "Verizon Wireless: 310289",
+      "Verizon Wireless: 311483",
+      "Verizon Wireless: 312489",
+      "Verizon Wireless: 310274",
+      "Verizon Wireless: 310897",
+      "Verizon Wireless: 312110",
+      "Verizon Wireless: 311286",
+      "Verizon Wireless: 312480",
+      "Verizon Wireless: 310770",
+      "Verizon Wireless: 311894",
+      "Verizon Wireless: 312910",
+      "Verizon Wireless: 312891",
+      "Verizon Wireless: 311277",
+      "Verizon Wireless: 312283",
+      "Verizon Wireless: 310591",
+      "Verizon Wireless: 311597",
+      "Verizon Wireless: 310482",
+      "Verizon Wireless: 311488",
+      "Verizon Wireless: 312594",
+      "Verizon Wireless: 310279",
+      "Verizon Wireless: 31113",
+      "Verizon Wireless: 312274",
+      "Verizon Wireless: 310285",
+      "Verizon Wireless: 311390",
+      "Verizon Wireless: 312485",
+      "Verizon Wireless: 310893",
+      "Verizon Wireless: 311899",
+      "Verizon Wireless: 311282",
+      "Verizon Wireless: 312288",
+      "Verizon Wireless: 310596",
+      "Verizon Wireless: 311890",
+      "Verizon Wireless: 312896",
+      "Verizon Wireless: 311593",
+      "Verizon Wireless: 312599",
+      "Verizon Wireless: 311273",
+      "Verizon Wireless: 312279",
+      "Verizon Wireless: 310487",
+      "Verizon Wireless: 310350",
+      "Verizon Wireless: 311484",
+      "Verizon Wireless: 312590",
+      "Verizon Wireless: 310275",
+      "Verizon Wireless: 310898",
+      "Verizon Wireless: 311287",
+      "Verizon Wireless: 312481",
+      "Verizon Wireless: 310820",
+      "Verizon Wireless: 311895",
+      "Verizon Wireless: 311278",
+      "Verizon Wireless: 312284",
+      "Verizon Wireless: 310592",
+      "Verizon Wireless: 311598",
+      "Verizon Wireless: 312892",
+      "Verizon Wireless: 310483",
+      "Verizon Wireless: 311489",
+      "Verizon Wireless: 312595",
+      "Verizon Wireless: 310280",
+      "Verizon Wireless: 311110",
+      "Verizon Wireless: 312275",
+      "Verizon Wireless: 310286",
+      "Verizon Wireless: 311480",
+      "Verizon Wireless: 312486",
+      "Verizon Wireless: 310271",
+      "Verizon Wireless: 310894",
+      "Verizon Wireless: 311910",
+      "Verizon Wireless: 311283",
+      "Verizon Wireless: 312289",
+      "Verizon Wireless: 310597",
+      "Verizon Wireless: 311891",
+      "Verizon Wireless: 312897",
+      "Verizon Wireless: 312770",
+      "Verizon Wireless: 311274",
+      "Verizon Wireless: 312280",
+      "Verizon Wireless: 310488",
+      "Verizon Wireless: 311594",
+      "Verizon Wireless: 310390",
+      "Verizon Wireless: 311485",
+      "Verizon Wireless: 312591",
+      "Verizon Wireless: 310276",
+      "Verizon Wireless: 310899",
+      "Verizon Wireless: 312271",
+      "Verizon Wireless: 310282",
+      "Verizon Wireless: 311288",
+      "Verizon Wireless: 312482",
+      "Verizon Wireless: 31012",
+      "Verizon Wireless: 310890",
+      "Verizon Wireless: 311896",
+      "Verizon Wireless: 311279",
+      "Verizon Wireless: 312285",
+      "Verizon Wireless: 310593",
+      "Verizon Wireless: 311599",
+      "Verizon Wireless: 312893",
+      "Verizon Wireless: 311590",
+      "Verizon Wireless: 312596",
+      "Verizon Wireless: 310281",
+      "Verizon Wireless: 312276",
+      "Verizon Wireless: 310484",
+      "Verizon Wireless: 310287",
+      "Verizon Wireless: 311481",
+      "Verizon Wireless: 312487",
+      "Verizon Wireless: 310272",
+      "Verizon Wireless: 310895",
+      "Verizon Wireless: 31212",
+      "Verizon Wireless: 311284",
+      "Verizon Wireless: 312350",
+      "Verizon Wireless: 310598",
+      "Verizon Wireless: 311892",
+      "Verizon Wireless: 312898",
+      "Viaero Wireless: 310740",
+      "Viaero Wireless: 310450",
+      "West Central Wireless: 310860"
+    ]
+  },
+  {
+    "ISO": "UY",
+    "Country": "Uruguay",
+    "Networks": [
+      "Antel Movil: 74801",
+      "Claro: 74810",
+      "Movistar: 74807"
+    ]
+  },
+  {
+    "ISO": "UZ",
+    "Country": "Uzbekistan",
+    "Networks": [
+      "Beeline: 43404",
+      "Perfectum Mobile: 43406",
+      "Ucell: 43405",
+      "UMS: 43407",
+      "UzMobile: 43403"
+    ]
+  },
+  {
+    "ISO": "VU",
+    "Country": "Vanuatu",
+    "Networks": [
+      "Digicel: 54105",
+      "Smile: 54101"
+    ]
+  },
+  {
+    "ISO": "VE",
+    "Country": "Venezuela",
+    "Networks": [
+      "Digitel: 73402",
+      "Movilnet: 73406",
+      "Movistar: 73404"
+    ]
+  },
+  {
+    "ISO": "VN",
+    "Country": "Vietnam",
+    "Networks": [
+      "Gmobile: 45207",
+      "I-Telecom: 45208",
+      "MobiFone: 45201",
+      "Reddi: 45209",
+      "Vietnamobile: 45205",
+      "Viettel: 45206",
+      "Viettel: 45204",
+      "VinaPhone: 45202"
+    ]
+  },
+  {
+    "ISO": "VI",
+    "Country": "Virgin Islands",
+   "Networks": [
+      "Fix Line: 376999"
+    ]
+  },
+  {
+    "ISO": "YE",
+    "Country": "Yemen",
+    "Networks": [
+      "SabaFon: 42101",
+      "Spacetel: 42102",
+      "Y: 42104",
+      "Yemen Mobile: 42103"
+    ]
+  },
+  {
+    "ISO": "ZM",
+    "Country": "Zambia",
+    "Networks": [
+      "Airtel: 64501",
+      "MTN: 64502",
+      "Zamtel: 64503"
+    ]
+  },
+  {
+    "ISO": "ZW",
+    "Country": "Zimbabwe",
+    "Networks": [
+      "Econet: 64804",
+      "NetOne: 64801",
+      "Telecel: 64803"
+    ]
+  }
+]

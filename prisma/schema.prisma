@@ -125,6 +125,7 @@ model MPC {
    sttimeOutMethodScriptVerify        Int @default(300)
    sttimeOutMethodScriptUpAvatar      Int @default(100)
    sttimeTryAgainSendOTP        Int @default(3)
+
 // Settings for UploadToWebSite
    stuploadtowebsiteType       Int @default(0)
    stuploadtowebsiteFormat String   @default("{deviceTemp.Uid}|{deviceInfoAPI.PASSWORD}|{deviceTemp.Cookie}|{deviceTemp.Token}|{deviceTemp.MailID}|{deviceTemp.MailPass}|{currentDateTime}|{deviceInfoAPI.FULLNAME}")  
@@ -134,7 +135,7 @@ model MPC {
 // Settings for aperchange
    staperchangeNETWORK        Int @default(0)
    staperchangeBUILDOS        Int @default(0)
-   staperchangeUSERAGENT      Int @default(0)
+   
    staperchangeGPS            Int @default(0)
    staperchangeSERIAL         Int @default(0)
    staperchangeFINGERPRINT    Int @default(0)
@@ -163,13 +164,15 @@ model MPC {
    staperchangeEBPF                   Int @default(0)
    staperchangeBYPASSSERVERSIDEAI       Int @default(0)
    staperchangeOPENGLRENDERER   Int @default(0)
-   staperchangetypePHONEINFO   String
 
+   staperchangetypePHONEINFO   String 
    staperchangeNAME        String  @default("vi_VN")
    staperchangeCOUNTRY         String @default("VN")
+   staperchangeCarrier     String @default("AS-COUNTRY")
    staperchangePHONENUMBER   String   @default("AS-COUNTRY")
-   staperchangeLANGUAGE     String    @default("US")
    staperchangeEMAIL         String   @default("8-12|@gmail.com|com.google")
+   staperchangeLANGUAGE     String    @default("US")
+   staperchangeUSERAGENT      String  @default("None")  // "None" | "AS-PHONEINFO" | "WITH-USERAGENTLIST"
 }
 
 

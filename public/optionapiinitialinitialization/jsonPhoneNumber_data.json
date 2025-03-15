@@ -1,0 +1,1200 @@
+[
+  {
+    "CountryCode": "AD",
+    "CodeLength": 6,
+    "SamplePhoneNumber": "+376"
+  },
+  {
+    "CountryCode": "AE",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+971"
+  },
+  {
+    "CountryCode": "AF",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+93"
+  },
+  {
+    "CountryCode": "AG",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "AI",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "AL",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+355"
+  },
+  {
+    "CountryCode": "AM",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+374"
+  },
+  {
+    "CountryCode": "AO",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+244"
+  },
+  {
+    "CountryCode": "AR",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+54"
+  },
+  {
+    "CountryCode": "AT",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+43"
+  },
+  {
+    "CountryCode": "AU",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+61"
+  },
+  {
+    "CountryCode": "AW",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+297"
+  },
+  {
+    "CountryCode": "AZ",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+994"
+  },
+  {
+    "CountryCode": "BA",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+387"
+  },
+  {
+    "CountryCode": "BB",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "BD",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+880"
+  },
+  {
+    "CountryCode": "BE",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+32"
+  },
+  {
+    "CountryCode": "BF",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+226"
+  },
+  {
+    "CountryCode": "BG",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+359"
+  },
+  {
+    "CountryCode": "BH",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+973"
+  },
+  {
+    "CountryCode": "BI",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+257"
+  },
+  {
+    "CountryCode": "BJ",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+229"
+  },
+  {
+    "CountryCode": "BM",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "BN",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+673"
+  },
+  {
+    "CountryCode": "BO",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+591"
+  },
+  {
+    "CountryCode": "BR",
+    "CodeLength": 11,
+    "SamplePhoneNumber": "+55"
+  },
+  {
+    "CountryCode": "BS",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "BT",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+975"
+  },
+  {
+    "CountryCode": "BW",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+267"
+  },
+  {
+    "CountryCode": "BY",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+375"
+  },
+  {
+    "CountryCode": "BZ",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+501"
+  },
+  {
+    "CountryCode": "CA",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "CD",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+243"
+  },
+  {
+    "CountryCode": "CF",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+236"
+  },
+  {
+    "CountryCode": "CG",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+242"
+  },
+  {
+    "CountryCode": "CH",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+41"
+  },
+  {
+    "CountryCode": "CI",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+225"
+  },
+  {
+    "CountryCode": "CK",
+    "CodeLength": 5,
+    "SamplePhoneNumber": "+682"
+  },
+  {
+    "CountryCode": "CL",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+56"
+  },
+  {
+    "CountryCode": "CM",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+237"
+  },
+  {
+    "CountryCode": "CN",
+    "CodeLength": 11,
+    "SamplePhoneNumber": "+86"
+  },
+  {
+    "CountryCode": "CO",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+57"
+  },
+  {
+    "CountryCode": "CR",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+506"
+  },
+  {
+    "CountryCode": "CU",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+53"
+  },
+  {
+    "CountryCode": "CV",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+238"
+  },
+  {
+    "CountryCode": "CW",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+599"
+  },
+  {
+    "CountryCode": "CY",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+357"
+  },
+  {
+    "CountryCode": "CZ",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+420"
+  },
+  {
+    "CountryCode": "DE",
+    "CodeLength": 11,
+    "SamplePhoneNumber": "+49"
+  },
+  {
+    "CountryCode": "DJ",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+253"
+  },
+  {
+    "CountryCode": "DK",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+45"
+  },
+  {
+    "CountryCode": "DM",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "DO",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "DZ",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+213"
+  },
+  {
+    "CountryCode": "EC",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+593"
+  },
+  {
+    "CountryCode": "EE",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+372"
+  },
+  {
+    "CountryCode": "EG",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+20"
+  },
+  {
+    "CountryCode": "ER",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+291"
+  },
+  {
+    "CountryCode": "ES",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+34"
+  },
+  {
+    "CountryCode": "ET",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+251"
+  },
+  {
+    "CountryCode": "FI",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+358"
+  },
+  {
+    "CountryCode": "FJ",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+679"
+  },
+  {
+    "CountryCode": "FK",
+    "CodeLength": 5,
+    "SamplePhoneNumber": "+500"
+  },
+  {
+    "CountryCode": "FM",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+691"
+  },
+  {
+    "CountryCode": "FO",
+    "CodeLength": 6,
+    "SamplePhoneNumber": "+298"
+  },
+  {
+    "CountryCode": "FR",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+33"
+  },
+  {
+    "CountryCode": "GA",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+241"
+  },
+  {
+    "CountryCode": "GB",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+44"
+  },
+  {
+    "CountryCode": "GD",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "GE",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+995"
+  },
+  {
+    "CountryCode": "GF",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+594"
+  },
+  {
+    "CountryCode": "GG",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+44"
+  },
+  {
+    "CountryCode": "GH",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+233"
+  },
+  {
+    "CountryCode": "GI",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+350"
+  },
+  {
+    "CountryCode": "GL",
+    "CodeLength": 6,
+    "SamplePhoneNumber": "+299"
+  },
+  {
+    "CountryCode": "GM",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+220"
+  },
+  {
+    "CountryCode": "GN",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+224"
+  },
+  {
+    "CountryCode": "GP",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+590"
+  },
+  {
+    "CountryCode": "GQ",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+240"
+  },
+  {
+    "CountryCode": "GR",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+30"
+  },
+  {
+    "CountryCode": "GT",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+502"
+  },
+  {
+    "CountryCode": "GU",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "GW",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+245"
+  },
+  {
+    "CountryCode": "GY",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+592"
+  },
+  {
+    "CountryCode": "HK",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+852"
+  },
+  {
+    "CountryCode": "HN",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+504"
+  },
+  {
+    "CountryCode": "HR",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+385"
+  },
+  {
+    "CountryCode": "HT",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+509"
+  },
+  {
+    "CountryCode": "HU",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+36"
+  },
+  {
+    "CountryCode": "ID",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+62"
+  },
+  {
+    "CountryCode": "IE",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+353"
+  },
+  {
+    "CountryCode": "IL",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+972"
+  },
+  {
+    "CountryCode": "IM",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+44"
+  },
+  {
+    "CountryCode": "IN",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+91"
+  },
+  {
+    "CountryCode": "IO",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+246"
+  },
+  {
+    "CountryCode": "IQ",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+964"
+  },
+  {
+    "CountryCode": "IR",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+98"
+  },
+  {
+    "CountryCode": "IS",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+354"
+  },
+  {
+    "CountryCode": "IT",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+39"
+  },
+  {
+    "CountryCode": "JE",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+44"
+  },
+  {
+    "CountryCode": "JM",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+1 876"
+  },
+  {
+    "CountryCode": "JO",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+962"
+  },
+  {
+    "CountryCode": "JP",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+81"
+  },
+  {
+    "CountryCode": "KE",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+254"
+  },
+  {
+    "CountryCode": "KG",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+996"
+  },
+  {
+    "CountryCode": "KH",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+855"
+  },
+  {
+    "CountryCode": "KI",
+    "CodeLength": 5,
+    "SamplePhoneNumber": "+686"
+  },
+  {
+    "CountryCode": "KM",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+269"
+  },
+  {
+    "CountryCode": "KN",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "KP",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+850"
+  },
+  {
+    "CountryCode": "KR",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+82"
+  },
+  {
+    "CountryCode": "KW",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+965"
+  },
+  {
+    "CountryCode": "KY",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "KZ",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+7"
+  },
+  {
+    "CountryCode": "LA",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+856"
+  },
+  {
+    "CountryCode": "LB",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+961"
+  },
+  {
+    "CountryCode": "LC",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "LI",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+423"
+  },
+  {
+    "CountryCode": "LK",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+94"
+  },
+  {
+    "CountryCode": "LR",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+231"
+  },
+  {
+    "CountryCode": "LS",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+266"
+  },
+  {
+    "CountryCode": "LT",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+370"
+  },
+  {
+    "CountryCode": "LU",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+352"
+  },
+  {
+    "CountryCode": "LV",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+371"
+  },
+  {
+    "CountryCode": "LY",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+218"
+  },
+  {
+    "CountryCode": "MA",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+212"
+  },
+  {
+    "CountryCode": "MC",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+377"
+  },
+  {
+    "CountryCode": "MD",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+373"
+  },
+  {
+    "CountryCode": "ME",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+382"
+  },
+  {
+    "CountryCode": "MF",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+590"
+  },
+  {
+    "CountryCode": "MG",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+261"
+  },
+  {
+    "CountryCode": "MH",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+692"
+  },
+  {
+    "CountryCode": "MK",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+389"
+  },
+  {
+    "CountryCode": "ML",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+223"
+  },
+  {
+    "CountryCode": "MM",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+95"
+  },
+  {
+    "CountryCode": "MN",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+976"
+  },
+  {
+    "CountryCode": "MO",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+853"
+  },
+  {
+    "CountryCode": "MP",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "MQ",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+596"
+  },
+  {
+    "CountryCode": "MR",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+222"
+  },
+  {
+    "CountryCode": "MS",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+1 664"
+  },
+  {
+    "CountryCode": "MT",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+356"
+  },
+  {
+    "CountryCode": "MU",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+230"
+  },
+  {
+    "CountryCode": "MV",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+960"
+  },
+  {
+    "CountryCode": "MW",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+265"
+  },
+  {
+    "CountryCode": "MX",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+52"
+  },
+  {
+    "CountryCode": "MY",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+60"
+  },
+  {
+    "CountryCode": "MZ",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+258"
+  },
+  {
+    "CountryCode": "NA",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+264"
+  },
+  {
+    "CountryCode": "NC",
+    "CodeLength": 6,
+    "SamplePhoneNumber": "+687"
+  },
+  {
+    "CountryCode": "NE",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+227"
+  },
+  {
+    "CountryCode": "NF",
+    "CodeLength": 6,
+    "SamplePhoneNumber": "+672"
+  },
+  {
+    "CountryCode": "NG",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+234"
+  },
+  {
+    "CountryCode": "NI",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+505"
+  },
+  {
+    "CountryCode": "NL",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+31"
+  },
+  {
+    "CountryCode": "NO",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+47"
+  },
+  {
+    "CountryCode": "NP",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+977"
+  },
+  {
+    "CountryCode": "NR",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+674"
+  },
+  {
+    "CountryCode": "NU",
+    "CodeLength": 4,
+    "SamplePhoneNumber": "+683"
+  },
+  {
+    "CountryCode": "NZ",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+64"
+  },
+  {
+    "CountryCode": "OM",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+968"
+  },
+  {
+    "CountryCode": "PA",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+507"
+  },
+  {
+    "CountryCode": "PE",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+51"
+  },
+  {
+    "CountryCode": "PF",
+    "CodeLength": 6,
+    "SamplePhoneNumber": "+689"
+  },
+  {
+    "CountryCode": "PG",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+675"
+  },
+  {
+    "CountryCode": "PH",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+63"
+  },
+  {
+    "CountryCode": "PK",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+92"
+  },
+  {
+    "CountryCode": "PL",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+48"
+  },
+  {
+    "CountryCode": "PM",
+    "CodeLength": 6,
+    "SamplePhoneNumber": "+508"
+  },
+  {
+    "CountryCode": "PR",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "PS",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+970"
+  },
+  {
+    "CountryCode": "PT",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+351"
+  },
+  {
+    "CountryCode": "PW",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+680"
+  },
+  {
+    "CountryCode": "PY",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+595"
+  },
+  {
+    "CountryCode": "QA",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+974"
+  },
+  {
+    "CountryCode": "RE",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+262"
+  },
+  {
+    "CountryCode": "RO",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+40"
+  },
+  {
+    "CountryCode": "RS",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+381"
+  },
+  {
+    "CountryCode": "RU",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+7"
+  },
+  {
+    "CountryCode": "RW",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+250"
+  },
+  {
+    "CountryCode": "SA",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+966"
+  },
+  {
+    "CountryCode": "SB",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+677"
+  },
+  {
+    "CountryCode": "SC",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+248"
+  },
+  {
+    "CountryCode": "SD",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+249"
+  },
+  {
+    "CountryCode": "SE",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+46"
+  },
+  {
+    "CountryCode": "SG",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+65"
+  },
+  {
+    "CountryCode": "SH",
+    "CodeLength": 5,
+    "SamplePhoneNumber": "+290"
+  },
+  {
+    "CountryCode": "SI",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+386"
+  },
+  {
+    "CountryCode": "SJ",
+    "CodeLength": 6,
+    "SamplePhoneNumber": "+47"
+  },
+  {
+    "CountryCode": "SK",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+421"
+  },
+  {
+    "CountryCode": "SL",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+232"
+  },
+  {
+    "CountryCode": "SM",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+378"
+  },
+  {
+    "CountryCode": "SN",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+221"
+  },
+  {
+    "CountryCode": "SO",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+252"
+  },
+  {
+    "CountryCode": "SR",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+597"
+  },
+  {
+    "CountryCode": "SS",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+211"
+  },
+  {
+    "CountryCode": "ST",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+239"
+  },
+  {
+    "CountryCode": "SV",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+503"
+  },
+  {
+    "CountryCode": "SX",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "SY",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+963"
+  },
+  {
+    "CountryCode": "SZ",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+268"
+  },
+  {
+    "CountryCode": "TC",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "TD",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+235"
+  },
+  {
+    "CountryCode": "TG",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+228"
+  },
+  {
+    "CountryCode": "TH",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+66"
+  },
+  {
+    "CountryCode": "TJ",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+992"
+  },
+  {
+    "CountryCode": "TK",
+    "CodeLength": 4,
+    "SamplePhoneNumber": "+690"
+  },
+  {
+    "CountryCode": "TL",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+670"
+  },
+  {
+    "CountryCode": "TM",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+993"
+  },
+  {
+    "CountryCode": "TN",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+216"
+  },
+  {
+    "CountryCode": "TO",
+    "CodeLength": 5,
+    "SamplePhoneNumber": "+676"
+  },
+  {
+    "CountryCode": "TR",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+90"
+  },
+  {
+    "CountryCode": "TT",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "TV",
+    "CodeLength": 5,
+    "SamplePhoneNumber": "+688"
+  },
+  {
+    "CountryCode": "TW",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+886"
+  },
+  {
+    "CountryCode": "TZ",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+255"
+  },
+  {
+    "CountryCode": "UA",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+380"
+  },
+  {
+    "CountryCode": "UG",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+256"
+  },
+  {
+    "CountryCode": "US",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "UY",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+598"
+  },
+  {
+    "CountryCode": "UZ",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+998"
+  },
+  {
+    "CountryCode": "VA",
+    "CodeLength": 8,
+    "SamplePhoneNumber": "+39"
+  },
+  {
+    "CountryCode": "VC",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "VE",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+58"
+  },
+  {
+    "CountryCode": "VG",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "VI",
+    "CodeLength": 10,
+    "SamplePhoneNumber": "+1"
+  },
+  {
+    "CountryCode": "VN",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "0"
+  },
+  {
+    "CountryCode": "VU",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+678"
+  },
+  {
+    "CountryCode": "WF",
+    "CodeLength": 6,
+    "SamplePhoneNumber": "+681"
+  },
+  {
+    "CountryCode": "WS",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+685"
+  },
+  {
+    "CountryCode": "XK",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+383"
+  },
+  {
+    "CountryCode": "YE",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+967"
+  },
+  {
+    "CountryCode": "YT",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+262"
+  },
+  {
+    "CountryCode": "ZA",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+27"
+  },
+  {
+    "CountryCode": "ZM",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+260"
+  },
+  {
+    "CountryCode": "ZW",
+    "CodeLength": 9,
+    "SamplePhoneNumber": "+263"
+  },
+
+ {
+    "CountryCode": "AS",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+1 684"
+  },
+   {
+    "CountryCode": "AN",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+599"
+  },
+  {
+    "CountryCode": "DG",
+    "CodeLength": 7,
+    "SamplePhoneNumber": "+246"
+  }
+
+
+]

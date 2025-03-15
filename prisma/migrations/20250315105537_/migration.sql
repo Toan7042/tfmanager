@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `MPC` MODIFY `staperchangeUSERAGENT` VARCHAR(191) NOT NULL DEFAULT 'None';

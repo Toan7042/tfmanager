@@ -18,14 +18,6 @@ import { Button } from "@/components/ui/button";
 import { MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarShortcut, MenubarTrigger } from "@/components/ui/menubar";
 import { Menubar } from "@/components/ui/menubar";
 
-interface Settings {
-  launch: Record<string, string>;
-  network: Record<string, string>;
-  aperChange: Record<string, boolean>;
-  otp: Record<string, string>;
-  time: { timeZone: string; timeSync: boolean };
-}
-
 interface Props {
   settings: Settings;
   handleChange: (category: keyof Settings, key: string, value: string | boolean) => void;
@@ -41,20 +33,37 @@ interface MenuGroup {
   items: (MenuItem | string | "separator")[];
 }
 
+interface Settings {
+  launch: Record<string, string>;
+  network: Record<string, string>;
+  aperChange: Record<string, boolean>;
+  otp: Record<string, string>;
+  time: { timeZone: string; timeSync: boolean };
+}
+
+interface OptionsApiInitialInitializationState {
+  staperchangetypePHONEINFO: string[];
+  staperchangetypeNAME: string[];
+  staperchangeCOUNTRY: string[];
+  staperchangePHONENUMBER: string[];
+  staperchangeEMAIL: string[];
+  staperchangeLANGUAGE: string[];
+  staperchangeUSERAGENT: string[];
+  staperchangeCarrier: string[];
+}
+
+// MENU
 const menuItems: MenuGroup[] = [
   {
-    label: "File",
+    label: "Entity",
     items: [
-      { label: "New", shortcut: "⌘N" },
-      { label: "Open", shortcut: "⌘O" },
-      { label: "Save", shortcut: "⌘S" },
-      "separator",
-      { label: "Print", shortcut: "⌘P" },
-      { label: "Exit" }
+      { label: "Devices Info"},
+      { label: "Carrier"},
+      { label: "Phone Number"}
     ]
   },
   {
-    label: "Edit",
+    label: "Rand",
     items: [
       { label: "Undo", shortcut: "⌘Z" },
       { label: "Redo", shortcut: "⌘Y" },
@@ -74,10 +83,11 @@ const menuItems: MenuGroup[] = [
   },
   {
     label: "Help",
-    items: ["About", "Contact Us", "Support"]
+    items: ["About", "Contact Us", "API Documentation"]
   }
 ];
 
+// SET SPEED
 const prioritiesSpeeds = [
   { value: "highest", label: "Highest", icon: ChevronsUp, color: "text-destructive", description: "Tối đa hiệu suất, sử dụng tài nguyên cao nhất." },
   { value: "high", label: "High", icon: ChevronUp, color: "text-orange-500", description: "Hiệu suất cao, sử dụng nhiều tài nguyên." },
@@ -85,43 +95,28 @@ const prioritiesSpeeds = [
   { value: "low", label: "Low", icon: ChevronDown, color: "text-green-600", description: "Tiết kiệm tài nguyên, tốc độ thấp." }
 ];
 
-
+// SET APP RUN
 const stlaunchAppRuntype = [
   { id: 1, name: "Facebook", createdBy: "com.facebook.katana" },
   { id: 2, name: "Facebook Lite", createdBy: "com.facebook.lite" },
   { id: 3, name: "Messenger", createdBy: "com.facebook.orca" },
 ];
 
-const options = {
-  PHONEINFO: ["iPhone", "Samsung", "Google Pixel"],
-  NAME: ["vi_VN", "en_US"],
-  COUNTRY: ["VN", "US"],
-  PHONENUMBER: ["AS-COUNTRY", "US-NUMBER"],
-  LANGUAGE: ["US", "JP"],
-  EMAIL: ["@gmail.com", "@yahoo.com"]
-};
-
-interface LocalSettings {
-  PHONEINFO: string;
-  NAME: string;
-  COUNTRY: string;
-  PHONENUMBER: string;
-  LANGUAGE: string;
-  EMAIL: string;
-}
-
 export default function PcsettingsLaunch({ settings, handleChange }: Props) {
   const [selectedWorkspace, setSelectedWorkspace] = useState(stlaunchAppRuntype[0]);
   const [mounted, setMounted] = useState(false);
   const [priority, setPriority] = useState("highest");
   const selectedPriority = prioritiesSpeeds.find((p) => p.value === priority);
-  const [localSettings, setLocalSettings] = useState<LocalSettings>({
-    PHONEINFO: "iPhone",
-    NAME: "vi_VN",
-    COUNTRY: "VN",
-    PHONENUMBER: "AS-COUNTRY",
-    LANGUAGE: "US",
-    EMAIL: "@gmail.com"
+
+  const [options, setOptions] = useState<OptionsApiInitialInitializationState>({
+    staperchangetypePHONEINFO: [],
+    staperchangetypeNAME: [],
+    staperchangeCOUNTRY: [],
+    staperchangePHONENUMBER: [],
+    staperchangeEMAIL: [],
+    staperchangeLANGUAGE: [],
+    staperchangeUSERAGENT: [],
+    staperchangeCarrier: []
   });
 
   useEffect(() => {
@@ -129,6 +124,19 @@ export default function PcsettingsLaunch({ settings, handleChange }: Props) {
     setSelectedWorkspace(initialWorkspace);
     setMounted(true);
   }, [settings.launch.stlaunchAppRun]);
+
+  useEffect(() => {
+    async function loadOptions() {
+      try {
+        const response = await fetch("/api/loadOptionsInitialinitialization");
+        const data = await response.json();
+        setOptions(data);
+      } catch (error) {
+        console.error("Lỗi khi tải options:", error);
+      }
+    }
+    loadOptions();
+  }, []);
 
   if (!mounted) {
     return null;
@@ -244,21 +252,32 @@ export default function PcsettingsLaunch({ settings, handleChange }: Props) {
                     {Object.entries(options).map(([key, values]) => (
                       <DropdownMenu key={key}>
                         <DropdownMenuTrigger asChild>
-                          <Button variant="outline" className="w-full justify-between text-sm font-medium text-gray-800 dark:text-gray-100">
-                            {key}: <span className="text-blue-600 dark:text-blue-400">{localSettings[key as keyof LocalSettings]}</span>
+                          <Button
+                            variant="outline"
+                            className="w-full justify-between text-sm font-medium text-gray-800 dark:text-gray-100">{key}{" "}<span className="text-blue-600 dark:text-blue-400">{values[0]}</span>
                             <ChevronDown className="w-4 h-4 opacity-70" />
                           </Button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent align="start" className="w-full shadow-md rounded-lg bg-white dark:bg-gray-800">
-                          {values.map((value) => (
-                            <DropdownMenuItem
-                              key={value}
-                              onClick={() => setLocalSettings(prev => ({ ...prev, [key]: value }))}
-                              className="text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-blue-700"
-                            >
-                              {value}
+                        <DropdownMenuContent
+                          align="end"
+                          className="w-full shadow-md rounded-lg bg-white dark:bg-gray-800 max-h-60 overflow-y-auto">
+                          {values.length > 0 ? (
+                            values.map((value: string) => (
+                              <DropdownMenuItem
+                                key={value}
+                                onClick={() => setOptions((prev: OptionsApiInitialInitializationState) => ({
+                                  ...prev,
+                                  [key as keyof OptionsApiInitialInitializationState]: [value, ...prev[key as keyof OptionsApiInitialInitializationState].filter((v: string) => v !== value)],
+                                }))}
+                                className="text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-blue-700"
+                              >
+                                {value}
+                              </DropdownMenuItem>
+                            ))
+                          ) : (
+                            <DropdownMenuItem disabled className="text-sm text-gray-500">
                             </DropdownMenuItem>
-                          ))}
+                          )}
                         </DropdownMenuContent>
                       </DropdownMenu>
                     ))}

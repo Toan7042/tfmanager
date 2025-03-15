@@ -89,10 +89,10 @@ const menuItems: MenuGroup[] = [
 
 // SET SPEED
 const prioritiesSpeeds = [
-  { value: "highest", label: "Highest", icon: ChevronsUp, color: "text-destructive", description: "Tối đa hiệu suất, sử dụng tài nguyên cao nhất." },
-  { value: "high", label: "High", icon: ChevronUp, color: "text-orange-500", description: "Hiệu suất cao, sử dụng nhiều tài nguyên." },
-  { value: "medium", label: "Medium", icon: Equal, color: "text-yellow-500", description: "Cân bằng giữa hiệu suất và tài nguyên." },
-  { value: "low", label: "Low", icon: ChevronDown, color: "text-green-600", description: "Tiết kiệm tài nguyên, tốc độ thấp." }
+  { value: "highest", label: "Highest", icon: ChevronsUp, color: "text-destructive", description: "Maximum performance, highest resource utilization" },
+  { value: "high", label: "High", icon: ChevronUp, color: "text-orange-500", description: "High performance, high resource utilization" },
+  { value: "medium", label: "Medium", icon: Equal, color: "text-yellow-500", description: "Balance between performance and resources" },
+  { value: "low", label: "Low", icon: ChevronDown, color: "text-green-600", description: "Save resources, low speed" }
 ];
 
 // SET APP RUN

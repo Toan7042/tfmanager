@@ -15,23 +15,25 @@
   } from "@/components/ui/dropdown-menu";
   import { useState, useEffect } from "react";
   import { Button } from "@/components/ui/button";
-  import { MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarShortcut, MenubarTrigger } from "@/components/ui/menubar";
+  import { MenubarContent, MenubarItem, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
   import { Menubar } from "@/components/ui/menubar";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import PcSettingsRAND from "./PcSettingsRAND";
 
   interface Props {
     settings: Settings;
     handleChange: (category: keyof Settings, key: string, value: string | boolean) => void;
   }
 
-  interface MenuItem {
-    label: string;
-    shortcut?: string;
-  }
+  // interface MenuItem {
+  //   label: string;
+  //   shortcut?: string;
+  // }
 
-  interface MenuGroup {
-    label: string;
-    items: (MenuItem | string | "separator")[];
-  }
+  // interface MenuGroup {
+  //   label: string;
+  //   items: (MenuItem | string | "separator")[];
+  // }
 
   interface Settings {
     launch: Record<string, string>;
@@ -48,40 +50,21 @@
     staperchangeLANGUAGE: string[];
   }
 
-  // MENU
-  const menuItems: MenuGroup[] = [
-    {
-      label: "Entity",
-      items: [
-        { label: "Devices Info"},
-        { label: "Carrier"},
-        { label: "Phone Number"}
-      ]
-    },
-    {
-      label: "Rand",
-      items: [
-        { label: "Undo", shortcut: "⌘Z" },
-        { label: "Redo", shortcut: "⌘Y" },
-        "separator",
-        { label: "Cut", shortcut: "⌘X" },
-        { label: "Copy", shortcut: "⌘C" },
-        { label: "Paste", shortcut: "⌘V" }
-      ]
-    },
-    {
-      label: "View",
-      items: [
-        { label: "Zoom In", shortcut: "⌘+" },
-        { label: "Zoom Out", shortcut: "⌘-" },
-        { label: "Reset Zoom", shortcut: "⌘0" }
-      ]
-    },
-    {
-      label: "Help",
-      items: ["About", "Contact Us", "API Documentation"]
-    }
-  ];
+// Dữ liệu menu
+const menuItems = [
+  {
+    label: "Entity",
+    items: [
+      { label: "Devices Info", key: "devices" },
+      { label: "Carrier", key: "carrier" },
+      { label: "Phone Number", key: "phone" }
+    ]
+  },
+  {
+    label: "RandList",
+    items: [{ label: "Rand Settings", key: "rand" }]
+  }
+];
 
   // SET SPEED
   const prioritiesSpeeds = [
@@ -115,6 +98,26 @@
       staperchangeLANGUAGE: []
     });
 
+    const [modalContent, setModalContent] = useState<React.ReactNode | null>(null);
+    const [showModal, setShowModal] = useState(false);
+    const handleMenuSelect = (key: string) => {
+      const contentMap: Record<string, React.ReactNode> = {
+        devices: (
+          <div>Thông tin thiết bị</div>
+        ),
+        carrier: (
+          <div>Nhà mạng</div>
+        ),
+        phone: (
+          <div>Số điện thoại</div>
+        ),
+        rand: <PcSettingsRAND />
+      };
+      setModalContent(contentMap[key] || null);
+      setShowModal(true);
+    };
+    
+
     useEffect(() => {
       const initialWorkspace = stlaunchAppRuntype.find((w) => w.name === settings.launch.stlaunchAppRun) || stlaunchAppRuntype[0];
       setSelectedWorkspace(initialWorkspace);
@@ -146,24 +149,29 @@
             <LucideGanttChart className="w-5 h-5" />
             Launch
             <Menubar>
-              {menuItems.map((menu) => (
-                <MenubarMenu key={menu.label}>
-                  <MenubarTrigger>{menu.label}</MenubarTrigger>
-                  <MenubarContent>
-                    {menu.items.map((item, index) =>
-                      item === "separator" ? (
-                        <MenubarSeparator key={index} />
-                      ) : (
-                        <MenubarItem key={typeof item === "object" ? item.label : index}>
-                          {typeof item === "object" ? item.label : item}
-                          {typeof item === "object" && item.shortcut && <MenubarShortcut>{item.shortcut}</MenubarShortcut>}
-                        </MenubarItem>
-                      )
-                    )}
-                  </MenubarContent>
-                </MenubarMenu>
+        {menuItems.map((menu) => (
+          <MenubarMenu key={menu.label}>
+            <MenubarTrigger>{menu.label}</MenubarTrigger>
+            <MenubarContent>
+              {menu.items.map((item) => (
+                <MenubarItem key={item.key} onClick={() => handleMenuSelect(item.key)}>
+                  {item.label}
+                </MenubarItem>
               ))}
-            </Menubar>
+            </MenubarContent>
+          </MenubarMenu>
+        ))}
+      </Menubar>
+
+      {/* Modal hiển thị nội dung */}
+      <Dialog open={showModal} onOpenChange={setShowModal}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle className="text-xs text-muted-foreground">Menu Config</DialogTitle>
+          </DialogHeader>
+          {modalContent}
+        </DialogContent>
+      </Dialog>
           </CardTitle>
         </CardHeader>
 

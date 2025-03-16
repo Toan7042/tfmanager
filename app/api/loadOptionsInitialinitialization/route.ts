@@ -15,7 +15,7 @@ export async function GET() {
     const userAgentData = fs.readFileSync(path.join(basePath, "file_option_useragent.txt"), "utf-8").split("\n").map(line => line.trim()).filter(Boolean);
 
     // LOAD JSON
-    const phoneModels = ["RAND", ...JSON.parse(fs.readFileSync(path.join(basePath, "jsonPhoneInfo_data.json"), "utf-8")).devices.map((device: { MODEL: string }) => device.MODEL)];
+    const phoneModels = ["RAND-ITEM", ...JSON.parse(fs.readFileSync(path.join(basePath, "jsonPhoneInfo_data.json"), "utf-8")).devices.map((device: { MODEL: string }) => device.MODEL)];
     const carrierData = ["AS-COUNTRY", ...JSON.parse(fs.readFileSync(path.join(basePath, "jsonCarrier_data.json"), "utf-8")).map((device: { ISO: string }) => device.ISO)];    
 
     return NextResponse.json({

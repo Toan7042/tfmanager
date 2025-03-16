@@ -1,60 +1,50 @@
 "use client";
 
-import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
+import { Input } from "@/components/ui/input";
 import { Clock } from "lucide-react";
 
 interface Settings {
-  launch: {
-    stlaunchAppRun: string;
-    stlaunchListWipe: string;
-  };
-  network: {
-    stnetworkTypeNetwork: string;
-    stnetworkTypeConnect: string;
-  };
-  aperChange: {
-    [key: string]: boolean;
-  };
-  otp: {
-    stotpGmail: string;
-  };
-  time: {
-    timeZone: string;
-    timeSync: boolean;
-  };
+  time: { [key: string]: number };
 }
 
 interface Props {
   settings: Settings;
-  handleChange: (category: keyof Settings, key: string, value: string | boolean) => void;
+  handleChange: (category: keyof Settings, key: string, value: number | string | boolean) => void;
 }
 
-export default function PcsettingsTime({ settings, handleChange }: Props) {
+const timeKeys = [
+  "sttimeDelayBeforeOpenApp", "sttimeDelayAfterOpenApp", "sttimeDelayClickSignUP",
+  "sttimeOutMethodScriptSignUP", "sttimeOutMethodScriptCheckSignUP",
+  "sttimeOutMethodScriptVerify", "sttimeOutMethodScriptUpAvatar", "sttimeTryAgainSendOTP"
+];
+
+export default function PcSettingsTime({ settings, handleChange }: Props) {
   return (
     <Card className="mt-3 w-[800px] h-[500px] overflow-hidden">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Clock className="w-5 h-5" />
-          Time Settings
+          Time
         </CardTitle>
       </CardHeader>
-      <CardContent className="h-full overflow-auto">
-        <Table>
+      <CardContent className="h-full overflow-auto p-4">
+        <Table className="text-[13px] w-full"> 
           <TableBody>
-            <TableRow>
-              <TableCell>Time Zone</TableCell>
-              <TableCell>
-                <input type="text" value={settings.time.timeZone} onChange={(e) => handleChange("time", "timeZone", e.target.value)} />
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Time Sync</TableCell>
-              <TableCell>
-                <Checkbox checked={settings.time.timeSync} onCheckedChange={(checked) => handleChange("time", "timeSync", checked)} />
-              </TableCell>
-            </TableRow>
+            {timeKeys.map((key) => (
+              <TableRow key={key} className="border-b">
+                <TableCell>{key}</TableCell>
+                <TableCell className="py-2 px-3">
+                  <Input
+                    type="number"
+                    className="w-20 h-8 text-center p-1 border rounded-md"
+                    value={settings.time[key] ?? 0} // Fix lỗi undefined
+                    onChange={(e) => handleChange("time", key, Number(e.target.value) || 0)}
+                  />
+                </TableCell>
+              </TableRow>
+            ))}
           </TableBody>
         </Table>
       </CardContent>

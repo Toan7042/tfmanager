@@ -6,30 +6,9 @@ import { Network, CircleCheck, Globe, Shield, ScrollText, Signal, TrainFront } f
 import * as RadioGroup from "@radix-ui/react-radio-group";
 import { cn } from "@/lib/utils";
 
-interface Settings {
-  launch: {
-    stlaunchAppRun: string;
-    stlaunchListWipe: string;
-  };
-  network: {
-    stnetworkTypeNetwork: string;
-    stnetworkTypeConnect: string;
-  };
-  aperChange: {
-    [key: string]: boolean;
-  };
-  otp: {
-    stotpGmail: string;
-  };
-  time: {
-    timeZone: string;
-    timeSync: boolean;
-  };
-}
-
 interface Props {
-  settings: Settings;
-  handleChange: (category: keyof Settings, key: string, value: string | boolean) => void;
+  settings: { network: Record<string, string> };
+  handleChange: (category: "network", key: string, value: string) => void;
 }
 
 const networkSettings = [
@@ -52,7 +31,7 @@ export default function PcsettingsNetwork({ settings, handleChange }: Props) {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Network className="w-5 h-5" />
-          Network Settings
+          Network
         </CardTitle>
       </CardHeader>
       <CardContent className="h-full overflow-auto space-y-6">

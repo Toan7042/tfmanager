@@ -65,31 +65,12 @@ const rawData: DataItem[] = [
 const countCategory = (category: string) => rawData.filter((item) => item.category === category).length;
 const sortDataByCategory = (data: DataItem[]) => [...data].sort((a, b) => a.category.localeCompare(b.category));
 
-interface Settings {
-  launch: {
-    stlaunchAppRun: string;
-    stlaunchListWipe: string;
-  };
-  network: {
-    stnetworkTypeNetwork: string;
-    stnetworkTypeConnect: string;
-  };
-  aperChange: {
-    [key: string]: boolean;
-  };
-  otp: {
-    stotpGmail: string;
-  };
-  time: {
-    timeZone: string;
-    timeSync: boolean;
-  };
-}
 
 interface Props {
-  settings: Settings;
-  handleChange: (category: keyof Settings, key: string, value: string | boolean) => void;
+  settings: { otp: Record<string, string> };
+  handleChange: (category: "otp", key: string, value: string) => void;
 }
+
 export default function PcsettingsOTP({ handleChange }: Props) {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortedData, setSortedData] = useState<DataItem[]>(sortDataByCategory(rawData));
@@ -119,7 +100,7 @@ export default function PcsettingsOTP({ handleChange }: Props) {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <KeyRound className="w-5 h-5" />
-          Time Settings
+          OTP
         </CardTitle>
       </CardHeader>
       <CardContent className="h-full overflow-auto">

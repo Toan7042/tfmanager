@@ -50,6 +50,7 @@ model ServicePackage {
   quantityPC        Int                                                                           
   quantityPhone     Int
   durationDays Int
+  Show         Int     @default(1)
 
   purchases PurchaseHistory[]
 }

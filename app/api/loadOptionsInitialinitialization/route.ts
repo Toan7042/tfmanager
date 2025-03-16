@@ -20,13 +20,13 @@ export async function GET() {
 
     return NextResponse.json({
       staperchangetypePHONEINFO: phoneModels,
+      staperchangeUSERAGENT: userAgentData,
       staperchangetypeNAME: nameGenData,
       staperchangeCOUNTRY: countryData,
       staperchangeCarrier: carrierData,
       staperchangePHONENUMBER: phoneGenData,
       staperchangeEMAIL: mailGenData,
-      staperchangeLANGUAGE: languageData,
-      staperchangeUSERAGENT: userAgentData
+      staperchangeLANGUAGE: languageData
     }, { status: 200 });
 
   } catch (error) {

@@ -1,5 +1,5 @@
 {
-  "/api/loadOptionsInitialinitialization/route": "app/api/loadOptionsInitialinitialization/route.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/api/loadOptionsInitialinitialization/route": "app/api/loadOptionsInitialinitialization/route.js",
   "/test/page": "app/test/page.js"
 }

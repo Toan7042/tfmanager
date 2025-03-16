@@ -8,20 +8,28 @@ import PcsettingsAperChange from "./PcSettingsAperChange";
 import PcsettingsTime from "./PcSettingsTime";
 import PcsettingsOTP from "./PcSettingsOTP";
 
-const defaultSettings = {
-  launch: { stlaunchAppRun: "Facebook", stlaunchListWipe: "ListItem" },
-  network: { stnetworkTypeNetwork: "None", stnetworkTypeConnect: "Aper" },
-  aperChange: { staperchangeNETWORK: false, staperchangeBUILDOS: false },
-  otp: { stotpGmail: "https://sptmail.com = api_here*facebook" },
-  time: { timeZone: "UTC+7", timeSync: true },
+interface Settings {
+  launch: Record<string, string>;
+  network: Record<string, string>;
+  aperChange: Record<string, boolean>;
+  otp: Record<string, string>;
+  time: Record<string, number>;
+}
+
+// Giá trị mặc định để tránh lỗi thiếu thuộc tính
+const initialSettings: Settings = {
+  launch: {},
+  network: {},
+  aperChange: {},
+  otp: {},
+  time: {},
 };
 
-
 export default function PcSettings() {
-  const [settings, setSettings] = useState(defaultSettings);
-  const [activeTab, setActiveTab] = useState<keyof typeof settings>("launch");
+  const [settings, setSettings] = useState<Settings>(initialSettings);
+  const [activeTab, setActiveTab] = useState<keyof Settings>("launch");
 
-  const handleChange = (category: keyof typeof settings, key: string, value: string | boolean) => {
+  const handleChange = (category: keyof Settings, key: string, value: string | number | boolean) => {
     setSettings((prev) => ({
       ...prev,
       [category]: {
@@ -35,10 +43,9 @@ export default function PcSettings() {
     <div className="p-4 max-w-full w-full">
       <Tabs defaultValue={activeTab} className="w-full">
         <TabsList className="border-b overflow-x-auto whitespace-nowrap">
-          {Object.keys(settings).map((key) => (
-            <TabsTrigger key={key} value={key} onClick={() => setActiveTab(key as keyof typeof settings)}>
+          {(Object.keys(settings) as (keyof Settings)[]).map((key) => (
+            <TabsTrigger key={key} value={key} onClick={() => setActiveTab(key)}>
               <span className="text-[13px] font-normal">{key.charAt(0).toUpperCase() + key.slice(1).toLowerCase()}</span>
-
             </TabsTrigger>
           ))}
         </TabsList>

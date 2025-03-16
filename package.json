@@ -47,6 +47,7 @@
     "prisma": "^6.4.1",
     "react": "^19.0.0",
     "react-apexcharts": "^1.7.0",
+    "react-contenteditable": "^3.3.7",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-simple-tree-menu": "^1.1.18",

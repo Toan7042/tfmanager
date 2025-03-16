@@ -1,12 +1,4 @@
 {
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
-  "/api/loadOptionsInitialinitialization/route": "app/api/loadOptionsInitialinitialization/route.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/api/admin-only/route": "app/api/admin-only/route.js",
-  "/dashboard/page": "app/dashboard/page.js",
-  "/admin/page": "app/admin/page.js",
-  "/page": "app/page.js",
-  "/test/page": "app/test/page.js",
-  "/login/page": "app/login/page.js"
+  "/test/page": "app/test/page.js"
 }

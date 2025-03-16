@@ -8,7 +8,7 @@ import { InfoIcon } from "lucide-react";
 const tabs = [
   { name: "UserAgentList", value: "Useragent" },
   { name: "PhoneNumberList", value: "Phone number" },
-  { name: "FullName", value: "FullName" },
+  { name: "FullName", value: "FullName" }
 ] as const;
 
 const contentEditableStyle = {

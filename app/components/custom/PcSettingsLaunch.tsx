@@ -19,21 +19,12 @@
   import { Menubar } from "@/components/ui/menubar";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import PcSettingsRAND from "./PcSettingsRAND";
+import PcSettingsAPITestCase from "./PcSettingsAPITestCase";
 
   interface Props {
     settings: Settings;
     handleChange: (category: keyof Settings, key: string, value: string | boolean) => void;
   }
-
-  // interface MenuItem {
-  //   label: string;
-  //   shortcut?: string;
-  // }
-
-  // interface MenuGroup {
-  //   label: string;
-  //   items: (MenuItem | string | "separator")[];
-  // }
 
   interface Settings {
     launch: Record<string, string>;
@@ -53,16 +44,20 @@ import PcSettingsRAND from "./PcSettingsRAND";
 // Dữ liệu menu
 const menuItems = [
   {
-    label: "Entity",
-    items: [
-      { label: "Devices Info", key: "devices" },
-      { label: "Carrier", key: "carrier" },
-      { label: "Phone Number", key: "phone" }
-    ]
+    label: "RandList",
+    items: [{ label: "Import", key: "randlist" }]
   },
   {
-    label: "RandList",
-    items: [{ label: "Rand Settings", key: "rand" }]
+    label: "API Testcase",
+    items: [{ label: "Entity test", key: "entitytest" }]
+  },
+  {
+    label: "About",
+    items: [{ label: "Contact us", key: "contactus" }, { label: "Social network for study", key: "socialnetworkforstudy" }]
+  },
+  {
+    label: "Help",
+    items: [{ label: "API Document", key: "apidocument" }, { label: "How to use", key: "howtouse" }]
   }
 ];
 
@@ -111,7 +106,8 @@ const menuItems = [
         phone: (
           <div>Số điện thoại</div>
         ),
-        rand: <PcSettingsRAND />
+        randlist: <PcSettingsRAND />,
+        entitytest: <PcSettingsAPITestCase />
       };
       setModalContent(contentMap[key] || null);
       setShowModal(true);

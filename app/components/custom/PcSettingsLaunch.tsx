@@ -20,6 +20,7 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import PcSettingsRAND from "./PcSettingsRAND";
 import PcSettingsAPITestCase from "./PcSettingsAPITestCase";
+import PcSettingsProxyList from "./PcSettingsProxyList";
 
   interface Props {
     settings: Settings;
@@ -43,6 +44,10 @@ import PcSettingsAPITestCase from "./PcSettingsAPITestCase";
 
 // Dữ liệu menu
 const menuItems = [
+  {
+    label: "ProxyList",
+    items: [{ label: "Import", key: "proxylist" }]
+  },
   {
     label: "RandList",
     items: [{ label: "Import", key: "randlist" }]
@@ -106,6 +111,7 @@ const menuItems = [
         phone: (
           <div>Số điện thoại</div>
         ),
+        proxylist: <PcSettingsProxyList />,
         randlist: <PcSettingsRAND />,
         entitytest: <PcSettingsAPITestCase />
       };

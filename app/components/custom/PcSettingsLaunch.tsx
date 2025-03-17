@@ -2,7 +2,7 @@
 
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { LucideGanttChart, Check, ChevronsUpDown, Equal, ChevronDown, ChevronUp, ChevronsUp, SettingsIcon, InfoIcon } from "lucide-react";
+import { LucideGanttChart, Check, ChevronsUpDown, Equal, ChevronDown, ChevronUp, ChevronsUp, InfoIcon } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
   DropdownMenu,

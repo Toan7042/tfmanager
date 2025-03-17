@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 
 const tabs = [
   { name: "LaunchApp", value: "LaunchApp" },
-  { name: "GetMailPhone", value: "GetMailPhone" }
+  { name: "IDVerify", value: "IDVerify" }
 ] as const;
 
 type TabName = typeof tabs[number]["name"];
@@ -51,7 +51,7 @@ export default function PcSettingsProxyList() {
     <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
       <Alert className="border-cyan-600/50 text-cyan-600 dark:border-cyan-600">
         <InfoIcon className="h-4 w-4" />
-        <AlertTitle>Important Information</AlertTitle>
+        <AlertTitle>Important Information PROXY</AlertTitle>
         <AlertDescription>Format: IP:PORT or IP:PORT:USER:PASS. Right click to show Copy, Paste, Shuffle</AlertDescription>
       </Alert>
 

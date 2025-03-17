@@ -39,7 +39,7 @@ export default function PcSettingsRAND() {
     <form onSubmit={(e) => (e.preventDefault(), handleSave())} className="space-y-4">
       <Alert className="border-cyan-600/50 text-cyan-600 dark:border-cyan-600 [&>svg]:text-cyan-600">
         <InfoIcon className="h-4 w-4" />
-        <AlertTitle>Important Information</AlertTitle>
+        <AlertTitle>Important Information RAND</AlertTitle>
         <AlertDescription>Ensure that the data you collect is organized systematically within the list.</AlertDescription>
       </Alert>
 

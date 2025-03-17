@@ -2,7 +2,7 @@
 
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Network, CircleCheck, Globe, Shield, ScrollText, Signal, TrainFront } from "lucide-react";
+import { Network, CircleCheck, Globe, Shield, ScrollText, Signal, TrainFront, Power, PowerOff } from "lucide-react";
 import * as RadioGroup from "@radix-ui/react-radio-group";
 import { cn } from "@/lib/utils";
 
@@ -22,6 +22,10 @@ const networkSettings = [
     { value: "Aper", label: "Aper", description: "Use Aper.Inc to connect proxy", icon: TrainFront },
     { value: "CollageProxy", label: "CollageProxy", description: "Use CollageProxyApp to connect proxy", icon: TrainFront  },
     { value: "SuperProxy", label: "SuperProxy", description: "Use SuperProxyApp to connect proxy", icon: TrainFront  }
+  ]},
+  { key: "stnetworkTypeProxyIDVerify", options: [
+    { value: "Enable", label: "Enable", description: "Use Aper.Inc to connect proxy", icon: Power },
+    { value: "Disale", label: "Disale", description: "Use CollageProxyApp to connect proxy", icon: PowerOff  }
   ]}
 ];
 

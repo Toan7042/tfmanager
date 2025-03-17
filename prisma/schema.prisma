@@ -96,6 +96,16 @@ model MPC {
   expirationDate DateTime
   Note           String
 
+// TEMP DATA FOR RAND, LIST
+  sttempListProxyLaunchApp  String
+  sttempListProxyIDVerify  String
+
+  sttempUserAgent    String
+  sttempPhoneNumber   String
+  sttempFirstName     String
+  sttempLastName        String
+  sttempWipe              String
+
 // Settings for launch
   stlaunchAppSpeed     String   @default("High")     // "Highest" | "High" | "Medium" | "Low"
   stlaunchAppRun       String   @default("Facebook") //"Facebook" | "FacebookLite" | "Messenger"
@@ -106,9 +116,7 @@ model MPC {
 // Settings for network
   stnetworkTypeNetwork         String   @default("None")  // "None" | "ListProxy" | "SIM" | "VPN_1.1.1.1"
   stnetworkTypeConnect         String   @default("Aper")  // "Aper" | "College" | "SuperProxy"
-  stnetworkListProxy           String
-  stnetworkTypeProxyForGetIDlaunchVerify  Int @default(0) // 0 tắt 1 bật
-  stnetworkListProxyForGetIDlaunchVerify  String
+  stnetworkTypeProxyIDVerify  Int @default(0) // 0 tắt 1 bật
 
 // Settings for otp
    stotpGmail                  String   @default("https://sptmail.com = api_here*facebook")  
@@ -174,6 +182,9 @@ model MPC {
    staperchangeEMAIL         String   @default("8-12|@gmail.com|com.google")
    staperchangeLANGUAGE     String    @default("US")
    staperchangeUSERAGENT      String  @default("None")  // "None" | "AS-PHONEINFO" | "WITH-USERAGENTLIST"
+
+
+
 }
 
 

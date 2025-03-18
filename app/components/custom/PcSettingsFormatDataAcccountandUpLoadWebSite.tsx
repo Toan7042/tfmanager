@@ -51,7 +51,7 @@ export default function PcSettingsFormatDataAcccountandUpLoadWebSite() {
   };
 
   return (
-    <div className="w-full max-w-lg max-h-[800px] overflow-auto border rounded-md p-4">
+    <div className="w-full max-w-lg max-h-[700px] overflow-auto border rounded-md p-4">
       <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
         <Alert className="border-cyan-600/50 text-cyan-600 dark:border-cyan-600 [&>svg]:text-cyan-600">
           <InfoIcon className="h-4 w-4" />
@@ -74,6 +74,7 @@ export default function PcSettingsFormatDataAcccountandUpLoadWebSite() {
             </span>
           ))}
         </div>
+          
 
         <Alert>
           <Terminal className="h-3 w-3" />

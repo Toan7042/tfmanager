@@ -106,7 +106,7 @@ export default function PcsettingsAperChange({ settings, handleChange }: Props) 
           <DialogContent className="max-w-md w-full max-h-[400px] overflow-hidden">
             <DialogHeader>
               <DialogTitle className="text-sm text-muted-foreground">
-                Selected Items
+                List of properties that have been activated
               </DialogTitle>
             </DialogHeader>
             <div className="space-y-2 max-h-[300px] overflow-auto">

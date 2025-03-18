@@ -6,25 +6,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 import Navbar from "../components/Nav";
-import { Button } from "@/components/ui/button"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { Terminal } from "lucide-react"
-import { AlertCircle } from "lucide-react"
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table"
 
 
 const ReactApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 export default function DashboardPage() {
-  
+
   const { data: session } = useSession();
   const [showWelcome, setShowWelcome] = useState(true);
 
@@ -39,48 +26,8 @@ export default function DashboardPage() {
     <div>
       <Navbar />
       <div>
-      <Button>Click me</Button>
-      <Alert>
-      <Terminal className="h-4 w-4" />
-      <AlertTitle>Heads up!</AlertTitle>
-      <AlertDescription>
-        You can add components and dependencies to your app using the cli.
-      </AlertDescription>
-    </Alert>
-    <Alert variant="destructive">
-      <AlertCircle className="h-4 w-4" />
-      <AlertTitle>Error</AlertTitle>
-      <AlertDescription>
-        Your session has expired. Please log in again.
-      </AlertDescription>
-    </Alert>
 
-    <Table>
-  <TableCaption>A list of your recent invoices.</TableCaption>
-  <TableHeader>
-    <TableRow>
-      <TableHead className="w-[100px]">Invoice</TableHead>
-      <TableHead>Status</TableHead>
-      <TableHead>Method</TableHead>
-      <TableHead className="text-right">Amount</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-medium">INV001</TableCell>
-      <TableCell>Paid</TableCell>
-      <TableCell>Credit Card</TableCell>
-      <TableCell className="text-right">$250.00</TableCell>
-    </TableRow>
-  </TableBody>
-</Table>
-
-
-
-
-
-
-    </div>
+      </div>
       {/* Biểu đồ ApexCharts */}
       <div id="apex-curved-line-charts" className="w-full">
         <ReactApexChart

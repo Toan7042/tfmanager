@@ -3,7 +3,7 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X, LayoutDashboard, Shield, User, Package, Command, Loader2 } from "lucide-react";
+import { Menu, X, LayoutDashboard, Shield, User, Package, Command, Loader2, MonitorSpeaker } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
@@ -13,6 +13,7 @@ export default function Navbar() {
   const menuItems = [
     { href: "/dashboard", label: "Bảng điều khiển", icon: <LayoutDashboard size={16} />, show: status === "authenticated" },
     { href: "/community", label: "Cộng đồng", icon: <Command size={16} />, show: status === "authenticated" },
+    { href: "/mydevices", label: "Thiết bị của tôi", icon: <MonitorSpeaker size={16} />, show: status === "authenticated" },
     { href: "/servicepackage", label: "Gói dịch vụ", icon: <Package size={16} />, show: status === "authenticated" },
     { href: "/profile", label: "Hồ sơ", icon: <User size={16} />, show: status === "authenticated" },
     { href: "/admin", label: "Quản trị", icon: <Shield size={16} />, show: session?.user?.role === "admin" },

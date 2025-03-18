@@ -3,92 +3,55 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X, LayoutDashboard, Shield, User, Package, Command } from "lucide-react";
+import { Menu, X, LayoutDashboard, Shield, User, Package, Command, Loader2 } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
   const [menuOpen, setMenuOpen] = useState(false);
-  
-  // Danh sách menu
+
   const menuItems = [
-    {
-      href: "/dashboard",
-      label: "Bảng điều khiển",
-      icon: <LayoutDashboard size={16} />,
-      show: !!session,
-    },
-    {
-      href: "/community",
-      label: "Cộng đồng",
-      icon: <Command size={16} />,
-      show: !!session, // Hiển thị nếu session tồn tại (đăng nhập)
-    },
-    {
-      href: "/mydevices",
-      label: "Thiết bị của tôi",
-      icon: (
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15 4H19C19.55 4 20 4.45 20 5V19C20 19.55 19.55 20 19 20H5C4.45 20 4 19.55 4 19V5C4 4.45 4.45 4 5 4H9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      ),
-      show: !!session, // Hiển thị nếu session tồn tại (đăng nhập)
-    },
-    {
-      href: "/servicepackage",
-      label: "Gói dịch vụ",
-      icon: <Package size={16} />,
-      show: !!session,
-    },
-    {
-      href: "/profile",
-      label: "Hồ sơ",
-      icon: <User size={16} />, // Thêm icon profile
-      show: !!session,
-    },
-    {
-      href: "/admin",
-      label: "Quản trị",
-      icon: <Shield size={16} />,
-      show: session?.user?.role === "admin",
-    },
+    { href: "/dashboard", label: "Bảng điều khiển", icon: <LayoutDashboard size={16} />, show: status === "authenticated" },
+    { href: "/community", label: "Cộng đồng", icon: <Command size={16} />, show: status === "authenticated" },
+    { href: "/servicepackage", label: "Gói dịch vụ", icon: <Package size={16} />, show: status === "authenticated" },
+    { href: "/profile", label: "Hồ sơ", icon: <User size={16} />, show: status === "authenticated" },
+    { href: "/admin", label: "Quản trị", icon: <Shield size={16} />, show: session?.user?.role === "admin" },
   ];
 
   return (
     <>
-      {/* Navbar */}
       <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            {/* Logo = Trang chủ */}
             <Link href="/" className="text-xl font-semibold text-blue-600 hover:opacity-80 transition">
               ToolWeb
             </Link>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-3">
-              {menuItems
-                .filter((item) => item.show)
-                .map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="flex items-center space-x-1.5 bg-gray-100 px-3 py-1.5 rounded-md text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-500 transition"
-                  >
-                    {item.icon}
-                    <span>{item.label}</span>
-                  </Link>
-                ))}
+              {menuItems.filter((item) => item.show).map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="flex items-center space-x-1.5 bg-gray-100 px-3 py-1.5 rounded-md text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-500 transition"
+                >
+                  {item.icon}
+                  <span>{item.label}</span>
+                </Link>
+              ))}
 
-              {/* Hiển thị Avatar người dùng hoặc nút đăng xuất */}
-              {session ? (
-                <div className="flex items-center space-x-2">
-                  <button
-                    onClick={() => signOut({ callbackUrl: "/" })}
-                    className="bg-red-500 text-white px-3 py-1.5 text-sm rounded-md hover:bg-red-600 transition"
-                  >
-                    Đăng xuất
-                  </button>
-                </div>
+              {/* Nút đăng nhập/đăng xuất */}
+              {status === "loading" ? (
+                <button className="px-3 py-1.5 text-sm bg-gray-200 rounded-md flex items-center justify-center">
+                  <Loader2 className="animate-spin h-5 w-5 text-gray-500" />
+                </button>
+              ) : session ? (
+                <button
+                  onClick={() => signOut({ callbackUrl: "/" })}
+                  className="bg-red-500 text-white px-3 py-1.5 text-sm rounded-md hover:bg-red-600 transition"
+                >
+                  Đăng xuất
+                </button>
               ) : (
                 <button
                   onClick={() => signIn("google")}
@@ -108,43 +71,59 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu (Giữ nguyên) */}
-        {menuOpen && (
-          <div className="md:hidden bg-white shadow-md py-4 px-6 space-y-4 absolute top-16 left-0 w-full">
-            {menuItems
-              .filter((item) => item.show)
-              .map((item) => (
-                <Link
+        {/* Mobile Menu với Animation */}
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="md:hidden bg-white shadow-md py-4 px-6 space-y-4 absolute top-16 left-0 w-full"
+            >
+              {menuItems.filter((item) => item.show).map((item) => (
+                <motion.div
                   key={item.href}
-                  href={item.href}
-                  className="block text-gray-700 hover:text-blue-500 flex items-center space-x-2 text-base"
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -10 }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
                 >
-                  {item.icon}
-                  <span>{item.label}</span>
-                </Link>
+                  <Link
+                    href={item.href}
+                    className="block text-gray-700 hover:text-blue-500 flex items-center space-x-2 text-base"
+                  >
+                    {item.icon}
+                    <span>{item.label}</span>
+                  </Link>
+                </motion.div>
               ))}
 
-            {/* Hiển thị avatar người dùng hoặc nút đăng xuất trên mobile */}
-            {session ? (
-              <button
-                onClick={() => signOut({ callbackUrl: "/" })}
-                className="block w-full text-left bg-red-500 text-white px-4 py-2 rounded-lg text-base hover:bg-red-600 transition"
-              >
-                Đăng xuất
-              </button> 
-            ) : (
-              <button
-                onClick={() => signIn("google")}
-                className="block w-full text-center bg-blue-500 text-white px-4 py-2 rounded-lg text-base hover:bg-blue-600 transition"
-              >
-                Đăng nhập
-              </button>
-            )}
-          </div>
-        )}
+              {/* Nút đăng nhập/đăng xuất trong mobile */}
+              {status === "loading" ? (
+                <button className="block w-full text-center bg-gray-200 text-gray-500 px-4 py-2 rounded-lg text-base flex items-center justify-center">
+                  <Loader2 className="animate-spin h-5 w-5" />
+                </button>
+              ) : session ? (
+                <button
+                  onClick={() => signOut({ callbackUrl: "/" })}
+                  className="block w-full text-left bg-red-500 text-white px-4 py-2 rounded-lg text-base hover:bg-red-600 transition"
+                >
+                  Đăng xuất
+                </button>
+              ) : (
+                <button
+                  onClick={() => signIn("google")}
+                  className="block w-full text-center bg-blue-500 text-white px-4 py-2 rounded-lg text-base hover:bg-blue-600 transition"
+                >
+                  Đăng nhập
+                </button>
+              )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
 
-      {/* Padding tránh navbar đè lên nội dung */}
       <div className="pt-16"></div>
     </>
   );

@@ -28,7 +28,7 @@ const aperChangeKeys = {
     "staperchangeDNSRESOLUTION",
     "staperchangeBYPASSSERVERSIDEAI",
   ],
-  "System Settings": [
+  "System Settings & Security Settings": [
     "staperchangeRELEASE",
     "staperchangeWIPEADVANCED",
     "staperchangeSTACKTRACE",
@@ -37,8 +37,6 @@ const aperChangeKeys = {
     "staperchangeAPIGOOGLEPLAYSERVICES",
     "staperchangeEBPF",
     "staperchangeOPENGLRENDERER",
-  ],
-  "Security Settings": [
     "staperchangeBOOTLOADER",
     "staperchangeHIDEBYPASSROOT",
     "staperchangeHIDEVPN",

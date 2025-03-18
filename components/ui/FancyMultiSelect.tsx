@@ -71,31 +71,35 @@ export default function FancyMultiSelect({ options, selected, onChange }: FancyM
           )}
         </div>
 
-        {/* Danh sách lựa chọn */}
-        {open && !!filteredOptions.length && (
-          <div className="relative mt-2">
-            <div className="absolute top-0 z-10 w-full rounded-md border bg-popover text-popover-foreground shadow-md outline-none">
-              <CommandList>
-                <CommandGroup className="h-full overflow-auto">
-                  {filteredOptions.map((field) => (
-                    <CommandItem
-                      key={field.value}
-                      onMouseDown={(e) => e.preventDefault()}
-                      onSelect={() => {
-                        setInputValue("");
-                        onChange([...selected, field]);
-                        setOpen(false); // Đóng ngay sau khi chọn
-                      }}
-                      className="cursor-pointer"
-                    >
-                      {field.label}
-                    </CommandItem>
-                  ))}
-                </CommandGroup>
-              </CommandList>
-            </div>
+        {/* Danh sách lựa chọn với hiệu ứng mượt và z-index */}
+        <div
+          className={`relative mt-2 origin-top transition-all duration-300 ease-in-out ${
+            open && filteredOptions.length > 0
+              ? "opacity-100 scale-y-100 z-20" // Higher z-index when open
+              : "opacity-0 scale-y-0 pointer-events-none z-0" // Lower z-index when closed
+          }`}
+        >
+          <div className="absolute top-0 w-full rounded-md border bg-popover text-popover-foreground shadow-md outline-none">
+            <CommandList className="max-h-60 overflow-auto">
+              <CommandGroup className="h-full overflow-auto">
+                {filteredOptions.map((field) => (
+                  <CommandItem
+                    key={field.value}
+                    onMouseDown={(e) => e.preventDefault()}
+                    onSelect={() => {
+                      setInputValue("");
+                      onChange([...selected, field]);
+                      setOpen(false); // Đóng ngay sau khi chọn
+                    }}
+                    className="cursor-pointer"
+                  >
+                    {field.label}
+                  </CommandItem>
+                ))}
+              </CommandGroup>
+            </CommandList>
           </div>
-        )}
+        </div>
       </Command>
     </div>
   );

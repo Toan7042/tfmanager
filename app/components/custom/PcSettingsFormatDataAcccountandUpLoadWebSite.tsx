@@ -18,12 +18,11 @@ const contentEditableStyle = {
 
 // Danh sách các trường có thể chọn
 const FIELDS = [
-  { value: "Device", label: "Device" },
   { value: "UID", label: "UID" },
   { value: "Pass", label: "Pass" },
-  { value: "2FAVerification", label: "2FAVerification" },
   { value: "Cookie", label: "Cookie" },
   { value: "Token", label: "Token" },
+  { value: "2FAVerification", label: "2FAVerification" },
   { value: "IDVerify", label: "IDVerify" },
   { value: "IDVerifyPassword", label: "IDVerifyPassword" },
   { value: "Time", label: "Time" },
@@ -32,6 +31,7 @@ const FIELDS = [
   { value: "Name", label: "Name" },
   { value: "PhoneGen", label: "PhoneGen" },
   { value: "MailGen", label: "MailGen" },
+  { value: "Device", label: "Device" },
 ];
 
 export default function PcSettingsFormatDataAcccountandUpLoadWebSite() {
@@ -57,7 +57,7 @@ export default function PcSettingsFormatDataAcccountandUpLoadWebSite() {
           <InfoIcon className="h-4 w-4" />
           <AlertTitle className="text-xs">Important Information ACCOUNT - WEBSITE</AlertTitle>
           <AlertDescription className="text-xs">
-            Ensure that the data you collect is organized systematically within the list.
+            Ensure that the data you collect is organized systematically.
           </AlertDescription>
         </Alert>
 
@@ -82,7 +82,6 @@ export default function PcSettingsFormatDataAcccountandUpLoadWebSite() {
             APIShop<span className="text-red-500">*</span>Description.
           </AlertTitle>
           <AlertDescription className="text-xs break-words whitespace-pre-line">
-            Each line, each API, each status, each category as you like.
             <ul className="list-disc pl-4">
               <li className="break-all">
                 Example: https://example.com/api/importAccount.php?code=codeShop1&api_key=apikeyShop&account=

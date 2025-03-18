@@ -24,6 +24,7 @@ import {
 const ReactApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 export default function DashboardPage() {
+  
   const { data: session } = useSession();
   const [showWelcome, setShowWelcome] = useState(true);
 

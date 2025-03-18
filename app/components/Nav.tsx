@@ -8,7 +8,7 @@ import { Menu, X, LayoutDashboard, Shield, User, Package, Command } from "lucide
 export default function Navbar() {
   const { data: session } = useSession();
   const [menuOpen, setMenuOpen] = useState(false);
-
+  
   // Danh sách menu
   const menuItems = [
     {

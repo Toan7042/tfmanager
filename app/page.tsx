@@ -1,20 +1,8 @@
 "use client";
-
-import { useSession } from "next-auth/react";
-import { useRouter } from "next/navigation"; // Hoặc useRouter nếu là Next.js 12
-import { useEffect } from "react";
 import Nav from "./components/Nav";
+import { withAuth } from "@/lib/withAuth"; 
 
-export default function Home() {
-  const { data: session } = useSession();
-  const router = useRouter();
-
-  // Sử dụng useEffect để thực hiện điều hướng sau khi render hoàn tất
-  useEffect(() => {
-    if (session) {
-      router.push("/dashboard");
-    }
-  }, [session, router]); // Chạy lại khi session thay đổi
+export default withAuth(function Home() {
 
   return (
     <main className="bg-gray-50 min-h-screen">
@@ -65,4 +53,4 @@ export default function Home() {
       </section>
     </main>
   );
-}
+}, "/dashboard");

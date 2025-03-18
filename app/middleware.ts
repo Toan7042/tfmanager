@@ -34,5 +34,5 @@ export default withAuth(
 );
 
 export const config = {
-  matcher: ["/admin/:path*", "/dashboard/:path*"], // Bảo vệ trang Admin & Dashboard
+  matcher: ["/admin/:path*", "/dashboard/:path*", "/mydevices/:path*"], // Bảo vệ trang Admin & Dashboard
 };

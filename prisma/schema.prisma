@@ -19,6 +19,9 @@ model User {
   maxPhone           Int              @default(0)         // Cập nhật khi Người dùng mua ở ServicePackage
   maxPC              Int              @default(0)         // Cập nhật khi Người dùng mua ở ServicePackage
 
+  usedPhone          Int              @default(0)  
+  usedPC             Int              @default(0)  
+
   transactions       TransactionHistory[]
   mphones            MPhone[]
   mpcs               MPC[]

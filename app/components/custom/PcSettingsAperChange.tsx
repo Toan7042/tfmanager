@@ -1,6 +1,6 @@
 "use client";
 
-import { Switch } from "@/components/ui/switch";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import {
@@ -21,7 +21,6 @@ interface Props {
   handleChange: (category: keyof Settings, key: string, value: boolean) => void;
 }
 
-// Nhóm cài đặt
 const aperChangeKeys = {
   "Security Settings": [
     "staperchangeBOOTLOADER",
@@ -64,15 +63,15 @@ export default function PcsettingsAperChange({ settings, handleChange }: Props) 
             <Table>
               <TableBody>
                 {keys.map((key) => (
-                  <TableRow key={key}>
+                  <TableRow key={key} className="hover:bg-transparent">
                     <TableCell>
                       <code className="text-[13px]">{key}</code>
                     </TableCell>
                     <TableCell>
-                      <Switch
+                      <Checkbox
                         checked={settings.aperChange[key] ?? false}
                         onCheckedChange={(checked) =>
-                          handleChange("aperChange", key, checked)
+                          handleChange("aperChange", key, checked === true)
                         }
                         className="data-[state=checked]:bg-blue-500"
                       />
@@ -88,7 +87,6 @@ export default function PcsettingsAperChange({ settings, handleChange }: Props) 
   );
 }
 
-// Component nhóm cài đặt có thể mở rộng/thu gọn
 const CollapsibleFilter = ({
   title,
   icon: Icon,
@@ -99,12 +97,12 @@ const CollapsibleFilter = ({
   children: ReactNode;
 }) => (
   <Collapsible defaultOpen>
-    <CollapsibleTrigger className="group flex w-full items-center justify-between py-3">
-      <h3 className="flex items-center gap-2 text-sm font-semibold">
-        {Icon && <Icon className="h-5 w-5" />} {title}
-      </h3>
-      <ChevronDown className="h-4 w-4 group-data-[state=open]:rotate-180 transition-transform text-muted-foreground" />
+    <CollapsibleTrigger className="group flex w-full items-center justify-between py-2 text-xs font-semibold text-gray-700">
+      <span className="flex items-center gap-2">
+        {Icon && <Icon className="h-4 w-4 text-gray-500" />} {title}
+      </span>
+      <ChevronDown className="h-3 w-3 transition-transform group-data-[state=open]:rotate-180 text-gray-500" />
     </CollapsibleTrigger>
-    <CollapsibleContent className="pt-1 pb-3">{children}</CollapsibleContent>
+    <CollapsibleContent className="pt-1 pb-2">{children}</CollapsibleContent>
   </Collapsible>
 );

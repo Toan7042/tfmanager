@@ -14,34 +14,75 @@ interface Props {
   handleChange: (category: keyof Settings, key: string, value: number | string | boolean) => void;
 }
 
-const timeKeys = [
-  "sttimeDelayBeforeOpenApp", "sttimeDelayAfterOpenApp", "sttimeDelayClickSignUP",
-  "sttimeOutMethodScriptSignUP", "sttimeOutMethodScriptCheckSignUP",
-  "sttimeOutMethodScriptVerify", "sttimeOutMethodScriptUpAvatar", "sttimeTryAgainSendOTP"
+// Nhóm thời gian (mili giây), (giây), (lượt)
+const timeKeysMilliseconds = [
+  "sttimeDelayClickSignUP",
+  "sttimeOutMethodScriptSignUP",
+  "sttimeOutMethodScriptCheckSignUP",
+  "sttimeOutMethodScriptVerify",
+  "sttimeOutMethodScriptUpAvatar",
 ];
+
+const timeKeysSeconds = ["sttimeDelayBeforeOpenApp", "sttimeDelayAfterOpenApp"];
+
+const timeKeysAttempts = ["sttimeTryAgainSendOTP"]; // Đơn vị là lượt
 
 export default function PcSettingsTime({ settings, handleChange }: Props) {
   return (
     <Card className="mt-3 w-[800px] h-[500px] overflow-hidden">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Clock className="w-5 h-5" />
+          <Clock className="w-4 h-4 text-gray-500" />
           Time
         </CardTitle>
       </CardHeader>
       <CardContent className="h-full overflow-auto p-4">
-        <Table className="text-[13px] w-full"> 
+        <Table>
           <TableBody>
-            {timeKeys.map((key) => (
-              <TableRow key={key} className="border-b">
-                <TableCell>{key}</TableCell>
-                <TableCell className="py-2 px-3">
+            {/* Nhóm đơn vị mili giây */}
+            {timeKeysMilliseconds.map((key) => (
+              <TableRow key={key} className="border-b hover:bg-transparent focus:bg-transparent border-0">
+                <TableCell className="text-xs font-medium text-black-600">{key}</TableCell>
+                <TableCell className="py-2 px-3 flex items-center gap-2">
                   <Input
                     type="number"
-                    className="w-20 h-8 text-center p-1 border rounded-md"
-                    value={settings.time[key] ?? 0} // Fix lỗi undefined
+                    className="w-20 h-7 text-sm text-black-600 text-center p-1 border rounded-md"
+                    value={settings.time[key] ?? 0}
                     onChange={(e) => handleChange("time", key, Number(e.target.value) || 0)}
                   />
+                  <span className="text-xs text-black-500">milliseconds</span>
+                </TableCell>
+              </TableRow>
+            ))}
+
+            {/* Nhóm đơn vị giây */}
+            {timeKeysSeconds.map((key) => (
+              <TableRow key={key} className="border-b hover:bg-transparent focus:bg-transparent border-0">
+                <TableCell className="text-xs font-medium text-black-600">{key}</TableCell>
+                <TableCell className="py-2 px-3 flex items-center gap-2">
+                  <Input
+                    type="number"
+                    className="w-20 h-7 text-sm text-black-600 text-center p-1 border rounded-md"
+                    value={settings.time[key] ?? 0}
+                    onChange={(e) => handleChange("time", key, Number(e.target.value) || 0)}
+                  />
+                  <span className="text-xs text-black-500">seconds</span>
+                </TableCell>
+              </TableRow>
+            ))}
+
+            {/* Nhóm đơn vị lượt */}
+            {timeKeysAttempts.map((key) => (
+              <TableRow key={key} className="border-b hover:bg-transparent focus:bg-transparent border-0">
+                <TableCell className="text-xs font-medium text-black-600">{key}</TableCell>
+                <TableCell className="py-2 px-3 flex items-center gap-2">
+                  <Input
+                    type="number"
+                    className="w-20 h-7 text-sm text-black-600 text-center p-1 border rounded-md"
+                    value={settings.time[key] ?? 0}
+                    onChange={(e) => handleChange("time", key, Number(e.target.value) || 0)}
+                  />
+                  <span className="text-xs text-black-500">attempts</span>
                 </TableCell>
               </TableRow>
             ))}

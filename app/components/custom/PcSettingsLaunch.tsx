@@ -23,6 +23,8 @@ import PcSettingsAPITestCase from "./PcSettingsAPITestCase";
 import PcSettingsProxyList from "./PcSettingsProxyList";
 import PcSettingsWipe from "./PcSettingsWipe";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import PcSettingsDomainBlack from "./PcSettingsDomainBlack";
+import PcSettingsFormatDataAndUploadWebsite from "./PcSettingsFormatDataAcccountandUpLoadWebSite";
 
 interface Props {
   settings: Settings;
@@ -48,11 +50,15 @@ interface OptionsApiInitialInitializationState {
 const menuItems = [
   {
     label: "List",
-    items: [{ label: "Proxy", key: "proxylist" }, { label: "Rand", key: "randlist" }, { label: "Wipe", key: "wipelist" }]
+    items: [{ label: "Proxy", key: "proxylist" }, { label: "Rand", key: "randlist" }, { label: "Wipe", key: "wipelist" } , { label: "DomainBlack", key: "domainblack" }]
   },
   {
     label: "API Testcase",
     items: [{ label: "Entity test", key: "entitytest" }]
+  },
+  {
+    label: "Export",
+    items: [{ label: "Format Data Acccount and UpLoadWebSite", key: "formatdataacccountanduploadwebsite" }]
   },
   {
     label: "About",
@@ -119,7 +125,9 @@ export default function PcsettingsLaunch({ settings, handleChange }: Props) {
       proxylist: <PcSettingsProxyList />,
       randlist: <PcSettingsRAND />,
       wipelist: <PcSettingsWipe />,
-      entitytest: <PcSettingsAPITestCase />
+      entitytest: <PcSettingsAPITestCase />,
+      domainblack: <PcSettingsDomainBlack />,
+      formatdataacccountanduploadwebsite: <PcSettingsFormatDataAndUploadWebsite />
     };
     setModalContent(contentMap[key] || null);
     setShowModal(true);
@@ -175,7 +183,7 @@ export default function PcsettingsLaunch({ settings, handleChange }: Props) {
           <Dialog open={showModal} onOpenChange={setShowModal}>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle className="text-xs text-muted-foreground">Menu Config</DialogTitle>
+                <DialogTitle className="text-xs text-muted-foreground">Config</DialogTitle>
               </DialogHeader>
               {modalContent}
             </DialogContent>
@@ -185,8 +193,8 @@ export default function PcsettingsLaunch({ settings, handleChange }: Props) {
       <CardContent className="h-full overflow-auto">
         <Table>
           <TableBody>
-          {/* loại bỏ separate boder - 0 */}
-          <TableRow className="hover:bg-transparent focus:bg-transparent border-0">  
+            {/* loại bỏ separate boder - 0 */}
+            <TableRow className="hover:bg-transparent focus:bg-transparent border-0">
               <TableCell className="flex gap-6 items-center">
                 {/* stlaunchAppRun */}
                 <div className="flex-1">
@@ -251,31 +259,34 @@ export default function PcsettingsLaunch({ settings, handleChange }: Props) {
             </TableRow>
             {/* Danh muc Run */}
             <TableRow className="hover:bg-transparent focus:bg-transparent border-0">
-            <TableCell colSpan={100}> {/* Đảm bảo chiếm toàn bộ hàng */}
-              <div className="flex flex-col gap-2">
-                {Object.entries(launchOptions).map(([key, values]) => (
-                  <div key={key} className="bg-white p-2 rounded-md shadow-sm border border-gray-200 hover:shadow transition-all">
-                    <div className="flex items-center gap-2">
-                      <InfoIcon className="h-4 w-4 text-gray-500" />
-                      <span className="text-sm font-medium">{key}:</span>
-                      <span className="text-xs text-gray-500 truncate">({values.join(", ")})</span>
+              <TableCell colSpan={100}> {/* Đảm bảo chiếm toàn bộ hàng */}
+                <div className="flex flex-col gap-2">
+                  {Object.entries(launchOptions).map(([key, values]) => (
+                    <div key={key} className="bg-white p-2 rounded-md shadow-sm border border-gray-200 hover:shadow transition-all">
+                      <div className="flex items-center gap-2">
+                        <InfoIcon className="h-4 w-4 text-gray-500" />
+                        <span className="text-sm font-medium">{key}:</span>
+                        <span className="text-xs text-gray-500 truncate">({values.join(", ")})</span>
+                      </div>
+                      <Select
+                        value={settings.launch[key] || values[0]}
+                        onValueChange={(value) => handleChange("launch", key, value)}
+                      >
+                        <SelectTrigger className="w-full h-8 text-xs border-gray-300 shadow-none focus:ring-1 focus:ring-blue-400">
+                          <SelectValue placeholder={values[0]} />
+                        </SelectTrigger>
+                        <SelectContent className="bg-white border border-gray-200 shadow-md rounded-md">
+                          {values.map((opt) => (
+                            <SelectItem key={opt} value={opt} className="text-xs p-1 hover:bg-gray-100">
+                              {opt}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
                     </div>
-                    <Select value={settings.launch[key]} onValueChange={(value) => handleChange("launch", key, value)}>
-                      <SelectTrigger className="w-full h-8 text-xs border-gray-300 shadow-none focus:ring-1 focus:ring-blue-400">
-                        <SelectValue placeholder="Chose..." />
-                      </SelectTrigger>
-                      <SelectContent className="bg-white border border-gray-200 shadow-md rounded-md">
-                        {values.map((opt) => (
-                          <SelectItem key={opt} value={opt} className="text-xs p-1 hover:bg-gray-100">
-                            {opt}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-                ))}
-              </div>
-            </TableCell>
+                  ))}
+                </div>
+              </TableCell>
             </TableRow>
 
             {/* Api Initial initialization */}

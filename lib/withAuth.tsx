@@ -7,7 +7,7 @@ import { useEffect } from "react";
 
 export function withAuth<T extends object>(
   Component: React.ComponentType<T>,
-  redirectTo: string = "/login" // Mặc định là dashboard
+  redirectTo: string = "/dashboard" // Mặc định là dashboard
 ) {
   return function AuthWrapper(props: T) {
     const { status } = useSession();

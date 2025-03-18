@@ -1,6 +1,6 @@
 "use client";
+import { withAuth } from "@/lib/withAuth";
 import Nav from "./components/Nav";
-import { withAuth } from "@/lib/withAuth"; 
 
 export default withAuth(function Home() {
 

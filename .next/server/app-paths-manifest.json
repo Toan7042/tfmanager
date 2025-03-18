@@ -1,14 +1,14 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
   "/api/admin-only/route": "app/api/admin-only/route.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
   "/api/loadOptionsInitialinitialization/route": "app/api/loadOptionsInitialinitialization/route.js",
-  "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/admin/page": "app/admin/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
   "/login/page": "app/login/page.js",
+  "/page": "app/page.js",
   "/loading/page": "app/loading/page.js",
   "/mydevices/page": "app/mydevices/page.js",
-  "/dashboard/page": "app/dashboard/page.js",
-  "/page": "app/page.js",
   "/test/page": "app/test/page.js"
 }

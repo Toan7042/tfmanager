@@ -15,9 +15,10 @@ export function withAuth<T extends object>(
 
     useEffect(() => {
       if (status === "authenticated") {
-        router.replace(redirectTo); // Chuyển hướng đến trang truyền vào
+        router.replace(redirectTo);
       }
-    }, [status, router, redirectTo]);
+    }, [status, router]); // ✅ Xóa redirectTo khỏi dependencies
+    
 
     if (status === "loading") {
       return <LoadingPage />; // Hiển thị trang loading khi xác thực

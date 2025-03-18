@@ -32,7 +32,7 @@ export default function PcSettingsTime({ settings, handleChange }: Props) {
     <Card className="mt-3 w-[800px] h-[500px] overflow-hidden">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Clock className="w-4 h-4 text-gray-500" />
+          <Clock className="w-5 h-5" />
           Time
         </CardTitle>
       </CardHeader>

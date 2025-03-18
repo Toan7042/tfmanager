@@ -10,6 +10,18 @@ import { ReactNode } from "react";
 import { LucideIcon } from "lucide-react";
 import FancyMultiSelect from "@/components/ui/FancyMultiSelect";
 
+// Define the Settings type to match the parent's structure
+interface Settings {
+  aperChange: Record<string, boolean>;
+  // Add other categories if needed
+}
+
+// Define Props with the parent's expected handleChange signature
+interface Props {
+  settings: Settings;
+  handleChange: (category: keyof Settings, key: string, value: string | number | boolean) => void;
+}
+
 const aperChangeKeys = {
   "Network Settings": [
     "staperchangeWIFITO4G",
@@ -37,15 +49,41 @@ const aperChangeKeys = {
   ],
 };
 
-// ✅ Định nghĩa Props
-interface Props {
-  handleChange: (category: string, values: Record<string, string[]>) => void;
-}
+export default function PcsettingsAperChange({ settings, handleChange }: Props) {
+  // Convert Record<string, boolean> to local state format for rendering
+  const initialSelectedSettings = Object.entries(settings.aperChange || {}).reduce(
+    (acc, [key, value]) => {
+      if (value) {
+        for (const [category, keys] of Object.entries(aperChangeKeys)) {
+          if (keys.includes(key)) {
+            acc[category] = acc[category] || [];
+            acc[category].push(key);
+          }
+        }
+      }
+      return acc;
+    },
+    {} as { [key: string]: string[] }
+  );
 
-export default function PcsettingsAperChange({ handleChange }: Props) {
-  const [selectedSettings, setSelectedSettings] = useState<{ [key: string]: string[] }>({});
+  const [selectedSettings, setSelectedSettings] = useState<{ [key: string]: string[] }>(
+    initialSelectedSettings
+  );
   const allSelectedItems = Object.values(selectedSettings).flat();
   const [showModal, setShowModal] = useState(false);
+
+  const handleSelectionChange = (category: string, values: string[]) => {
+    // Update local state
+    setSelectedSettings((prev) => ({ ...prev, [category]: values }));
+
+    // Call parent's handleChange for each changed value
+    const prevValues = selectedSettings[category] || [];
+    const added = values.filter((v) => !prevValues.includes(v));
+    const removed = prevValues.filter((v) => !values.includes(v));
+
+    added.forEach((key) => handleChange("aperChange", key, true));
+    removed.forEach((key) => handleChange("aperChange", key, false));
+  };
 
   return (
     <Card className="mt-3 w-[800px] h-[500px] overflow-hidden">
@@ -56,7 +94,6 @@ export default function PcsettingsAperChange({ handleChange }: Props) {
         </CardTitle>
       </CardHeader>
       <CardContent className="h-full overflow-auto space-y-4">
-        {/* ✅ Nút mở dialog hiển thị danh sách đã chọn */}
         <Button
           variant="outline"
           className="w-full text-xs"
@@ -65,7 +102,6 @@ export default function PcsettingsAperChange({ handleChange }: Props) {
           List of properties that have been activated
         </Button>
 
-        {/* ✅ Dialog hiển thị danh sách đã chọn */}
         <Dialog open={showModal} onOpenChange={setShowModal}>
           <DialogContent className="max-w-md w-full max-h-[400px] overflow-hidden">
             <DialogHeader>
@@ -73,7 +109,6 @@ export default function PcsettingsAperChange({ handleChange }: Props) {
                 Selected Items
               </DialogTitle>
             </DialogHeader>
-            {/* ✅ Đặt chiều cao cố định và bật thanh cuộn khi nội dung vượt quá */}
             <div className="space-y-2 max-h-[300px] overflow-auto">
               {allSelectedItems.length > 0 ? (
                 allSelectedItems.map((item, index) => (
@@ -94,7 +129,6 @@ export default function PcsettingsAperChange({ handleChange }: Props) {
           </DialogContent>
         </Dialog>
 
-        {/* ✅ Danh sách các danh mục */}
         {Object.entries(aperChangeKeys).map(([category, keys]) => {
           const selectedKeys = selectedSettings[category] || [];
           return (
@@ -106,8 +140,7 @@ export default function PcsettingsAperChange({ handleChange }: Props) {
                 selected={selectedKeys.map((key) => ({ label: key, value: key }))}
                 onChange={(newKeys) => {
                   const values = newKeys.map((item) => item.value);
-                  handleChange("aperChange", { ...selectedSettings, [category]: values });
-                  setSelectedSettings((prev) => ({ ...prev, [category]: values }));
+                  handleSelectionChange(category, values);
                 }}
               />
             </CollapsibleFilter>
@@ -118,7 +151,6 @@ export default function PcsettingsAperChange({ handleChange }: Props) {
   );
 }
 
-// ✅ Component CollapsibleFilter giữ nguyên
 const CollapsibleFilter = ({
   title,
   icon: Icon,

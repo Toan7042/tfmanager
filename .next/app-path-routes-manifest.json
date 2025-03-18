@@ -1,0 +1,12 @@
+{
+  "/api/admin-only/route": "/api/admin-only",
+  "/_not-found/page": "/_not-found",
+  "/api/loadOptionsInitialinitialization/route": "/api/loadOptionsInitialinitialization",
+  "/favicon.ico/route": "/favicon.ico",
+  "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
+  "/admin/page": "/admin",
+  "/page": "/",
+  "/dashboard/page": "/dashboard",
+  "/login/page": "/login",
+  "/test/page": "/test"
+}

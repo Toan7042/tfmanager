@@ -45,14 +45,14 @@ export default function PcSettings() {
         <TabsList className="w-full p-0 bg-background justify-start border-b rounded-none overflow-x-auto whitespace-nowrap">
           {(Object.keys(settings) as (keyof Settings)[]).map((key) => (
             <TabsTrigger
-            key={key}
-            value={key}
-            onClick={() => setActiveTab(key)}
-            className="rounded-none bg-background data-[state=active]:shadow-none border border-transparent border-b-border data-[state=active]:border-border data-[state=active]:border-b-background -mb-[2px] rounded-t px-4 py-2"
-          >
-            <span className="text-[13px] font-normal">{key.charAt(0).toUpperCase() + key.slice(1).toLowerCase()}</span>
-          </TabsTrigger>
-          
+              key={key}
+              value={key}
+              onClick={() => setActiveTab(key)}
+              className="rounded-none bg-background data-[state=active]:shadow-none border border-transparent border-b-border data-[state=active]:border-border data-[state=active]:border-b-background -mb-[2px] rounded-t px-4 py-2"
+            >
+              <span className="text-[13px] font-normal">{key.charAt(0).toUpperCase() + key.slice(1).toLowerCase()}</span>
+            </TabsTrigger>
+
           ))}
         </TabsList>
         <TabsContent value="launch">

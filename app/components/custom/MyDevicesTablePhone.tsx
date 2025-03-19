@@ -270,7 +270,7 @@ export default function MyDevicesTablePC() {
     };
 
     return (
-        <div className="w-full flex flex-col h-screen">
+        <div className="w-full flex flex-col">
             {/* Phần điều khiển (filter, search, pagination) */}
             <div className="mb-4 flex flex-wrap gap-4 items-center">
                 <Alert className="border-amber-500/50 text-amber-500 dark:border-amber-500 [&>svg]:text-amber-500">
@@ -358,7 +358,7 @@ export default function MyDevicesTablePC() {
             </div>
 
             {/* Bảng với thanh cuộn dọc */}
-            <div className="flex-1 overflow-y-auto rounded-md border" style={{ maxHeight: "calc(85vh - 180px)" }}>
+            <div className="flex-1 overflow-y-auto rounded-md border" style={{ maxHeight: "calc(102vh - 470px)" }}>
                 <Table className="min-w-full">
                     <TableHeader>
                         <TableRow>
@@ -436,22 +436,20 @@ export default function MyDevicesTablePC() {
                                     </TableCell>
                                     <TableCell className="whitespace-nowrap">
                                         <span
-                                            className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md ${
-                                                isExpired
-                                                    ? "text-red-600 bg-red-50"
-                                                    : new Date(device.expirationDate).getTime() - Date.now() <= 3 * 86400000
+                                            className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md ${isExpired
+                                                ? "text-red-600 bg-red-50"
+                                                : new Date(device.expirationDate).getTime() - Date.now() <= 3 * 86400000
                                                     ? "text-yellow-600 bg-yellow-50"
                                                     : "text-green-600 bg-green-50"
-                                            }`}
+                                                }`}
                                         >
                                             <span
-                                                className={`w-2 h-2 rounded-full ${
-                                                    isExpired
-                                                        ? "bg-red-400"
-                                                        : new Date(device.expirationDate).getTime() - Date.now() <= 3 * 86400000
+                                                className={`w-2 h-2 rounded-full ${isExpired
+                                                    ? "bg-red-400"
+                                                    : new Date(device.expirationDate).getTime() - Date.now() <= 3 * 86400000
                                                         ? "bg-yellow-400"
                                                         : "bg-green-400"
-                                                }`}
+                                                    }`}
                                             ></span>
                                             <span className="font-medium">{remaining}</span>
                                         </span>

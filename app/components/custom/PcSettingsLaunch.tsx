@@ -161,7 +161,7 @@ export default function PcsettingsLaunch({ settings, handleChange }: Props) {
     <Card className="mt-3 w-[800px] h-[500px] overflow-hidden">
       {/* File Edit View Help*/}
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
+      <CardTitle className="flex items-center gap-2 text-xs text-blue-500">
           <LucideGanttChart className="w-5 h-5" />
           Launch
           <Menubar>

@@ -72,36 +72,6 @@ function DialogContent({
   )
 }
 
-function DialogContentCustomPCSettings({
-  className,
-  children,
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Content>) {
-  return (
-    <DialogPortal data-slot="dialog-portal">
-      <DialogOverlay />
-      <DialogPrimitive.Content
-        data-slot="dialog-content"
-        className={cn(
-          "bg-background fixed top-[50%] left-[50%] z-50 grid w-auto min-w-[90vw] max-w-[95vw] sm:min-w-[60vw] sm:max-w-[80vw] md:min-w-[50vw] md:max-w-[70vw] lg:min-w-[40vw] lg:max-w-[60vw] max-h-[90vh] translate-x-[-50%] translate-y-[-50%] rounded-lg border p-4 sm:p-6 shadow-lg duration-200 overflow-auto",
-          className
-        )}
-        {...props}
-      >
-        {/* Nút đóng */}
-        <DialogPrimitive.Close className="absolute top-4 right-4 p-2 opacity-70 transition-opacity hover:opacity-100 focus:outline-none">
-          <XIcon className="w-5 h-5" />
-          <span className="sr-only">Close</span>
-        </DialogPrimitive.Close>
-
-        {/* Nội dung chính */}
-        <div className="overflow-auto max-h-[80vh]">{children}</div>
-      </DialogPrimitive.Content>
-    </DialogPortal>
-  );
-}
-
-
 function DialogHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
@@ -149,6 +119,35 @@ function DialogDescription({
       {...props}
     />
   )
+}
+
+function DialogContentCustomPCSettings({
+  className,
+  children,
+  ...props
+}: React.ComponentProps<typeof DialogPrimitive.Content>) {
+  return (
+    <DialogPortal data-slot="dialog-portal">
+      <DialogOverlay />
+      <DialogPrimitive.Content
+        data-slot="dialog-content"
+        className={cn(
+          "bg-background fixed top-[50%] left-[50%] z-50 grid w-auto min-w-[90vw] max-w-[95vw] sm:min-w-[60vw] sm:max-w-[80vw] md:min-w-[50vw] md:max-w-[70vw] lg:min-w-[40vw] lg:max-w-[60vw] max-h-[90vh] translate-x-[-50%] translate-y-[-50%] rounded-lg border p-4 sm:p-6 shadow-lg duration-200 overflow-auto",
+          className
+        )}
+        {...props}
+      >
+        {/* Nút đóng */}
+        <DialogPrimitive.Close className="absolute top-4 right-4 p-2 opacity-70 transition-opacity hover:opacity-100 focus:outline-none">
+          <XIcon className="w-5 h-5" />
+          <span className="sr-only">Close</span>
+        </DialogPrimitive.Close>
+
+        {/* Nội dung chính */}
+        <div className="overflow-auto max-h-[80vh]">{children}</div>
+      </DialogPrimitive.Content>
+    </DialogPortal>
+  );
 }
 
 export {

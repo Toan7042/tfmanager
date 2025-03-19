@@ -32,9 +32,9 @@ export default function PcsettingsNetwork({ settings, handleChange }: Props) {
   return (
     <Card className="mt-3 w-[800px] h-[500px] overflow-hidden">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
+      <CardTitle className="flex items-center gap-2 text-xs text-blue-500">
           <Network className="w-5 h-5" />
-          Network Settings
+          Network
         </CardTitle>
       </CardHeader>
       <CardContent className="h-full overflow-auto">

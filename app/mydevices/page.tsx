@@ -4,6 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Navbar from "../components/Nav";
 // import { MyDevicesChart } from "../components/custom/MyDevicesChart";
 import MyDevicesTablePC from "../components/custom/MyDevicesTablePC";
+import MyDevicesTablePhone from "../components/custom/MyDevicesTablePhone";
 // import Phone from "./Phone";
 
 export default function MyDevices() {
@@ -15,10 +16,10 @@ export default function MyDevices() {
         <Tabs defaultValue="computer" className="w-full">
           <TabsList className="w-full p-0 bg-background justify-start border-b rounded-none">
             <TabsTrigger value="computer" className="rounded-none bg-background h-full border border-transparent border-b-border data-[state=active]:border-border data-[state=active]:border-b-background -mb-[2px]">
-              Máy tính
+              PC
             </TabsTrigger>
             <TabsTrigger value="phone" className="rounded-none bg-background h-full border border-transparent border-b-border data-[state=active]:border-border data-[state=active]:border-b-background -mb-[2px]">
-              Điện thoại
+              Phone
             </TabsTrigger>
           </TabsList>
 
@@ -26,7 +27,7 @@ export default function MyDevices() {
             <MyDevicesTablePC />
           </TabsContent>
           <TabsContent value="phone">
-            {/* <Phone /> */}
+            <MyDevicesTablePhone />
           </TabsContent>
         </Tabs>
       </div>

@@ -86,19 +86,22 @@ export default function PcsettingsAperChange({ settings, handleChange }: Props) 
   return (
     <Card className="mt-3 w-[800px] h-[500px] overflow-hidden">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
+        <CardTitle className="flex items-center gap-2 text-xs text-blue-500">
           <Settings className="w-5 h-5" />
-          AperChange Settings
+          AperChange
         </CardTitle>
       </CardHeader>
+
       <CardContent className="h-full overflow-auto space-y-4">
+
         <Button
           variant="outline"
-          className="w-full text-xs"
+          className="w-full text-xs text-green-500"
           onClick={() => setShowModal(true)}
         >
           List of properties that have been activated
         </Button>
+
 
         <Dialog open={showModal} onOpenChange={setShowModal}>
           <DialogContent className="max-w-md w-full max-h-[400px] overflow-hidden">

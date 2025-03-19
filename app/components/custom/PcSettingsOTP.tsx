@@ -98,7 +98,7 @@ export default function PcsettingsOTP({ handleChange }: Props) {
   return (
     <Card className="mt-3 w-[800px] h-[500px] overflow-hidden">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
+      <CardTitle className="flex items-center gap-2 text-xs text-blue-500">
           <KeyRound className="w-5 h-5" />
           OTP
         </CardTitle>

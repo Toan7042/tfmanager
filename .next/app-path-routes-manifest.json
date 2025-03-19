@@ -4,11 +4,11 @@
   "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
   "/api/loadOptionsInitialinitialization/route": "/api/loadOptionsInitialinitialization",
   "/favicon.ico/route": "/favicon.ico",
+  "/loading/page": "/loading",
   "/admin/page": "/admin",
   "/dashboard/page": "/dashboard",
   "/login/page": "/login",
-  "/page": "/",
-  "/loading/page": "/loading",
   "/mydevices/page": "/mydevices",
+  "/page": "/",
   "/test/page": "/test"
 }

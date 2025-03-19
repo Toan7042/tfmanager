@@ -54,7 +54,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/loading": {
+    "/test": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -67,8 +67,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/loading",
-      "dataRoute": "/loading.rsc",
+      "srcRoute": "/test",
+      "dataRoute": "/test.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -102,6 +102,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/loading": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/loading",
+      "dataRoute": "/loading.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/login": {
       "experimentalBypassFor": [
         {
@@ -117,30 +141,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/login",
       "dataRoute": "/login.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/test": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/test",
-      "dataRoute": "/test.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -202,8 +202,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "5524a37d100a3ed0cb051c407e31c7d0",
-    "previewModeSigningKey": "b6c8434156df28092b88cd4e5709c1ceb73386e372129cd03e020ba4b74508b4",
-    "previewModeEncryptionKey": "e1b2e50df6f542d585d4302df2e95f69fafb89c36feed8839e25fa667984b226"
+    "previewModeId": "1765cd3f7bc6eba99ac6be50e9cff307",
+    "previewModeSigningKey": "522274bd245fb69b28833dd2fbc0b33f8703c05bec0aa4e45aaa7344e8cb2cb9",
+    "previewModeEncryptionKey": "8721b3fc7180a4c2dbd374a584c1b02898ad48f8b4b9a2a360aa0591e40edf0b"
   }
 }

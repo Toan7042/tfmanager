@@ -1,16 +1,16 @@
 "use client";
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Dialog, DialogTrigger, DialogContentCustomPCSettings, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import PcSettings from "../components/custom/PcSettings";
+// import { useState } from "react";
+// import { Button } from "@/components/ui/button";
+// import { Dialog, DialogTrigger, DialogContentCustomPCSettings, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+// import PcSettings from "../components/custom/PcSettings";
 
 export default function Test() {
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
   return (
     <div className="p-4">
-      <Dialog open={open} onOpenChange={setOpen}>
+      {/* <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
           <Button onClick={() => setOpen(true)}>Mở PC Settings</Button>
         </DialogTrigger>
@@ -20,7 +20,7 @@ export default function Test() {
           </DialogHeader>
           <PcSettings />
         </DialogContentCustomPCSettings>
-      </Dialog>
+      </Dialog> */}
     </div>
   );
 }

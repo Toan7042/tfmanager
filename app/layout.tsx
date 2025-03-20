@@ -7,8 +7,8 @@ import { Toaster } from "sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TF Manager",
-  description: "TF Key Management System",
+  title: "Hato",
+  description: "Providing automatic registration tool service on phone, supporting information exchange, multi-dimensional API data",
 };
 
 export default function RootLayout({

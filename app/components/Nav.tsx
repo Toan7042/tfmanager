@@ -24,17 +24,22 @@ export default function Navbar() {
       <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-xl font-semibold text-blue-600 hover:opacity-80 transition">
-              ToolWeb
+            <Link href="/" className="flex items-center space-x-1 text-lg font-semibold text-blue-600 hover:opacity-80 transition">
+              <svg width="150" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+                <image href="hato.png" x="0" y="5" height="30px" />
+                <text x="55" y="25" fontSize="17" fill="#2657A4" fontWeight="bold">Hato</text>
+                <text x="95" y="25" fontSize="12" fill="gray">.cloud</text>
+              </svg>
             </Link>
 
+
             {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-3">
+            <div className="hidden lg:flex space-x-3">
               {menuItems.filter((item) => item.show).map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="flex items-center space-x-1.5 bg-gray-100 px-3 py-1.5 rounded-md text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-500 transition"
+                  className="flex items-center space-x-1.5 bg-gray-100 px-3 py-1.5 rounded-md text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-500 transition whitespace-nowrap"
                 >
                   {item.icon}
                   <span>{item.label}</span>
@@ -43,20 +48,20 @@ export default function Navbar() {
 
               {/* Nút đăng nhập/đăng xuất */}
               {status === "loading" ? (
-                <button className="px-3 py-1.5 text-sm bg-gray-200 rounded-md flex items-center justify-center">
+                <button className="px-3 py-1.5 text-sm bg-gray-200 rounded-md flex items-center justify-center whitespace-nowrap">
                   <Loader2 className="animate-spin h-5 w-5 text-gray-500" />
                 </button>
               ) : session ? (
                 <button
                   onClick={() => signOut({ callbackUrl: "/" })}
-                  className="bg-red-500 text-white px-3 py-1.5 text-sm rounded-md hover:bg-red-600 transition"
+                  className="bg-red-500 text-white px-3 py-1.5 text-sm rounded-md hover:bg-red-600 transition whitespace-nowrap"
                 >
                   Đăng xuất
                 </button>
               ) : (
                 <button
                   onClick={() => signIn("google")}
-                  className="bg-blue-500 text-white px-3 py-1.5 text-sm rounded-md hover:bg-blue-600 transition"
+                  className="bg-blue-500 text-white px-3 py-1.5 text-sm rounded-md hover:bg-blue-600 transition whitespace-nowrap"
                 >
                   Đăng nhập
                 </button>
@@ -64,7 +69,7 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <button onClick={() => setMenuOpen(!menuOpen)} className="text-gray-700">
                 {menuOpen ? <X size={28} /> : <Menu size={28} />}
               </button>
@@ -80,7 +85,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden bg-white shadow-md py-4 px-6 space-y-4 absolute top-16 left-0 w-full"
+              className="lg:hidden bg-white shadow-md py-4 px-6 space-y-4 absolute top-16 left-0 w-full"
             >
               {menuItems.filter((item) => item.show).map((item) => (
                 <motion.div

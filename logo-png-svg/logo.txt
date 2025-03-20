@@ -1,0 +1,11 @@
+ <Link href="/" className="flex items-center space-x-1 text-lg font-semibold text-blue-600 hover:opacity-80 transition">
+              {/* <img src="/hato.png" alt="Hato Logo" className="h-6 w-auto object-contain" />
+              <span className="text-[#2657A4] font-semibold text-lg">
+                Hato<span className="text-gray-500 text-sm">.cloud</span>
+              </span> */}
+              <svg width="150" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+                <image href="hato.png" x="0" y="5" height="30px" />
+                <text x="55" y="25" font-size="16" fill="#2657A4" font-weight="bold">Hato</text>
+                <text x="95" y="25" font-size="12" fill="gray">.cloud</text>
+              </svg>
+            </Link>

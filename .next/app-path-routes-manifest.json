@@ -1,14 +1,13 @@
 {
   "/_not-found/page": "/_not-found",
-  "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
   "/api/admin-only/route": "/api/admin-only",
+  "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
   "/api/loadOptionsInitialinitialization/route": "/api/loadOptionsInitialinitialization",
-  "/favicon.ico/route": "/favicon.ico",
-  "/admin/page": "/admin",
   "/loading/page": "/loading",
-  "/mydevices/page": "/mydevices",
-  "/page": "/",
-  "/dashboard/page": "/dashboard",
+  "/admin/page": "/admin",
   "/login/page": "/login",
-  "/test/page": "/test"
+  "/test/page": "/test",
+  "/mydevices/page": "/mydevices",
+  "/dashboard/page": "/dashboard",
+  "/page": "/"
 }

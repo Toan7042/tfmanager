@@ -9,7 +9,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Hato",
   description: "Providing automatic registration tool service on phone, supporting information exchange, multi-dimensional API data",
-  icons: "/favicon.ico"
 };
 
 export default function RootLayout({

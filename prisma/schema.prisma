@@ -47,13 +47,13 @@ model SessionPoint {                                                        // T
 model ServicePackage {
   id           Int     @id @default(autoincrement())                   
   name         String
-  packageType  String  @default("Thông thường")
+  packageType  String  @default("Thông thường") // Thông thường, bắt buộc, tích hợp
   description  String?                                                      
   price        Decimal
   quantityPC        Int                                                                           
   quantityPhone     Int
   durationDays Int
-  Show         Int     @default(1)
+  Show         Int     @default(1) // Show, Hiden, Hiden nhưng hiện với User nào
 
   purchases PurchaseHistory[]
 }
@@ -66,6 +66,7 @@ model TransactionHistory {
   type   String   @default("Deposit") // Nạp/mua
   date   DateTime @default(now())
   status String   
+  Content String 
 }
 // Lịch sử đơn hàng, cập nhật sau khi mua gói hàng ở ServicePackage
 model PurchaseHistory {

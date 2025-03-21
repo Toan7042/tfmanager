@@ -18,6 +18,7 @@ model User {
   balance            Decimal          @default(0)                     // Cập nhật khi Người dùng Nạp tiền ở TransactionHistory và mua ở ServicePackage
   maxPhone           Int              @default(0)         // Cập nhật khi Người dùng mua ở ServicePackage
   maxPC              Int              @default(0)         // Cập nhật khi Người dùng mua ở ServicePackage
+  level              Int              @default(0)
 
   usedPhone          Int              @default(0)  
   usedPC             Int              @default(0)  

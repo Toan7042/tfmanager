@@ -29,18 +29,59 @@ const servicePackages: ServicePackage[] = [
   { id: 3, name: "Advanced Package", packageType: "Mandatory", description: "Package with multiple features", price: 250000, quantityPC: 3, quantityPhone: 5, durationDays: 60 },
 ];
 
+// Hiệu ứng xuất hiện
+const cardVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
+
+// Component hiển thị chi tiết gói dịch vụ trong dialog
+const PackageDetailsDialog = ({ pkg, onClose }: { pkg: ServicePackage; onClose: () => void }) => {
+  const details = [
+    { label: "Name", value: pkg.name },
+    { label: "Type", value: pkg.packageType },
+    { label: "Description", value: pkg.description },
+    { label: "Price", value: `${pkg.price.toLocaleString()} VND` },
+    { label: "PCs", value: pkg.quantityPC },
+    { label: "Phones", value: pkg.quantityPhone },
+    { label: "Duration", value: `${pkg.durationDays} days` },
+  ];
+
+  return (
+    <DialogContent>
+      <DialogHeader>
+        <DialogTitle className="text-sm">Package Details</DialogTitle>
+      </DialogHeader>
+      <div className="space-y-4">
+        {details.map((item, index) => (
+          <p key={index} className="text-sm text-gray-600">
+            <strong>{item.label}:</strong> {item.value}
+          </p>
+        ))}
+        <div className="flex justify-end gap-2">
+          <Button
+            className="w-24 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700"
+            onClick={() => console.log("Agreed:", pkg)}
+          >
+            Agree
+          </Button>
+          <Button variant="outline" className="w-24 rounded-full" onClick={onClose}>
+            Cancel
+          </Button>
+        </div>
+      </div>
+    </DialogContent>
+  );
+};
+
 export default function ServicePackage() {
   const [isDepositOpen, setIsDepositOpen] = useState(false);
   const [showHistory, setShowHistory] = useState(false);
+  const [isPackageDialogOpen, setIsPackageDialogOpen] = useState(false); // State để quản lý dialog gói dịch vụ
 
-  const handleHistoryClick = () => {
-    setShowHistory(!showHistory);
-  };
+  const handleHistoryClick = () => setShowHistory(!showHistory);
 
   return (
     <main className="min-h-screen bg-gray-50 p-6">
       <Navbar />
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+      <motion.div initial="hidden" animate="visible" variants={cardVariants}>
         <Card className="mb-6">
           <CardHeader>
             <CardTitle className="text-sm">Overview</CardTitle>
@@ -66,8 +107,8 @@ export default function ServicePackage() {
             <Dialog open={isDepositOpen} onOpenChange={setIsDepositOpen}>
               <DialogTrigger asChild>
                 <motion.div
-                  className="flex items-center cursor-pointer mt-4 text-blue-500 select-none hover:text-blue-600 transition-colors duration-200"
-                  whileTap={{ scale: 0.95, rotate: 5 }} // Animation on click
+                  className="flex items-center cursor-pointer mt-4 text-blue-500 hover:text-blue-600 transition-colors duration-200"
+                  whileTap={{ scale: 0.95, rotate: 5 }}
                   transition={{ duration: 0.2 }}
                 >
                   <PlusCircle className="w-4 h-4 mr-1" />
@@ -82,13 +123,10 @@ export default function ServicePackage() {
               </DialogContent>
             </Dialog>
             <div
-              className="flex items-center cursor-pointer mt-2 text-blue-500 select-none hover:text-blue-600 transition-colors duration-200"
+              className="flex items-center cursor-pointer mt-2 text-blue-500 hover:text-blue-600 transition-colors duration-200"
               onClick={handleHistoryClick}
             >
-              <motion.div
-                animate={{ rotate: showHistory ? 180 : 0 }}
-                transition={{ duration: 0.3 }}
-              >
+              <motion.div animate={{ rotate: showHistory ? 180 : 0 }} transition={{ duration: 0.3 }}>
                 <HistoryIcon className="w-4 h-4 mr-1" />
               </motion.div>
               <span className="text-sm">Transaction History</span>
@@ -112,9 +150,10 @@ export default function ServicePackage() {
         {servicePackages.map((pkg, index) => (
           <motion.div
             key={pkg.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
+            initial="hidden"
+            animate="visible"
+            variants={cardVariants}
+            transition={{ delay: 0.3 + index * 0.1 }}
             whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
           >
             <Card className="hover:shadow-lg transition-shadow">
@@ -145,7 +184,12 @@ export default function ServicePackage() {
                 <div className="text-sm text-gray-600">
                   <p>Price: <span className="font-medium">{pkg.price.toLocaleString()} VND</span></p>
                 </div>
-                <Button variant="outline" className="w-full rounded-full">Select</Button>
+                <Dialog open={isPackageDialogOpen} onOpenChange={setIsPackageDialogOpen}>
+                  <DialogTrigger asChild>
+                    <Button variant="outline" className="w-full rounded-full">Select</Button>
+                  </DialogTrigger>
+                  <PackageDetailsDialog pkg={pkg} onClose={() => setIsPackageDialogOpen(false)} />
+                </Dialog>
               </CardContent>
             </Card>
           </motion.div>

@@ -231,6 +231,13 @@ export default function MyDevicesTablePC() {
         setIsBatchUpdateDialogOpen(true);
     };
 
+    const handleBatchCopy = () => {
+        const selected = Array.from(selectedDevices).map(index => devicesState[index]);
+        const pcIds = selected.map(d => d.pcId).join('\n');
+        navigator.clipboard.writeText(pcIds);
+        toast.success(`Copied ${selected.length} PC ID${selected.length > 1 ? "s" : ""} to clipboard`);
+    };
+
     const handleBatchSave = () => {
         const lines = batchUpdateText.split('\n').filter(Boolean);
         const newDevices = [...devicesState];
@@ -284,7 +291,8 @@ export default function MyDevicesTablePC() {
                         </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
-                        <DropdownMenuItem onClick={() => handleBatchUpdate("pcId")}>Multi Update PC ID</DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => handleBatchCopy()}>Multi Copy PCID</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => handleBatchUpdate("pcId")}>Multi Update PCID</DropdownMenuItem>
                         <DropdownMenuItem onClick={() => handleBatchUpdate("name")}>Multi Update Name</DropdownMenuItem>
                         <DropdownMenuItem onClick={() => handleBatchUpdate("note")}>Multi Update Note</DropdownMenuItem>
                     </DropdownMenuContent>

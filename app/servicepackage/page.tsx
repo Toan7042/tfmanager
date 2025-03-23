@@ -10,7 +10,8 @@ import { motion } from "framer-motion";
 import Navbar from "../components/Nav";
 import ServicePackageDeposit from "../components/custom/ServicePackageDeposit";
 import ServicePackagePurchaseHistory from "../components/custom/ServicePackagePurchaseHistory";
-import { CircleCheck, HistoryIcon, PlusCircle } from "lucide-react";
+import { CircleCheck, HistoryIcon, PlusCircle, KeyRound } from "lucide-react";
+import ServicePackageLicenseRenewalKey from "../components/custom/ServicePackageLicenseRenewalKey";
 
 interface ServicePackage {
   id: number;
@@ -47,7 +48,7 @@ const PackageDetailsDialog = ({ pkg, onClose }: { pkg: ServicePackage; onClose: 
   return (
     <DialogContent>
       <DialogHeader>
-        <DialogTitle className="text-sm">Package Details</DialogTitle>
+        <DialogTitle className="text-sm">Payment confirmations</DialogTitle>
       </DialogHeader>
       <div className="space-y-4">
         {details.map((item, index) => (
@@ -57,7 +58,7 @@ const PackageDetailsDialog = ({ pkg, onClose }: { pkg: ServicePackage; onClose: 
         ))}
         <div className="flex justify-end gap-2">
           <Button
-            className="w-24 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700"
+            className="w-24 rounded-full bg-gradient-to-r from-blue-400 to-blue-500 text-white hover:from-blue-600 hover:to-blue-800"
             onClick={() => console.log("Agreed:", pkg)}
           >
             Agree
@@ -74,9 +75,11 @@ const PackageDetailsDialog = ({ pkg, onClose }: { pkg: ServicePackage; onClose: 
 export default function ServicePackage() {
   const [isDepositOpen, setIsDepositOpen] = useState(false);
   const [showHistory, setShowHistory] = useState(false);
-  const [isPackageDialogOpen, setIsPackageDialogOpen] = useState(false); // State để quản lý dialog gói dịch vụ
+  const [showRenewal, setshowRenewal] = useState(false);
+  const [isPackageDialogOpen, setIsPackageDialogOpen] = useState(false);
 
   const handleHistoryClick = () => setShowHistory(!showHistory);
+  const handleRenewalClick = () => setshowRenewal(!showRenewal);
 
   return (
     <main className="min-h-screen bg-gray-50 p-6">
@@ -107,7 +110,7 @@ export default function ServicePackage() {
             <Dialog open={isDepositOpen} onOpenChange={setIsDepositOpen}>
               <DialogTrigger asChild>
                 <motion.div
-                  className="flex items-center cursor-pointer mt-4 text-blue-500 hover:text-blue-600 transition-colors duration-200"
+                  className="flex items-center cursor-pointer mt-4 text-blue-500 hover:text-blue-600 transition-colors duration-200 select-none"
                   whileTap={{ scale: 0.95, rotate: 5 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -123,7 +126,7 @@ export default function ServicePackage() {
               </DialogContent>
             </Dialog>
             <div
-              className="flex items-center cursor-pointer mt-2 text-blue-500 hover:text-blue-600 transition-colors duration-200"
+              className="flex items-center cursor-pointer mt-2 text-blue-500 hover:text-blue-600 transition-colors duration-200 select-none"
               onClick={handleHistoryClick}
             >
               <motion.div animate={{ rotate: showHistory ? 180 : 0 }} transition={{ duration: 0.3 }}>
@@ -132,6 +135,18 @@ export default function ServicePackage() {
               <span className="text-sm">Transaction History</span>
             </div>
             {showHistory && <ServicePackagePurchaseHistory />}
+
+            <div
+              className="flex items-center cursor-pointer mt-2 text-blue-500 hover:text-blue-600 transition-colors duration-200 select-none"
+              onClick={handleRenewalClick}
+            >
+              <motion.div animate={{ rotate: showRenewal ? 180 : 0 }} transition={{ duration: 0.3 }}>
+                <KeyRound className="w-4 h-4 mr-1" />
+              </motion.div>
+              <span className="text-sm">License Renewal Key</span>
+            </div>
+            {showRenewal && <ServicePackageLicenseRenewalKey />}
+
           </CardContent>
         </Card>
       </motion.div>
@@ -186,7 +201,7 @@ export default function ServicePackage() {
                 </div>
                 <Dialog open={isPackageDialogOpen} onOpenChange={setIsPackageDialogOpen}>
                   <DialogTrigger asChild>
-                    <Button variant="outline" className="w-full rounded-full">Select</Button>
+                    <Button variant="outline" className="w-full rounded-full">Buy</Button>
                   </DialogTrigger>
                   <PackageDetailsDialog pkg={pkg} onClose={() => setIsPackageDialogOpen(false)} />
                 </Dialog>

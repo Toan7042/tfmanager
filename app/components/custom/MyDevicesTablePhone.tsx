@@ -232,6 +232,13 @@ export default function MyDevicesTablePC() {
         [devicesState, selectedDevices]
     );
 
+    const handleBatchCopy = () => {
+        const selected = Array.from(selectedDevices).map(index => devicesState[index]);
+        const pcIds = selected.map(d => d.pcId).join('\n');
+        navigator.clipboard.writeText(pcIds);
+        toast.success(`Copied ${selected.length} Phone ID${selected.length > 1 ? "s" : ""} to clipboard`);
+    };
+
     const handleBatchSave = React.useCallback(() => {
         const lines = batchUpdateText.split("\n").filter(Boolean);
         setDevicesState((prev) => {
@@ -294,6 +301,7 @@ export default function MyDevicesTablePC() {
                         </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
+                    <DropdownMenuItem onClick={() => handleBatchCopy()}>Multi Copy PhoneID</DropdownMenuItem>
                         <DropdownMenuItem onClick={() => handleBatchUpdate("pcId")}>Multi Update PhoneID</DropdownMenuItem>
                         <DropdownMenuItem onClick={() => handleBatchUpdate("name")}>Multi Update Name</DropdownMenuItem>
                         <DropdownMenuItem onClick={() => handleBatchUpdate("note")}>Multi Update Note</DropdownMenuItem>

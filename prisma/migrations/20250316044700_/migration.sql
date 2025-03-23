@@ -1,5 +1,0 @@
--- AlterTable
-ALTER TABLE `MPC` ADD COLUMN `staperchangeCarrier` VARCHAR(191) NOT NULL DEFAULT 'AS-COUNTRY';
-
--- AlterTable
-ALTER TABLE `ServicePackage` ADD COLUMN `Show` INTEGER NOT NULL DEFAULT 1;

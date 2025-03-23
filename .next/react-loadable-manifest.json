@@ -1,21 +1,14 @@
 {
   "app\\dashboard\\page.tsx -> react-apexcharts": {
-    "id": 8756,
+    "id": "app\\dashboard\\page.tsx -> react-apexcharts",
     "files": [
-      "static/chunks/721aab79.b8e8b853c76f8e2d.js",
-      "static/chunks/8756.131541b2e3fc6df8.js"
+      "static/chunks/_app-pages-browser_node_modules_react-apexcharts_dist_react-apexcharts_min_js.js"
     ]
   },
-  "node_modules\\.pnpm\\next@15.2.1_react-dom@18.3.1_react@18.3.1__react@18.3.1\\node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
-    "id": 9106,
+  "node_modules\\next\\dist\\client\\components\\react-dev-overlay\\utils\\use-websocket.js -> @vercel/turbopack-ecmascript-runtime/browser/dev/hmr-client/hmr-client.ts": {
+    "id": "node_modules\\next\\dist\\client\\components\\react-dev-overlay\\utils\\use-websocket.js -> @vercel/turbopack-ecmascript-runtime/browser/dev/hmr-client/hmr-client.ts",
     "files": [
-      "static/chunks/9106.8bb21241f1c3f142.js"
-    ]
-  },
-  "node_modules\\.pnpm\\next@15.2.1_react-dom@18.3.1_react@18.3.1__react@18.3.1\\node_modules\\next\\dist\\client\\index.js -> ../pages/_error": {
-    "id": 6415,
-    "files": [
-      "static/chunks/6415.50965d09834a2ac1.js"
+      "static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js"
     ]
   }
 }

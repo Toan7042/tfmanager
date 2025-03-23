@@ -1,10 +1,25 @@
 {
+  "/api/admin-only/route": "app/api/admin-only/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
-  "/api/community-chatapp/online/route": "app/api/community-chatapp/online/route.js",
+  "/api/community-chatapp/offline/route": "app/api/community-chatapp/offline/route.js",
+  "/api/community-chatapp/auth/route": "app/api/community-chatapp/auth/route.js",
   "/api/community-chatapp/messages/route": "app/api/community-chatapp/messages/route.js",
-  "/api/community-chatapp/users/route": "app/api/community-chatapp/users/route.js",
+  "/api/community-chatapp/messages/[id]/route": "app/api/community-chatapp/messages/[id]/route.js",
+  "/api/community-chatapp/reactions/route": "app/api/community-chatapp/reactions/route.js",
   "/api/community-chatapp/typing/route": "app/api/community-chatapp/typing/route.js",
+  "/api/loadOptionsInitialinitialization/route": "app/api/loadOptionsInitialinitialization/route.js",
+  "/api/community-chatapp/users/route": "app/api/community-chatapp/users/route.js",
+  "/api/community-chatapp/seen/route": "app/api/community-chatapp/seen/route.js",
+  "/api/community-chatapp/online/route": "app/api/community-chatapp/online/route.js",
+  "/admin/page": "app/admin/page.js",
   "/dashboard/page": "app/dashboard/page.js",
+  "/login/page": "app/login/page.js",
   "/page": "app/page.js",
-  "/community/page": "app/community/page.js"
+  "/mydevices/page": "app/mydevices/page.js",
+  "/community/page": "app/community/page.js",
+  "/loading/page": "app/loading/page.js",
+  "/servicepackage/page": "app/servicepackage/page.js",
+  "/profile/page": "app/profile/page.js",
+  "/test/page": "app/test/page.js"
 }

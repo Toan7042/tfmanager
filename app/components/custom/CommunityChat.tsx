@@ -7,13 +7,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Paperclip, Send, Users, Pin, MessageSquare, X, Trash2, MoreVertical, ZoomIn, ZoomOut, Search, Image as ImageIcon, Link, Loader2, Info, Eye } from "lucide-react";
+import { Paperclip, Send, Users, Pin, MessageSquare, X, Trash2, MoreVertical, ZoomIn, ZoomOut, Search, Image as ImageIcon, Link, Loader2, Info, Eye, ChevronDown } from "lucide-react"; // Thêm ChevronDown
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { formatDistanceToNow, format } from "date-fns";
 
-// Types
+// Types (giữ nguyên như cũ)
 type User = { id: number; email: string; name: string | null; avatar: string | null; maxPhone: number; maxPC: number; sessions: SessionPoint[]; role: "user" | "admin"; isOnline: boolean };
 type SessionPoint = { id: number; createdAt: string; lastActiveAt: string; expiresAt: string };
 type Message = {
@@ -53,6 +53,7 @@ export default function CommunityChat() {
   const [isSending, setIsSending] = useState(false);
   const [typingUsers, setTypingUsers] = useState<Set<number>>(new Set());
   const [showInfoDialog, setShowInfoDialog] = useState<Message | null>(null);
+  const [isAtBottom, setIsAtBottom] = useState(true); // Thêm state để kiểm tra xem có ở cuối không
 
   const scrollAreaRef = useRef<HTMLDivElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -66,7 +67,7 @@ export default function CommunityChat() {
   const isAdmin = session?.user?.role === "admin";
   const canSend = (newMessage.trim() || selectedFiles.length > 0) && !isSending;
 
-  // Pusher setup và fetch dữ liệu
+  // Pusher setup và fetch dữ liệu (giữ nguyên)
   useEffect(() => {
     if (!session) {
       setMessages([]);
@@ -147,7 +148,7 @@ export default function CommunityChat() {
     };
   }, [session, currentUserId]);
 
-  // Điều chỉnh chiều cao chat
+  // Điều chỉnh chiều cao chat (giữ nguyên)
   useEffect(() => {
     const updateHeight = () => {
       if (chatContainerRef.current && scrollAreaRef.current) {
@@ -160,18 +161,38 @@ export default function CommunityChat() {
     return () => window.removeEventListener("resize", updateHeight);
   }, [messages.length]);
 
-  // Tự động scroll khi messages hoặc typingUsers thay đổi
+  // Kiểm tra vị trí cuộn để hiển thị nút mũi tên xuống
+  useEffect(() => {
+    const handleScroll = () => {
+      if (scrollAreaRef.current) {
+        const { scrollHeight, clientHeight, scrollTop } = scrollAreaRef.current;
+        // Kiểm tra xem có gần cuối (trong 50px) hay không
+        setIsAtBottom(scrollHeight - scrollTop - clientHeight < 50);
+      }
+    };
+
+    const scrollArea = scrollAreaRef.current;
+    if (scrollArea) {
+      scrollArea.addEventListener("scroll", handleScroll);
+      handleScroll(); // Kiểm tra ban đầu
+    }
+
+    return () => {
+      if (scrollArea) scrollArea.removeEventListener("scroll", handleScroll);
+    };
+  }, [messages]);
+
+  // Tự động scroll khi messages hoặc typingUsers thay đổi (giữ nguyên)
   useEffect(() => {
     if (scrollAreaRef.current) {
       const { scrollHeight, clientHeight, scrollTop } = scrollAreaRef.current;
-      // Scroll xuống dưới cùng nếu gần cuối hoặc có tin nhắn mới từ người dùng hiện tại
       if (scrollHeight - scrollTop - clientHeight < 100 || messages[messages.length - 1]?.userId === currentUserId) {
         scrollAreaRef.current.scrollTo({ top: scrollHeight, behavior: "smooth" });
       }
     }
   }, [messages, typingUsers, currentUserId]);
 
-  // Đóng menu khi click bên ngoài
+  // Đóng menu khi click bên ngoài (giữ nguyên)
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(e.target as Node)) setShowMenu(false);
@@ -180,7 +201,7 @@ export default function CommunityChat() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Ghi lại hành động "seen" khi gửi reply
+  // Ghi lại hành động "seen" khi gửi reply (giữ nguyên)
   const markAsSeen = async (messageId: number) => {
     try {
       const res = await fetch("/api/community-chatapp/seen", {
@@ -198,7 +219,7 @@ export default function CommunityChat() {
     }
   };
 
-  // Tự động mark as seen khi tin nhắn hiển thị
+  // Tự động mark as seen khi tin nhắn hiển thị (giữ nguyên)
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -219,7 +240,7 @@ export default function CommunityChat() {
     return () => observer.disconnect();
   }, [messages, currentUserId]);
 
-  // Gửi tin nhắn cộng đồng
+  // Gửi tin nhắn cộng đồng (giữ nguyên)
   const handleSendMessage = async () => {
     if (!canSend || !currentUserId) return;
     setIsSending(true);
@@ -244,7 +265,6 @@ export default function CommunityChat() {
       setPreviewContents([]);
       setReplyTo(null);
       if (fileInputRef.current) fileInputRef.current.value = "";
-      // Scroll xuống dưới cùng ngay sau khi gửi
       if (scrollAreaRef.current) {
         scrollAreaRef.current.scrollTo({ top: scrollAreaRef.current.scrollHeight, behavior: "smooth" });
       }
@@ -254,7 +274,7 @@ export default function CommunityChat() {
     setIsSending(false);
   };
 
-  // Xử lý file upload
+  // Xử lý file upload (giữ nguyên)
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
       const files = Array.from(e.target.files).filter((file) => file.type.startsWith("image/"));
@@ -265,8 +285,6 @@ export default function CommunityChat() {
       }
     }
   };
-
-
 
   const handlePaste = (e: React.ClipboardEvent) => {
     const items = e.clipboardData.items;
@@ -285,17 +303,16 @@ export default function CommunityChat() {
     }
   };
 
-  const lastTypingSent = useRef<number>(0); // Lưu timestamp lần gửi typing cuối
-  const TYPING_INTERVAL = 1000; // Gửi typing mỗi 300ms nếu cần
-  
+  const lastTypingSent = useRef<number>(0);
+  const TYPING_INTERVAL = 1000;
+
   const handleInputChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const value = e.target.value;
       setNewMessage(value);
-  
+
       if (currentUserId) {
         const now = Date.now();
-        // Chỉ gửi typing nếu đã qua 300ms kể từ lần gửi cuối
         if (now - lastTypingSent.current >= TYPING_INTERVAL) {
           fetch("/api/community-chatapp/typing", {
             method: "POST",
@@ -305,10 +322,9 @@ export default function CommunityChat() {
           }).catch((error) => {
             console.error("Failed to notify typing:", error);
           });
-          lastTypingSent.current = now; // Cập nhật thời gian gửi cuối
+          lastTypingSent.current = now;
         }
-  
-        // Xử lý timeout cho typingUsers
+
         if (typingTimeoutRef.current) clearTimeout(typingTimeoutRef.current);
         typingTimeoutRef.current = setTimeout(() => {
           setTypingUsers((prev) => {
@@ -319,10 +335,17 @@ export default function CommunityChat() {
         }, 2000);
       }
     },
-    [currentUserId, setNewMessage] // Dependencies
+    [currentUserId, setNewMessage]
   );
 
-  // Xử lý zoom và drag ảnh
+  // Hàm cuộn xuống tin nhắn mới nhất
+  const scrollToBottom = () => {
+    if (scrollAreaRef.current) {
+      scrollAreaRef.current.scrollTo({ top: scrollAreaRef.current.scrollHeight, behavior: "smooth" });
+    }
+  };
+
+  // Các hàm khác (giữ nguyên)
   const handleWheelZoom = (e: React.WheelEvent<HTMLDivElement>) => {
     e.preventDefault();
     setZoomLevel((prev) => Math.max(0.5, Math.min(prev + (e.deltaY < 0 ? 0.1 : -0.1), 3)));
@@ -352,7 +375,6 @@ export default function CommunityChat() {
 
   const handleTouchEnd = () => setIsDragging(false);
 
-  // Xử lý reaction
   const handleReaction = async (messageId: number, emoji: string) => {
     const res = await fetch("/api/community-chatapp/reactions", {
       method: "POST",
@@ -457,7 +479,7 @@ export default function CommunityChat() {
 
   return (
     <div className="h-full flex flex-col md:flex-row gap-4 p-4 bg-gray-100 font-['Inter']" ref={chatContainerRef}>
-      <div className="bg-white rounded-lg shadow-sm overflow-hidden flex-1 flex flex-col">
+      <div className="bg-white rounded-lg shadow-sm overflow-hidden flex-1 flex flex-col relative"> {/* Thêm relative để định vị nút */}
         <div className="p-4 border-b bg-gray-50 flex items-center justify-between chat-header">
           <div className="flex items-center gap-2">
             <Users className="h-5 w-5 text-gray-600" />
@@ -515,7 +537,7 @@ export default function CommunityChat() {
                 onClick={() => handleScrollToMessage(msg.id)}
               >
                 <Pin className="h-4 w-4 shrink-0" />
-                <div className="flex items-center gap-1 group hover:bg-blue-100 transition-colors duration-200 rounded-lg"> {/* Thêm rounded-lg */}
+                <div className="flex items-center gap-1 group hover:bg-blue-100 transition-colors duration-200 rounded-lg">
                   <span className="truncate flex-1">{msg.content ? `${msg.content.slice(0, 48)}...` : `${msg.imageUrls.length} ảnh`}</span>
                   {isAdmin && (
                     <Button
@@ -714,6 +736,27 @@ export default function CommunityChat() {
             </AnimatePresence>
           )}
         </div>
+
+        {/* Nút mũi tên xuống */}
+        <AnimatePresence>
+          {!isAtBottom && messages.length > 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              className="absolute bottom-22 right-6 z-10" // Đặt trên phần input
+            >
+              <Button
+                variant="outline"
+                size="sm"
+                className="bg-white text-blue-500 hover:bg-blue-100 border-gray-300 rounded-full p-2 shadow-md"
+                onClick={scrollToBottom}
+              >
+                <ChevronDown className="h-5 w-5" />
+              </Button>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {selectedImage && (
           <motion.div
